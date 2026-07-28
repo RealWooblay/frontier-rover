@@ -20,6 +20,14 @@ Connect from the development Mac:
 ssh rover@frontier-pi.local
 ```
 
+Shut down before removing Pi power:
+
+```sh
+sudo shutdown -h now
+```
+
+Wait at least 20 seconds after SSH disconnects before unplugging power.
+
 ## Working Method
 
 Read [AGENTS.md](AGENTS.md) before contributing. Experiments belong in

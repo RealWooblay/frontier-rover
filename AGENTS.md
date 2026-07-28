@@ -524,12 +524,12 @@ Completed:
 4. Verified remote access, internet, DNS, storage, temperature, and system state.
 5. Recorded the baseline system state.
 6. Created the initial Git repository and documentation.
+7. Established and tested the safe shutdown procedure.
 
 Remaining before M1:
 
 1. Review the M0 experiment and operating-system decision with the user.
-2. Establish and test the safe shutdown procedure.
-3. Establish and test the backup and recovery procedure.
+2. Establish and test the backup and recovery procedure.
 
 Do not write GPIO, motor, sensor, ROS, or Jetson code until M0 is complete.
 
