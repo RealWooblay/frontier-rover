@@ -15,6 +15,7 @@ power wiring should be based only on an Amazon title.
 | IMU | HiLetgo GY-9250 / MPU-9250, ASIN B01I1J0Z7Y | Acceleration, rotation, and magnetic-field sensing | Board-level voltage tolerance and authenticity unverified |
 | Chassis | XiaoR Geek XR-003, ASIN B07F759T89 | Four-wheel mechanical platform | Verified model |
 | Motors | Four TT brushed DC gearmotors supplied with XR-003 | Differential drive | Listing states 3-12 V; current and encoders unverified |
+| Battery | None currently available | Mobile power | Must be selected after the rover power budget is calculated |
 | Buck converters | Lylanmo LM2596 adjustable modules, ASIN B0F2BC4JGM | Step-down power conversion | Output must be adjusted and load-tested before connection |
 | Jumper wires | ELEGOO Dupont kit, ASIN B01EV70C78 | Low-current logic signals | Do not use for battery or motor current |
 | DC pigtails | CENTROPOWER 5.5 x 2.1 mm, 18 AWG, nominal 5 A | Low-voltage DC connections | Polarity and actual branch current must be verified |
@@ -64,8 +65,7 @@ Source:
 ## Missing or Unverified Before Motor Bring-Up
 
 1. Dual-channel brushed DC motor driver.
-2. Exact battery pack, cell chemistry, cell count, voltage, capacity, connector,
-   and protection circuitry.
+2. Battery pack, holder, connector, and protection circuitry.
 3. Motor running current and stall current.
 4. Main fuse, accessible power-disconnect switch, and suitable power wiring.
 5. Confirmation of whether any motor has an encoder.
@@ -81,21 +81,26 @@ The Cytron MDD10A Rev 2.0 is the current candidate:
 - Accepts Raspberry Pi 3.3 V PWM and direction signals.
 - No reverse-polarity protection on the motor supply.
 
-It is not approved for purchase or wiring until the battery and motor current
-are verified.
+It is not approved for wiring until the battery and motor current are verified.
 
 Source:
 <https://www.cytron.io/p-10amp-5v-30v-dc-motor-driver-2-channels>
 
-## Next Physical Evidence
+## Next Physical Measurement
 
-Photograph:
+Measure the winding resistance of each motor with the rover unpowered:
 
-1. The complete chassis from above and below.
-2. All markings and wires on one motor.
-3. The battery pack, holder, connector, and every label.
-4. Both sides of one LM2596 module.
-5. Both sides of the GY-9250 board.
+1. Measure the multimeter probe resistance by touching the probes together.
+2. Measure across each motor's two wires while slowly rotating its wheel.
+3. Record the lowest reading for each motor.
+4. Subtract the probe resistance from each reading.
 
-Include a ruler or known-size object in the chassis photograph. Do not connect
-the battery, buck converter, motors, Raspberry Pi, or Jetson for these photos.
+The minimum winding resistance provides a conservative estimate of stall
+current at a proposed motor voltage:
+
+```text
+stall current in amperes = motor voltage in volts / winding resistance in ohms
+```
+
+No product photographs are required unless the physical item differs from its
+named listing.
