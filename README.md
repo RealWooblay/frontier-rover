@@ -31,4 +31,6 @@ Wait at least 20 seconds after SSH disconnects before unplugging power.
 ## Working Method
 
 Read [AGENTS.md](AGENTS.md) before contributing. Experiments belong in
-`docs/experiments/`; architecture decisions belong in `docs/decisions/`.
+`docs/experiments/`; architecture decisions belong in `docs/decisions/`. The
+verified and unknown physical components are tracked in
+[`docs/hardware-inventory.md`](docs/hardware-inventory.md).
