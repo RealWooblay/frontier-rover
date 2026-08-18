@@ -53,36 +53,48 @@ Do not waste time teaching elementary software-engineering concepts unless they 
 
 ## Hardware Currently Available
 
+`docs/hardware-inventory.md` is the authoritative list of exact products,
+ratings, and sources. This section records only what an agent must know before
+proposing any physical work.
+
 Known hardware:
 
 - Raspberry Pi 4 Model B, 4 GB RAM
 - NVIDIA Jetson Orin Nano Super Developer Kit
-- Raspberry Pi Camera Module 3
-- MPU9250 breakout board / IMU
-- Four-wheel-drive rover chassis with DC motors
-- Battery holder / battery power system supplied with the chassis
-- Adjustable DC buck converters
-- Jumper wires and connectors
+- Raspberry Pi Camera Module 3, standard
+- HiLetgo GY-9250 / MPU-9250 IMU breakout
+- XiaoR Geek XR-003 4WD chassis, mechanically assembled
+- Four supplied two-wire TT brushed DC gearmotors
+- Lylanmo LM2596 adjustable buck modules
+- ELEGOO Dupont jumper wires, logic signals only
+- CENTROPOWER 5.5 x 2.1 mm 18 AWG DC pigtails
 - Raspberry Pi power supply
 - Jetson power supply
 - Soldering iron
 - Multimeter
-- CSI camera extension cables
+- CSI camera extension cable, 15-pin to 22-pin
 - Laptop used as the development machine
+
+Not present, despite what earlier notes implied:
+
+- No battery, battery holder, or battery protection circuitry of any kind
+- No motor-controller board; the XR-003 listing excludes controllers and sensors
 
 Important unknowns:
 
-- Exact motor-controller board and pinout
+- Motor winding resistance, running current, and stall current
 - Whether the motors include encoders
 - Battery chemistry, nominal voltage, maximum voltage, and safe current
-- Chassis motor voltage/current requirements
-- Exact MPU9250 breakout-board design and voltage tolerance
-- Exact buck-converter models and ratings
+- Exact MPU-9250 breakout-board design and voltage tolerance
+- Actual load behaviour of the assembled LM2596 modules
 - Physical wiring and connector polarity
+- Measured chassis mass and payload margin against the 500 g listed limit
 
 Never invent these details.
 
-Before giving wiring instructions, request photographs, labels, model numbers, datasheets, or multimeter measurements.
+Before giving wiring instructions, resolve unknowns in this order: the official
+product listing or datasheet first, then a multimeter measurement. Ask for a
+photograph only when the physical item appears to differ from its named listing.
 
 ---
 
