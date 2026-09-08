@@ -1,0 +1,6409 @@
+{
+  "recorded_at": "2026-09-06T04:55:31.377662+00:00",
+  "service_url": "http://192.168.55.1:8771",
+  "target": "orange",
+  "time_limit_s": 25.0,
+  "outcome": "timeout",
+  "state_counts": {
+    "armed": 3,
+    "searching": 219,
+    "aligning": 4
+  },
+  "frames_observed": 67,
+  "service_mission_state_counts": {
+    "searching": 66,
+    "aligning": 1
+  },
+  "maximum_area_ratio": 0.023671,
+  "maximum_absolute_horizontal_error": 0.727417,
+  "final": {
+    "state": "disarmed",
+    "armed": false,
+    "reason": "operator disarm",
+    "fault": null,
+    "target": "orange",
+    "confidence": 0.4,
+    "controller_config": {
+      "target": "orange",
+      "confidence": 0.4,
+      "target_area_ratio": 0.143,
+      "area_tolerance": 0.007,
+      "alignment_tolerance": 0.15,
+      "turn_gain": 0.35,
+      "max_forward": 0.7,
+      "max_turn": 0.35,
+      "search_turn": 0.35,
+      "min_turn": 0.3,
+      "max_frame_age_ms": 300,
+      "turn_pulse_ms": 70,
+      "alignment_pulse_ms": 30
+    },
+    "detector_ready": true,
+    "pi_url": "http://127.0.0.1:8765",
+    "frame_id": 34177,
+    "frames_processed": 67,
+    "mission_frames": 67,
+    "mission_state_counts": {
+      "searching": 66,
+      "aligning": 1
+    },
+    "detection": null,
+    "observation": {
+      "target_visible": false,
+      "horizontal_error": 0.0,
+      "area_ratio": 0.0,
+      "frame_age_ms": 81
+    },
+    "action": {
+      "forward": 0.0,
+      "turn": 0.0,
+      "state": "disarmed"
+    },
+    "perception_timing": {
+      "preprocess_ms": 14.2,
+      "inference_ms": 35.97,
+      "postprocess_ms": 0.85,
+      "total_ms": 51.1
+    },
+    "command_ms": 19.11,
+    "pulse_stop_ms": 19.2,
+    "updated_at": "2026-03-17T09:05:30.368783+00:00"
+  },
+  "samples": [
+    {
+      "elapsed_s": 0.007,
+      "state": "armed",
+      "armed": true,
+      "frame_id": -1,
+      "detection": null,
+      "observation": null,
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "disarmed"
+      },
+      "perception_timing": null,
+      "command_ms": null,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.126,
+      "state": "armed",
+      "armed": true,
+      "frame_id": -1,
+      "detection": null,
+      "observation": null,
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "disarmed"
+      },
+      "perception_timing": null,
+      "command_ms": null,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.24,
+      "state": "armed",
+      "armed": true,
+      "frame_id": -1,
+      "detection": null,
+      "observation": null,
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "disarmed"
+      },
+      "perception_timing": null,
+      "command_ms": null,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.357,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33803,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 221
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 38.99,
+        "inference_ms": 90.44,
+        "postprocess_ms": 0.91,
+        "total_ms": 130.41
+      },
+      "command_ms": 29.43,
+      "pulse_stop_ms": 18.57,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.467,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33803,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 221
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 38.99,
+        "inference_ms": 90.44,
+        "postprocess_ms": 0.91,
+        "total_ms": 130.41
+      },
+      "command_ms": 29.43,
+      "pulse_stop_ms": 18.57,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.574,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33808,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 85
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 22.54,
+        "inference_ms": 34.76,
+        "postprocess_ms": 0.97,
+        "total_ms": 58.36
+      },
+      "command_ms": 26.05,
+      "pulse_stop_ms": 68.94,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.684,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33808,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 85
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 22.54,
+        "inference_ms": 34.76,
+        "postprocess_ms": 0.97,
+        "total_ms": 58.36
+      },
+      "command_ms": 26.05,
+      "pulse_stop_ms": 68.94,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.793,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33808,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 85
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 22.54,
+        "inference_ms": 34.76,
+        "postprocess_ms": 0.97,
+        "total_ms": 58.36
+      },
+      "command_ms": 26.05,
+      "pulse_stop_ms": 68.94,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.903,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33815,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.6,
+        "inference_ms": 35.35,
+        "postprocess_ms": 0.91,
+        "total_ms": 52.97
+      },
+      "command_ms": 19.75,
+      "pulse_stop_ms": 20.09,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.016,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33815,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.6,
+        "inference_ms": 35.35,
+        "postprocess_ms": 0.91,
+        "total_ms": 52.97
+      },
+      "command_ms": 19.75,
+      "pulse_stop_ms": 20.09,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.125,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33815,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.6,
+        "inference_ms": 35.35,
+        "postprocess_ms": 0.91,
+        "total_ms": 52.97
+      },
+      "command_ms": 19.75,
+      "pulse_stop_ms": 20.09,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.243,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33815,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.6,
+        "inference_ms": 35.35,
+        "postprocess_ms": 0.91,
+        "total_ms": 52.97
+      },
+      "command_ms": 19.75,
+      "pulse_stop_ms": 20.09,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.356,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33815,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.6,
+        "inference_ms": 35.35,
+        "postprocess_ms": 0.91,
+        "total_ms": 52.97
+      },
+      "command_ms": 19.75,
+      "pulse_stop_ms": 20.09,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.465,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33822,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.14,
+        "inference_ms": 25.25,
+        "postprocess_ms": 0.82,
+        "total_ms": 42.29
+      },
+      "command_ms": 18.48,
+      "pulse_stop_ms": 19.68,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.575,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33822,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.14,
+        "inference_ms": 25.25,
+        "postprocess_ms": 0.82,
+        "total_ms": 42.29
+      },
+      "command_ms": 18.48,
+      "pulse_stop_ms": 19.68,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.688,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33822,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.14,
+        "inference_ms": 25.25,
+        "postprocess_ms": 0.82,
+        "total_ms": 42.29
+      },
+      "command_ms": 18.48,
+      "pulse_stop_ms": 19.68,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.796,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33828,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.83,
+        "inference_ms": 24.88,
+        "postprocess_ms": 0.89,
+        "total_ms": 42.69
+      },
+      "command_ms": 18.71,
+      "pulse_stop_ms": 20.51,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.906,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33828,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.83,
+        "inference_ms": 24.88,
+        "postprocess_ms": 0.89,
+        "total_ms": 42.69
+      },
+      "command_ms": 18.71,
+      "pulse_stop_ms": 20.51,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.012,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33828,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.83,
+        "inference_ms": 24.88,
+        "postprocess_ms": 0.89,
+        "total_ms": 42.69
+      },
+      "command_ms": 18.71,
+      "pulse_stop_ms": 20.51,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.126,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33828,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.83,
+        "inference_ms": 24.88,
+        "postprocess_ms": 0.89,
+        "total_ms": 42.69
+      },
+      "command_ms": 18.71,
+      "pulse_stop_ms": 20.51,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.237,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33828,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.83,
+        "inference_ms": 24.88,
+        "postprocess_ms": 0.89,
+        "total_ms": 42.69
+      },
+      "command_ms": 18.71,
+      "pulse_stop_ms": 20.51,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.352,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33834,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 143
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.31,
+        "inference_ms": 31.54,
+        "postprocess_ms": 0.34,
+        "total_ms": 49.22
+      },
+      "command_ms": 17.01,
+      "pulse_stop_ms": 16.84,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.461,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33838,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.68,
+        "inference_ms": 36.49,
+        "postprocess_ms": 0.83,
+        "total_ms": 54.07
+      },
+      "command_ms": 17.46,
+      "pulse_stop_ms": 19.45,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.573,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33838,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.68,
+        "inference_ms": 36.49,
+        "postprocess_ms": 0.83,
+        "total_ms": 54.07
+      },
+      "command_ms": 17.46,
+      "pulse_stop_ms": 19.45,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.684,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33838,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.68,
+        "inference_ms": 36.49,
+        "postprocess_ms": 0.83,
+        "total_ms": 54.07
+      },
+      "command_ms": 17.46,
+      "pulse_stop_ms": 19.45,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.795,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33843,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.92,
+        "inference_ms": 25.19,
+        "postprocess_ms": 0.83,
+        "total_ms": 41.0
+      },
+      "command_ms": 18.23,
+      "pulse_stop_ms": 21.31,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.906,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33843,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.92,
+        "inference_ms": 25.19,
+        "postprocess_ms": 0.83,
+        "total_ms": 41.0
+      },
+      "command_ms": 18.23,
+      "pulse_stop_ms": 21.31,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.018,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33843,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.92,
+        "inference_ms": 25.19,
+        "postprocess_ms": 0.83,
+        "total_ms": 41.0
+      },
+      "command_ms": 18.23,
+      "pulse_stop_ms": 21.31,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.125,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33843,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.92,
+        "inference_ms": 25.19,
+        "postprocess_ms": 0.83,
+        "total_ms": 41.0
+      },
+      "command_ms": 18.23,
+      "pulse_stop_ms": 21.31,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.237,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33848,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 57
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.16,
+        "inference_ms": 34.62,
+        "postprocess_ms": 0.84,
+        "total_ms": 52.7
+      },
+      "command_ms": 19.78,
+      "pulse_stop_ms": 60.93,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.348,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33848,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 57
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.16,
+        "inference_ms": 34.62,
+        "postprocess_ms": 0.84,
+        "total_ms": 52.7
+      },
+      "command_ms": 19.78,
+      "pulse_stop_ms": 60.93,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.454,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33853,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.01,
+        "inference_ms": 35.91,
+        "postprocess_ms": 0.92,
+        "total_ms": 53.92
+      },
+      "command_ms": 23.19,
+      "pulse_stop_ms": 21.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.568,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33853,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.01,
+        "inference_ms": 35.91,
+        "postprocess_ms": 0.92,
+        "total_ms": 53.92
+      },
+      "command_ms": 23.19,
+      "pulse_stop_ms": 21.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.679,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33853,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.01,
+        "inference_ms": 35.91,
+        "postprocess_ms": 0.92,
+        "total_ms": 53.92
+      },
+      "command_ms": 23.19,
+      "pulse_stop_ms": 21.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.785,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33857,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.17,
+        "inference_ms": 29.77,
+        "postprocess_ms": 0.37,
+        "total_ms": 47.35
+      },
+      "command_ms": 77.41,
+      "pulse_stop_ms": 20.25,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.894,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33857,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.17,
+        "inference_ms": 29.77,
+        "postprocess_ms": 0.37,
+        "total_ms": 47.35
+      },
+      "command_ms": 77.41,
+      "pulse_stop_ms": 20.25,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.004,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33857,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.17,
+        "inference_ms": 29.77,
+        "postprocess_ms": 0.37,
+        "total_ms": 47.35
+      },
+      "command_ms": 77.41,
+      "pulse_stop_ms": 20.25,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.112,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33857,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.17,
+        "inference_ms": 29.77,
+        "postprocess_ms": 0.37,
+        "total_ms": 47.35
+      },
+      "command_ms": 77.41,
+      "pulse_stop_ms": 20.25,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.223,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33863,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 53
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.96,
+        "inference_ms": 34.67,
+        "postprocess_ms": 0.85,
+        "total_ms": 52.55
+      },
+      "command_ms": 16.2,
+      "pulse_stop_ms": 122.45,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.331,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33863,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 53
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.96,
+        "inference_ms": 34.67,
+        "postprocess_ms": 0.85,
+        "total_ms": 52.55
+      },
+      "command_ms": 16.2,
+      "pulse_stop_ms": 122.45,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.441,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33863,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 53
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.96,
+        "inference_ms": 34.67,
+        "postprocess_ms": 0.85,
+        "total_ms": 52.55
+      },
+      "command_ms": 16.2,
+      "pulse_stop_ms": 122.45,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.551,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33869,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 9.81,
+        "inference_ms": 34.28,
+        "postprocess_ms": 0.37,
+        "total_ms": 44.5
+      },
+      "command_ms": 16.9,
+      "pulse_stop_ms": 18.37,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.658,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33869,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 9.81,
+        "inference_ms": 34.28,
+        "postprocess_ms": 0.37,
+        "total_ms": 44.5
+      },
+      "command_ms": 16.9,
+      "pulse_stop_ms": 18.37,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.774,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33869,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 9.81,
+        "inference_ms": 34.28,
+        "postprocess_ms": 0.37,
+        "total_ms": 44.5
+      },
+      "command_ms": 16.9,
+      "pulse_stop_ms": 18.37,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.879,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33869,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 9.81,
+        "inference_ms": 34.28,
+        "postprocess_ms": 0.37,
+        "total_ms": 44.5
+      },
+      "command_ms": 16.9,
+      "pulse_stop_ms": 18.37,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.994,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33874,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 103
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.08,
+        "inference_ms": 37.02,
+        "postprocess_ms": 1.2,
+        "total_ms": 55.37
+      },
+      "command_ms": 20.11,
+      "pulse_stop_ms": 20.11,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.105,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33874,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 103
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.08,
+        "inference_ms": 37.02,
+        "postprocess_ms": 1.2,
+        "total_ms": 55.37
+      },
+      "command_ms": 20.11,
+      "pulse_stop_ms": 20.11,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.211,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33878,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.98,
+        "inference_ms": 35.95,
+        "postprocess_ms": 0.78,
+        "total_ms": 53.77
+      },
+      "command_ms": 18.68,
+      "pulse_stop_ms": 19.34,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.32,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33878,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.98,
+        "inference_ms": 35.95,
+        "postprocess_ms": 0.78,
+        "total_ms": 53.77
+      },
+      "command_ms": 18.68,
+      "pulse_stop_ms": 19.34,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.428,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33878,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.98,
+        "inference_ms": 35.95,
+        "postprocess_ms": 0.78,
+        "total_ms": 53.77
+      },
+      "command_ms": 18.68,
+      "pulse_stop_ms": 19.34,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.533,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33884,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.25,
+        "inference_ms": 28.86,
+        "postprocess_ms": 0.44,
+        "total_ms": 46.61
+      },
+      "command_ms": 16.89,
+      "pulse_stop_ms": 17.35,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.642,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33884,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.25,
+        "inference_ms": 28.86,
+        "postprocess_ms": 0.44,
+        "total_ms": 46.61
+      },
+      "command_ms": 16.89,
+      "pulse_stop_ms": 17.35,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.752,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33884,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.25,
+        "inference_ms": 28.86,
+        "postprocess_ms": 0.44,
+        "total_ms": 46.61
+      },
+      "command_ms": 16.89,
+      "pulse_stop_ms": 17.35,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.86,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33884,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 54
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.25,
+        "inference_ms": 28.86,
+        "postprocess_ms": 0.44,
+        "total_ms": 46.61
+      },
+      "command_ms": 16.89,
+      "pulse_stop_ms": 17.35,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.971,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33890,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 91
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.8,
+        "inference_ms": 35.24,
+        "postprocess_ms": 0.83,
+        "total_ms": 51.95
+      },
+      "command_ms": 19.66,
+      "pulse_stop_ms": 18.06,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.078,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33890,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 91
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.8,
+        "inference_ms": 35.24,
+        "postprocess_ms": 0.83,
+        "total_ms": 51.95
+      },
+      "command_ms": 19.66,
+      "pulse_stop_ms": 18.06,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.183,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33890,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 91
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.8,
+        "inference_ms": 35.24,
+        "postprocess_ms": 0.83,
+        "total_ms": 51.95
+      },
+      "command_ms": 19.66,
+      "pulse_stop_ms": 18.06,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.291,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33890,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 91
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.8,
+        "inference_ms": 35.24,
+        "postprocess_ms": 0.83,
+        "total_ms": 51.95
+      },
+      "command_ms": 19.66,
+      "pulse_stop_ms": 18.06,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.4,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33890,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 91
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.8,
+        "inference_ms": 35.24,
+        "postprocess_ms": 0.83,
+        "total_ms": 51.95
+      },
+      "command_ms": 19.66,
+      "pulse_stop_ms": 18.06,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.512,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33897,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 131
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.94,
+        "inference_ms": 24.72,
+        "postprocess_ms": 0.89,
+        "total_ms": 38.62
+      },
+      "command_ms": 19.89,
+      "pulse_stop_ms": 32.13,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.623,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33897,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 131
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.94,
+        "inference_ms": 24.72,
+        "postprocess_ms": 0.89,
+        "total_ms": 38.62
+      },
+      "command_ms": 19.89,
+      "pulse_stop_ms": 32.13,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.741,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33897,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 131
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.94,
+        "inference_ms": 24.72,
+        "postprocess_ms": 0.89,
+        "total_ms": 38.62
+      },
+      "command_ms": 19.89,
+      "pulse_stop_ms": 32.13,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.85,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33897,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 131
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.94,
+        "inference_ms": 24.72,
+        "postprocess_ms": 0.89,
+        "total_ms": 38.62
+      },
+      "command_ms": 19.89,
+      "pulse_stop_ms": 32.13,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.957,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33904,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.57,
+        "inference_ms": 37.5,
+        "postprocess_ms": 2.41,
+        "total_ms": 56.55
+      },
+      "command_ms": 64.64,
+      "pulse_stop_ms": 16.78,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.066,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33904,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.57,
+        "inference_ms": 37.5,
+        "postprocess_ms": 2.41,
+        "total_ms": 56.55
+      },
+      "command_ms": 64.64,
+      "pulse_stop_ms": 16.78,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.182,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33904,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.57,
+        "inference_ms": 37.5,
+        "postprocess_ms": 2.41,
+        "total_ms": 56.55
+      },
+      "command_ms": 64.64,
+      "pulse_stop_ms": 16.78,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.294,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33904,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.57,
+        "inference_ms": 37.5,
+        "postprocess_ms": 2.41,
+        "total_ms": 56.55
+      },
+      "command_ms": 64.64,
+      "pulse_stop_ms": 16.78,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.403,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33911,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 45
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 9.19,
+        "inference_ms": 33.5,
+        "postprocess_ms": 0.87,
+        "total_ms": 43.64
+      },
+      "command_ms": 18.67,
+      "pulse_stop_ms": 67.94,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.521,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33911,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 45
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 9.19,
+        "inference_ms": 33.5,
+        "postprocess_ms": 0.87,
+        "total_ms": 43.64
+      },
+      "command_ms": 18.67,
+      "pulse_stop_ms": 67.94,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.628,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33911,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 45
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 9.19,
+        "inference_ms": 33.5,
+        "postprocess_ms": 0.87,
+        "total_ms": 43.64
+      },
+      "command_ms": 18.67,
+      "pulse_stop_ms": 67.94,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.748,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33916,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.52,
+        "inference_ms": 35.91,
+        "postprocess_ms": 0.42,
+        "total_ms": 52.89
+      },
+      "command_ms": 24.48,
+      "pulse_stop_ms": 21.16,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.86,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33916,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.52,
+        "inference_ms": 35.91,
+        "postprocess_ms": 0.42,
+        "total_ms": 52.89
+      },
+      "command_ms": 24.48,
+      "pulse_stop_ms": 21.16,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.968,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33920,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.72,
+        "inference_ms": 26.73,
+        "postprocess_ms": 0.89,
+        "total_ms": 39.41
+      },
+      "command_ms": 72.64,
+      "pulse_stop_ms": 21.9,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.08,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33920,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.72,
+        "inference_ms": 26.73,
+        "postprocess_ms": 0.89,
+        "total_ms": 39.41
+      },
+      "command_ms": 72.64,
+      "pulse_stop_ms": 21.9,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.19,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33924,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.25,
+        "inference_ms": 35.11,
+        "postprocess_ms": 0.9,
+        "total_ms": 53.35
+      },
+      "command_ms": 20.69,
+      "pulse_stop_ms": 19.88,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.297,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33924,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.25,
+        "inference_ms": 35.11,
+        "postprocess_ms": 0.9,
+        "total_ms": 53.35
+      },
+      "command_ms": 20.69,
+      "pulse_stop_ms": 19.88,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.406,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33924,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.25,
+        "inference_ms": 35.11,
+        "postprocess_ms": 0.9,
+        "total_ms": 53.35
+      },
+      "command_ms": 20.69,
+      "pulse_stop_ms": 19.88,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.517,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33924,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.25,
+        "inference_ms": 35.11,
+        "postprocess_ms": 0.9,
+        "total_ms": 53.35
+      },
+      "command_ms": 20.69,
+      "pulse_stop_ms": 19.88,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.624,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33930,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.45,
+        "inference_ms": 31.97,
+        "postprocess_ms": 0.88,
+        "total_ms": 44.39
+      },
+      "command_ms": 19.78,
+      "pulse_stop_ms": 19.78,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.753,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33930,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.45,
+        "inference_ms": 31.97,
+        "postprocess_ms": 0.88,
+        "total_ms": 44.39
+      },
+      "command_ms": 19.78,
+      "pulse_stop_ms": 19.78,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.865,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33930,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.45,
+        "inference_ms": 31.97,
+        "postprocess_ms": 0.88,
+        "total_ms": 44.39
+      },
+      "command_ms": 19.78,
+      "pulse_stop_ms": 19.78,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.977,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33930,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.45,
+        "inference_ms": 31.97,
+        "postprocess_ms": 0.88,
+        "total_ms": 44.39
+      },
+      "command_ms": 19.78,
+      "pulse_stop_ms": 19.78,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.086,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33936,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 35.37,
+        "postprocess_ms": 0.86,
+        "total_ms": 53.64
+      },
+      "command_ms": 19.08,
+      "pulse_stop_ms": 23.96,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.193,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33936,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 35.37,
+        "postprocess_ms": 0.86,
+        "total_ms": 53.64
+      },
+      "command_ms": 19.08,
+      "pulse_stop_ms": 23.96,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.301,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33936,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 35.37,
+        "postprocess_ms": 0.86,
+        "total_ms": 53.64
+      },
+      "command_ms": 19.08,
+      "pulse_stop_ms": 23.96,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.412,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33936,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 35.37,
+        "postprocess_ms": 0.86,
+        "total_ms": 53.64
+      },
+      "command_ms": 19.08,
+      "pulse_stop_ms": 23.96,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.523,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33942,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 61
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.45,
+        "inference_ms": 36.68,
+        "postprocess_ms": 0.94,
+        "total_ms": 54.17
+      },
+      "command_ms": 20.0,
+      "pulse_stop_ms": 72.41,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.633,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33942,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 61
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.45,
+        "inference_ms": 36.68,
+        "postprocess_ms": 0.94,
+        "total_ms": 54.17
+      },
+      "command_ms": 20.0,
+      "pulse_stop_ms": 72.41,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.748,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33942,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 61
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.45,
+        "inference_ms": 36.68,
+        "postprocess_ms": 0.94,
+        "total_ms": 54.17
+      },
+      "command_ms": 20.0,
+      "pulse_stop_ms": 72.41,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.862,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33949,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 65
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.8,
+        "inference_ms": 35.12,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.96
+      },
+      "command_ms": 19.98,
+      "pulse_stop_ms": 25.71,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.975,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33949,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 65
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.8,
+        "inference_ms": 35.12,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.96
+      },
+      "command_ms": 19.98,
+      "pulse_stop_ms": 25.71,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.093,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33949,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 65
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.8,
+        "inference_ms": 35.12,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.96
+      },
+      "command_ms": 19.98,
+      "pulse_stop_ms": 25.71,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.206,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33949,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 65
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.8,
+        "inference_ms": 35.12,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.96
+      },
+      "command_ms": 19.98,
+      "pulse_stop_ms": 25.71,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.317,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33955,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.93,
+        "inference_ms": 27.88,
+        "postprocess_ms": 0.55,
+        "total_ms": 45.44
+      },
+      "command_ms": 17.67,
+      "pulse_stop_ms": 18.83,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.428,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33955,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.93,
+        "inference_ms": 27.88,
+        "postprocess_ms": 0.55,
+        "total_ms": 45.44
+      },
+      "command_ms": 17.67,
+      "pulse_stop_ms": 18.83,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.539,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33955,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.93,
+        "inference_ms": 27.88,
+        "postprocess_ms": 0.55,
+        "total_ms": 45.44
+      },
+      "command_ms": 17.67,
+      "pulse_stop_ms": 18.83,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.651,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33961,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 75
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.58,
+        "inference_ms": 38.0,
+        "postprocess_ms": 0.79,
+        "total_ms": 55.43
+      },
+      "command_ms": 17.49,
+      "pulse_stop_ms": 18.46,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.762,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33961,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 75
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.58,
+        "inference_ms": 38.0,
+        "postprocess_ms": 0.79,
+        "total_ms": 55.43
+      },
+      "command_ms": 17.49,
+      "pulse_stop_ms": 18.46,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.868,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33961,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 75
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.58,
+        "inference_ms": 38.0,
+        "postprocess_ms": 0.79,
+        "total_ms": 55.43
+      },
+      "command_ms": 17.49,
+      "pulse_stop_ms": 18.46,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.976,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33961,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 75
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.58,
+        "inference_ms": 38.0,
+        "postprocess_ms": 0.79,
+        "total_ms": 55.43
+      },
+      "command_ms": 17.49,
+      "pulse_stop_ms": 18.46,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.085,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33961,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 75
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.58,
+        "inference_ms": 38.0,
+        "postprocess_ms": 0.79,
+        "total_ms": 55.43
+      },
+      "command_ms": 17.49,
+      "pulse_stop_ms": 18.46,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.196,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33968,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 128
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.28,
+        "inference_ms": 35.72,
+        "postprocess_ms": 0.88,
+        "total_ms": 52.97
+      },
+      "command_ms": 22.03,
+      "pulse_stop_ms": 18.07,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.314,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33968,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 128
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.28,
+        "inference_ms": 35.72,
+        "postprocess_ms": 0.88,
+        "total_ms": 52.97
+      },
+      "command_ms": 22.03,
+      "pulse_stop_ms": 18.07,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.421,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33968,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 128
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.28,
+        "inference_ms": 35.72,
+        "postprocess_ms": 0.88,
+        "total_ms": 52.97
+      },
+      "command_ms": 22.03,
+      "pulse_stop_ms": 18.07,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.532,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33973,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.92,
+        "inference_ms": 30.81,
+        "postprocess_ms": 0.36,
+        "total_ms": 48.14
+      },
+      "command_ms": 18.85,
+      "pulse_stop_ms": 111.42,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.643,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33973,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.92,
+        "inference_ms": 30.81,
+        "postprocess_ms": 0.36,
+        "total_ms": 48.14
+      },
+      "command_ms": 18.85,
+      "pulse_stop_ms": 111.42,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.759,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33973,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.92,
+        "inference_ms": 30.81,
+        "postprocess_ms": 0.36,
+        "total_ms": 48.14
+      },
+      "command_ms": 18.85,
+      "pulse_stop_ms": 111.42,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.872,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33973,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.92,
+        "inference_ms": 30.81,
+        "postprocess_ms": 0.36,
+        "total_ms": 48.14
+      },
+      "command_ms": 18.85,
+      "pulse_stop_ms": 111.42,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.985,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33980,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.34,
+        "inference_ms": 25.9,
+        "postprocess_ms": 0.87,
+        "total_ms": 44.2
+      },
+      "command_ms": 20.18,
+      "pulse_stop_ms": 20.03,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.096,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33980,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.34,
+        "inference_ms": 25.9,
+        "postprocess_ms": 0.87,
+        "total_ms": 44.2
+      },
+      "command_ms": 20.18,
+      "pulse_stop_ms": 20.03,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.201,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33980,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.34,
+        "inference_ms": 25.9,
+        "postprocess_ms": 0.87,
+        "total_ms": 44.2
+      },
+      "command_ms": 20.18,
+      "pulse_stop_ms": 20.03,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.317,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33980,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.34,
+        "inference_ms": 25.9,
+        "postprocess_ms": 0.87,
+        "total_ms": 44.2
+      },
+      "command_ms": 20.18,
+      "pulse_stop_ms": 20.03,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.427,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33980,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.34,
+        "inference_ms": 25.9,
+        "postprocess_ms": 0.87,
+        "total_ms": 44.2
+      },
+      "command_ms": 20.18,
+      "pulse_stop_ms": 20.03,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.537,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33988,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 61
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.18,
+        "inference_ms": 36.58,
+        "postprocess_ms": 0.73,
+        "total_ms": 53.53
+      },
+      "command_ms": 18.65,
+      "pulse_stop_ms": 18.73,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.646,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33988,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 61
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.18,
+        "inference_ms": 36.58,
+        "postprocess_ms": 0.73,
+        "total_ms": 53.53
+      },
+      "command_ms": 18.65,
+      "pulse_stop_ms": 18.73,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.754,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33988,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 61
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.18,
+        "inference_ms": 36.58,
+        "postprocess_ms": 0.73,
+        "total_ms": 53.53
+      },
+      "command_ms": 18.65,
+      "pulse_stop_ms": 18.73,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.867,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33988,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 61
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.18,
+        "inference_ms": 36.58,
+        "postprocess_ms": 0.73,
+        "total_ms": 53.53
+      },
+      "command_ms": 18.65,
+      "pulse_stop_ms": 18.73,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.976,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33995,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.54,
+        "inference_ms": 25.58,
+        "postprocess_ms": 0.87,
+        "total_ms": 41.08
+      },
+      "command_ms": 21.56,
+      "pulse_stop_ms": 27.37,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.086,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33995,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.54,
+        "inference_ms": 25.58,
+        "postprocess_ms": 0.87,
+        "total_ms": 41.08
+      },
+      "command_ms": 21.56,
+      "pulse_stop_ms": 27.37,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.197,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33995,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.54,
+        "inference_ms": 25.58,
+        "postprocess_ms": 0.87,
+        "total_ms": 41.08
+      },
+      "command_ms": 21.56,
+      "pulse_stop_ms": 27.37,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.308,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 33995,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.54,
+        "inference_ms": 25.58,
+        "postprocess_ms": 0.87,
+        "total_ms": 41.08
+      },
+      "command_ms": 21.56,
+      "pulse_stop_ms": 27.37,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.42,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34002,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.01,
+        "inference_ms": 35.67,
+        "postprocess_ms": 0.91,
+        "total_ms": 50.68
+      },
+      "command_ms": 19.74,
+      "pulse_stop_ms": 19.55,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.533,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34002,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.01,
+        "inference_ms": 35.67,
+        "postprocess_ms": 0.91,
+        "total_ms": 50.68
+      },
+      "command_ms": 19.74,
+      "pulse_stop_ms": 19.55,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.649,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34002,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.01,
+        "inference_ms": 35.67,
+        "postprocess_ms": 0.91,
+        "total_ms": 50.68
+      },
+      "command_ms": 19.74,
+      "pulse_stop_ms": 19.55,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.762,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34002,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.01,
+        "inference_ms": 35.67,
+        "postprocess_ms": 0.91,
+        "total_ms": 50.68
+      },
+      "command_ms": 19.74,
+      "pulse_stop_ms": 19.55,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.869,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34008,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 75
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.12,
+        "inference_ms": 28.32,
+        "postprocess_ms": 0.82,
+        "total_ms": 46.33
+      },
+      "command_ms": 21.54,
+      "pulse_stop_ms": 19.75,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.989,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34008,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 75
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.12,
+        "inference_ms": 28.32,
+        "postprocess_ms": 0.82,
+        "total_ms": 46.33
+      },
+      "command_ms": 21.54,
+      "pulse_stop_ms": 19.75,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.097,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34008,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 75
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.12,
+        "inference_ms": 28.32,
+        "postprocess_ms": 0.82,
+        "total_ms": 46.33
+      },
+      "command_ms": 21.54,
+      "pulse_stop_ms": 19.75,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.208,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34013,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.24,
+        "inference_ms": 36.88,
+        "postprocess_ms": 0.84,
+        "total_ms": 54.0
+      },
+      "command_ms": 17.64,
+      "pulse_stop_ms": 69.93,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.32,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34013,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.24,
+        "inference_ms": 36.88,
+        "postprocess_ms": 0.84,
+        "total_ms": 54.0
+      },
+      "command_ms": 17.64,
+      "pulse_stop_ms": 69.93,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.431,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34013,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.24,
+        "inference_ms": 36.88,
+        "postprocess_ms": 0.84,
+        "total_ms": 54.0
+      },
+      "command_ms": 17.64,
+      "pulse_stop_ms": 69.93,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.54,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34019,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 53
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.25,
+        "inference_ms": 35.08,
+        "postprocess_ms": 0.34,
+        "total_ms": 51.71
+      },
+      "command_ms": 17.46,
+      "pulse_stop_ms": 18.13,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.661,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34019,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 53
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.25,
+        "inference_ms": 35.08,
+        "postprocess_ms": 0.34,
+        "total_ms": 51.71
+      },
+      "command_ms": 17.46,
+      "pulse_stop_ms": 18.13,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.778,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34019,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 53
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.25,
+        "inference_ms": 35.08,
+        "postprocess_ms": 0.34,
+        "total_ms": 51.71
+      },
+      "command_ms": 17.46,
+      "pulse_stop_ms": 18.13,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.884,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34019,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 53
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.25,
+        "inference_ms": 35.08,
+        "postprocess_ms": 0.34,
+        "total_ms": 51.71
+      },
+      "command_ms": 17.46,
+      "pulse_stop_ms": 18.13,
+      "fault": null
+    },
+    {
+      "elapsed_s": 14.996,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34025,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.9,
+        "inference_ms": 31.88,
+        "postprocess_ms": 0.36,
+        "total_ms": 49.19
+      },
+      "command_ms": 20.76,
+      "pulse_stop_ms": 16.4,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.104,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34025,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.9,
+        "inference_ms": 31.88,
+        "postprocess_ms": 0.36,
+        "total_ms": 49.19
+      },
+      "command_ms": 20.76,
+      "pulse_stop_ms": 16.4,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.214,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34029,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 57
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.32,
+        "inference_ms": 36.03,
+        "postprocess_ms": 0.84,
+        "total_ms": 53.27
+      },
+      "command_ms": 17.04,
+      "pulse_stop_ms": 44.77,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.329,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34029,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 57
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.32,
+        "inference_ms": 36.03,
+        "postprocess_ms": 0.84,
+        "total_ms": 53.27
+      },
+      "command_ms": 17.04,
+      "pulse_stop_ms": 44.77,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.436,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34029,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 57
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.32,
+        "inference_ms": 36.03,
+        "postprocess_ms": 0.84,
+        "total_ms": 53.27
+      },
+      "command_ms": 17.04,
+      "pulse_stop_ms": 44.77,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.546,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34033,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 65
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.0,
+        "inference_ms": 36.0,
+        "postprocess_ms": 0.74,
+        "total_ms": 53.8
+      },
+      "command_ms": 17.41,
+      "pulse_stop_ms": 17.79,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.661,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34033,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 65
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.0,
+        "inference_ms": 36.0,
+        "postprocess_ms": 0.74,
+        "total_ms": 53.8
+      },
+      "command_ms": 17.41,
+      "pulse_stop_ms": 17.79,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.77,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34033,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 65
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.0,
+        "inference_ms": 36.0,
+        "postprocess_ms": 0.74,
+        "total_ms": 53.8
+      },
+      "command_ms": 17.41,
+      "pulse_stop_ms": 17.79,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.884,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34038,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 57
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.1,
+        "inference_ms": 31.05,
+        "postprocess_ms": 0.8,
+        "total_ms": 49.01
+      },
+      "command_ms": 69.99,
+      "pulse_stop_ms": 18.99,
+      "fault": null
+    },
+    {
+      "elapsed_s": 15.994,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34038,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 57
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.1,
+        "inference_ms": 31.05,
+        "postprocess_ms": 0.8,
+        "total_ms": 49.01
+      },
+      "command_ms": 69.99,
+      "pulse_stop_ms": 18.99,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.103,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34038,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 57
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.1,
+        "inference_ms": 31.05,
+        "postprocess_ms": 0.8,
+        "total_ms": 49.01
+      },
+      "command_ms": 69.99,
+      "pulse_stop_ms": 18.99,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.212,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34043,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.21,
+        "inference_ms": 35.57,
+        "postprocess_ms": 0.72,
+        "total_ms": 53.55
+      },
+      "command_ms": 19.49,
+      "pulse_stop_ms": 14.35,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.323,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34043,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.21,
+        "inference_ms": 35.57,
+        "postprocess_ms": 0.72,
+        "total_ms": 53.55
+      },
+      "command_ms": 19.49,
+      "pulse_stop_ms": 14.35,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.429,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34046,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.15,
+        "inference_ms": 35.22,
+        "postprocess_ms": 0.87,
+        "total_ms": 53.32
+      },
+      "command_ms": 18.43,
+      "pulse_stop_ms": 19.58,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.544,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34046,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.15,
+        "inference_ms": 35.22,
+        "postprocess_ms": 0.87,
+        "total_ms": 53.32
+      },
+      "command_ms": 18.43,
+      "pulse_stop_ms": 19.58,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.651,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34046,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.15,
+        "inference_ms": 35.22,
+        "postprocess_ms": 0.87,
+        "total_ms": 53.32
+      },
+      "command_ms": 18.43,
+      "pulse_stop_ms": 19.58,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.762,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34046,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.15,
+        "inference_ms": 35.22,
+        "postprocess_ms": 0.87,
+        "total_ms": 53.32
+      },
+      "command_ms": 18.43,
+      "pulse_stop_ms": 19.58,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.87,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34052,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.08,
+        "inference_ms": 35.29,
+        "postprocess_ms": 0.85,
+        "total_ms": 51.3
+      },
+      "command_ms": 20.7,
+      "pulse_stop_ms": 76.88,
+      "fault": null
+    },
+    {
+      "elapsed_s": 16.98,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34052,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.08,
+        "inference_ms": 35.29,
+        "postprocess_ms": 0.85,
+        "total_ms": 51.3
+      },
+      "command_ms": 20.7,
+      "pulse_stop_ms": 76.88,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.091,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34057,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.52,
+        "inference_ms": 25.7,
+        "postprocess_ms": 0.82,
+        "total_ms": 42.12
+      },
+      "command_ms": 17.76,
+      "pulse_stop_ms": 25.38,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.196,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34057,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.52,
+        "inference_ms": 25.7,
+        "postprocess_ms": 0.82,
+        "total_ms": 42.12
+      },
+      "command_ms": 17.76,
+      "pulse_stop_ms": 25.38,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.312,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34057,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.52,
+        "inference_ms": 25.7,
+        "postprocess_ms": 0.82,
+        "total_ms": 42.12
+      },
+      "command_ms": 17.76,
+      "pulse_stop_ms": 25.38,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.421,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34057,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.52,
+        "inference_ms": 25.7,
+        "postprocess_ms": 0.82,
+        "total_ms": 42.12
+      },
+      "command_ms": 17.76,
+      "pulse_stop_ms": 25.38,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.532,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34062,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 152
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.65,
+        "inference_ms": 25.23,
+        "postprocess_ms": 0.84,
+        "total_ms": 44.8
+      },
+      "command_ms": 18.54,
+      "pulse_stop_ms": 17.9,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.642,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34062,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 152
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.65,
+        "inference_ms": 25.23,
+        "postprocess_ms": 0.84,
+        "total_ms": 44.8
+      },
+      "command_ms": 18.54,
+      "pulse_stop_ms": 17.9,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.753,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34062,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 152
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.65,
+        "inference_ms": 25.23,
+        "postprocess_ms": 0.84,
+        "total_ms": 44.8
+      },
+      "command_ms": 18.54,
+      "pulse_stop_ms": 17.9,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.859,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34068,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 28.29,
+        "postprocess_ms": 0.34,
+        "total_ms": 46.0
+      },
+      "command_ms": 17.15,
+      "pulse_stop_ms": 88.03,
+      "fault": null
+    },
+    {
+      "elapsed_s": 17.967,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34068,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 28.29,
+        "postprocess_ms": 0.34,
+        "total_ms": 46.0
+      },
+      "command_ms": 17.15,
+      "pulse_stop_ms": 88.03,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.077,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34068,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 28.29,
+        "postprocess_ms": 0.34,
+        "total_ms": 46.0
+      },
+      "command_ms": 17.15,
+      "pulse_stop_ms": 88.03,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.187,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34074,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.12,
+        "inference_ms": 35.18,
+        "postprocess_ms": 0.78,
+        "total_ms": 52.14
+      },
+      "command_ms": 19.58,
+      "pulse_stop_ms": 19.07,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.3,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34074,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.12,
+        "inference_ms": 35.18,
+        "postprocess_ms": 0.78,
+        "total_ms": 52.14
+      },
+      "command_ms": 19.58,
+      "pulse_stop_ms": 19.07,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.409,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34074,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.12,
+        "inference_ms": 35.18,
+        "postprocess_ms": 0.78,
+        "total_ms": 52.14
+      },
+      "command_ms": 19.58,
+      "pulse_stop_ms": 19.07,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.518,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34074,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.12,
+        "inference_ms": 35.18,
+        "postprocess_ms": 0.78,
+        "total_ms": 52.14
+      },
+      "command_ms": 19.58,
+      "pulse_stop_ms": 19.07,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.628,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34080,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.13,
+        "inference_ms": 25.26,
+        "postprocess_ms": 0.84,
+        "total_ms": 40.29
+      },
+      "command_ms": 19.87,
+      "pulse_stop_ms": 19.02,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.734,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34080,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.13,
+        "inference_ms": 25.26,
+        "postprocess_ms": 0.84,
+        "total_ms": 40.29
+      },
+      "command_ms": 19.87,
+      "pulse_stop_ms": 19.02,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.84,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34080,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.13,
+        "inference_ms": 25.26,
+        "postprocess_ms": 0.84,
+        "total_ms": 40.29
+      },
+      "command_ms": 19.87,
+      "pulse_stop_ms": 19.02,
+      "fault": null
+    },
+    {
+      "elapsed_s": 18.947,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34080,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 52
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.13,
+        "inference_ms": 25.26,
+        "postprocess_ms": 0.84,
+        "total_ms": 40.29
+      },
+      "command_ms": 19.87,
+      "pulse_stop_ms": 19.02,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.056,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34086,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 113
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.05,
+        "inference_ms": 26.73,
+        "postprocess_ms": 0.81,
+        "total_ms": 39.66
+      },
+      "command_ms": 18.54,
+      "pulse_stop_ms": 17.53,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.162,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34086,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 113
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.05,
+        "inference_ms": 26.73,
+        "postprocess_ms": 0.81,
+        "total_ms": 39.66
+      },
+      "command_ms": 18.54,
+      "pulse_stop_ms": 17.53,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.273,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34086,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 113
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.05,
+        "inference_ms": 26.73,
+        "postprocess_ms": 0.81,
+        "total_ms": 39.66
+      },
+      "command_ms": 18.54,
+      "pulse_stop_ms": 17.53,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.384,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34086,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 113
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.05,
+        "inference_ms": 26.73,
+        "postprocess_ms": 0.81,
+        "total_ms": 39.66
+      },
+      "command_ms": 18.54,
+      "pulse_stop_ms": 17.53,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.495,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34093,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.85,
+        "inference_ms": 35.13,
+        "postprocess_ms": 0.84,
+        "total_ms": 54.89
+      },
+      "command_ms": 71.8,
+      "pulse_stop_ms": 17.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.605,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34093,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.85,
+        "inference_ms": 35.13,
+        "postprocess_ms": 0.84,
+        "total_ms": 54.89
+      },
+      "command_ms": 71.8,
+      "pulse_stop_ms": 17.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.72,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34093,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.85,
+        "inference_ms": 35.13,
+        "postprocess_ms": 0.84,
+        "total_ms": 54.89
+      },
+      "command_ms": 71.8,
+      "pulse_stop_ms": 17.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.836,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34093,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 58
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.85,
+        "inference_ms": 35.13,
+        "postprocess_ms": 0.84,
+        "total_ms": 54.89
+      },
+      "command_ms": 71.8,
+      "pulse_stop_ms": 17.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 19.944,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34099,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 35.72,
+        "postprocess_ms": 0.73,
+        "total_ms": 53.82
+      },
+      "command_ms": 21.53,
+      "pulse_stop_ms": 95.48,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.057,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34099,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 35.72,
+        "postprocess_ms": 0.73,
+        "total_ms": 53.82
+      },
+      "command_ms": 21.53,
+      "pulse_stop_ms": 95.48,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.162,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34099,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 55
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.32,
+        "inference_ms": 35.72,
+        "postprocess_ms": 0.73,
+        "total_ms": 53.82
+      },
+      "command_ms": 21.53,
+      "pulse_stop_ms": 95.48,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.273,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34105,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.92,
+        "inference_ms": 36.69,
+        "postprocess_ms": 0.82,
+        "total_ms": 53.49
+      },
+      "command_ms": 20.47,
+      "pulse_stop_ms": 19.66,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.383,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34105,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.92,
+        "inference_ms": 36.69,
+        "postprocess_ms": 0.82,
+        "total_ms": 53.49
+      },
+      "command_ms": 20.47,
+      "pulse_stop_ms": 19.66,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.495,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34105,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.92,
+        "inference_ms": 36.69,
+        "postprocess_ms": 0.82,
+        "total_ms": 53.49
+      },
+      "command_ms": 20.47,
+      "pulse_stop_ms": 19.66,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.602,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34105,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.92,
+        "inference_ms": 36.69,
+        "postprocess_ms": 0.82,
+        "total_ms": 53.49
+      },
+      "command_ms": 20.47,
+      "pulse_stop_ms": 19.66,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.71,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34109,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 165
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.47,
+        "inference_ms": 35.6,
+        "postprocess_ms": 0.33,
+        "total_ms": 53.43
+      },
+      "command_ms": 15.11,
+      "pulse_stop_ms": 20.38,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.817,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34112,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 138
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.31,
+        "inference_ms": 35.4,
+        "postprocess_ms": 0.83,
+        "total_ms": 49.65
+      },
+      "command_ms": 19.75,
+      "pulse_stop_ms": 24.15,
+      "fault": null
+    },
+    {
+      "elapsed_s": 20.93,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34112,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 138
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.31,
+        "inference_ms": 35.4,
+        "postprocess_ms": 0.83,
+        "total_ms": 49.65
+      },
+      "command_ms": 19.75,
+      "pulse_stop_ms": 24.15,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.044,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34112,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 138
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.31,
+        "inference_ms": 35.4,
+        "postprocess_ms": 0.83,
+        "total_ms": 49.65
+      },
+      "command_ms": 19.75,
+      "pulse_stop_ms": 24.15,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.154,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34117,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 134
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.79,
+        "inference_ms": 35.67,
+        "postprocess_ms": 0.88,
+        "total_ms": 53.41
+      },
+      "command_ms": 20.48,
+      "pulse_stop_ms": 22.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.272,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34117,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 134
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.79,
+        "inference_ms": 35.67,
+        "postprocess_ms": 0.88,
+        "total_ms": 53.41
+      },
+      "command_ms": 20.48,
+      "pulse_stop_ms": 22.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.388,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34117,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 134
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.79,
+        "inference_ms": 35.67,
+        "postprocess_ms": 0.88,
+        "total_ms": 53.41
+      },
+      "command_ms": 20.48,
+      "pulse_stop_ms": 22.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.497,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34122,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.76,
+        "inference_ms": 38.43,
+        "postprocess_ms": 0.78,
+        "total_ms": 54.02
+      },
+      "command_ms": 21.29,
+      "pulse_stop_ms": 16.09,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.612,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34122,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.76,
+        "inference_ms": 38.43,
+        "postprocess_ms": 0.78,
+        "total_ms": 54.02
+      },
+      "command_ms": 21.29,
+      "pulse_stop_ms": 16.09,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.72,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34122,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.76,
+        "inference_ms": 38.43,
+        "postprocess_ms": 0.78,
+        "total_ms": 54.02
+      },
+      "command_ms": 21.29,
+      "pulse_stop_ms": 16.09,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.832,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34128,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.35,
+        "inference_ms": 21.86,
+        "postprocess_ms": 0.79,
+        "total_ms": 36.06
+      },
+      "command_ms": 16.67,
+      "pulse_stop_ms": 21.66,
+      "fault": null
+    },
+    {
+      "elapsed_s": 21.939,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34128,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.35,
+        "inference_ms": 21.86,
+        "postprocess_ms": 0.79,
+        "total_ms": 36.06
+      },
+      "command_ms": 16.67,
+      "pulse_stop_ms": 21.66,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.051,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34128,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.35,
+        "inference_ms": 21.86,
+        "postprocess_ms": 0.79,
+        "total_ms": 36.06
+      },
+      "command_ms": 16.67,
+      "pulse_stop_ms": 21.66,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.161,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34128,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 46
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.35,
+        "inference_ms": 21.86,
+        "postprocess_ms": 0.79,
+        "total_ms": 36.06
+      },
+      "command_ms": 16.67,
+      "pulse_stop_ms": 21.66,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.305,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34135,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.93,
+        "inference_ms": 35.3,
+        "postprocess_ms": 0.85,
+        "total_ms": 53.16
+      },
+      "command_ms": 18.16,
+      "pulse_stop_ms": 44.61,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.418,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34135,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.93,
+        "inference_ms": 35.3,
+        "postprocess_ms": 0.85,
+        "total_ms": 53.16
+      },
+      "command_ms": 18.16,
+      "pulse_stop_ms": 44.61,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.529,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34135,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.93,
+        "inference_ms": 35.3,
+        "postprocess_ms": 0.85,
+        "total_ms": 53.16
+      },
+      "command_ms": 18.16,
+      "pulse_stop_ms": 44.61,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.639,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34135,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 59
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.93,
+        "inference_ms": 35.3,
+        "postprocess_ms": 0.85,
+        "total_ms": 53.16
+      },
+      "command_ms": 18.16,
+      "pulse_stop_ms": 44.61,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.744,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34141,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 104
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.27,
+        "inference_ms": 25.44,
+        "postprocess_ms": 0.93,
+        "total_ms": 37.71
+      },
+      "command_ms": 20.15,
+      "pulse_stop_ms": 18.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.854,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34141,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 104
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.27,
+        "inference_ms": 25.44,
+        "postprocess_ms": 0.93,
+        "total_ms": 37.71
+      },
+      "command_ms": 20.15,
+      "pulse_stop_ms": 18.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 22.966,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34141,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 104
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.27,
+        "inference_ms": 25.44,
+        "postprocess_ms": 0.93,
+        "total_ms": 37.71
+      },
+      "command_ms": 20.15,
+      "pulse_stop_ms": 18.95,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.075,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34147,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 43
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.8,
+        "inference_ms": 24.88,
+        "postprocess_ms": 0.87,
+        "total_ms": 38.62
+      },
+      "command_ms": 20.63,
+      "pulse_stop_ms": 68.42,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.184,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34147,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 43
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.8,
+        "inference_ms": 24.88,
+        "postprocess_ms": 0.87,
+        "total_ms": 38.62
+      },
+      "command_ms": 20.63,
+      "pulse_stop_ms": 68.42,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.301,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34147,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 43
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 12.8,
+        "inference_ms": 24.88,
+        "postprocess_ms": 0.87,
+        "total_ms": 38.62
+      },
+      "command_ms": 20.63,
+      "pulse_stop_ms": 68.42,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.411,
+      "state": "aligning",
+      "armed": true,
+      "frame_id": 34153,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.566019,
+        "x1_px": 513.55,
+        "y1_px": 157.58,
+        "x2_px": 592.0,
+        "y2_px": 227.09,
+        "horizontal_error": 0.727417,
+        "area_ratio": 0.023671
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.727417,
+        "area_ratio": 0.023671,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.3,
+        "state": "aligning",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.23,
+        "inference_ms": 30.17,
+        "postprocess_ms": 0.79,
+        "total_ms": 48.2
+      },
+      "command_ms": 22.15,
+      "pulse_stop_ms": 16.21,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.52,
+      "state": "aligning",
+      "armed": true,
+      "frame_id": 34153,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.566019,
+        "x1_px": 513.55,
+        "y1_px": 157.58,
+        "x2_px": 592.0,
+        "y2_px": 227.09,
+        "horizontal_error": 0.727417,
+        "area_ratio": 0.023671
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.727417,
+        "area_ratio": 0.023671,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.3,
+        "state": "aligning",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.23,
+        "inference_ms": 30.17,
+        "postprocess_ms": 0.79,
+        "total_ms": 48.2
+      },
+      "command_ms": 22.15,
+      "pulse_stop_ms": 16.21,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.628,
+      "state": "aligning",
+      "armed": true,
+      "frame_id": 34153,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.566019,
+        "x1_px": 513.55,
+        "y1_px": 157.58,
+        "x2_px": 592.0,
+        "y2_px": 227.09,
+        "horizontal_error": 0.727417,
+        "area_ratio": 0.023671
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.727417,
+        "area_ratio": 0.023671,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.3,
+        "state": "aligning",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.23,
+        "inference_ms": 30.17,
+        "postprocess_ms": 0.79,
+        "total_ms": 48.2
+      },
+      "command_ms": 22.15,
+      "pulse_stop_ms": 16.21,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.734,
+      "state": "aligning",
+      "armed": true,
+      "frame_id": 34153,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.566019,
+        "x1_px": 513.55,
+        "y1_px": 157.58,
+        "x2_px": 592.0,
+        "y2_px": 227.09,
+        "horizontal_error": 0.727417,
+        "area_ratio": 0.023671
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.727417,
+        "area_ratio": 0.023671,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.3,
+        "state": "aligning",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.23,
+        "inference_ms": 30.17,
+        "postprocess_ms": 0.79,
+        "total_ms": 48.2
+      },
+      "command_ms": 22.15,
+      "pulse_stop_ms": 16.21,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.846,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34158,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 19.71,
+        "inference_ms": 25.52,
+        "postprocess_ms": 0.8,
+        "total_ms": 46.09
+      },
+      "command_ms": 17.79,
+      "pulse_stop_ms": 21.55,
+      "fault": null
+    },
+    {
+      "elapsed_s": 23.959,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34158,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 19.71,
+        "inference_ms": 25.52,
+        "postprocess_ms": 0.8,
+        "total_ms": 46.09
+      },
+      "command_ms": 17.79,
+      "pulse_stop_ms": 21.55,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.071,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34158,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 19.71,
+        "inference_ms": 25.52,
+        "postprocess_ms": 0.8,
+        "total_ms": 46.09
+      },
+      "command_ms": 17.79,
+      "pulse_stop_ms": 21.55,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.183,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34158,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 19.71,
+        "inference_ms": 25.52,
+        "postprocess_ms": 0.8,
+        "total_ms": 46.09
+      },
+      "command_ms": 17.79,
+      "pulse_stop_ms": 21.55,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.295,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34164,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 149
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.5,
+        "inference_ms": 26.68,
+        "postprocess_ms": 0.83,
+        "total_ms": 45.08
+      },
+      "command_ms": 21.21,
+      "pulse_stop_ms": 21.65,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.401,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34164,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 149
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.5,
+        "inference_ms": 26.68,
+        "postprocess_ms": 0.83,
+        "total_ms": 45.08
+      },
+      "command_ms": 21.21,
+      "pulse_stop_ms": 21.65,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.515,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34164,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 149
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.5,
+        "inference_ms": 26.68,
+        "postprocess_ms": 0.83,
+        "total_ms": 45.08
+      },
+      "command_ms": 21.21,
+      "pulse_stop_ms": 21.65,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.626,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34164,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 149
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.5,
+        "inference_ms": 26.68,
+        "postprocess_ms": 0.83,
+        "total_ms": 45.08
+      },
+      "command_ms": 21.21,
+      "pulse_stop_ms": 21.65,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.737,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34170,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 41
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.89,
+        "inference_ms": 25.14,
+        "postprocess_ms": 0.86,
+        "total_ms": 39.95
+      },
+      "command_ms": 20.34,
+      "pulse_stop_ms": 104.28,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.848,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34170,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 41
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.89,
+        "inference_ms": 25.14,
+        "postprocess_ms": 0.86,
+        "total_ms": 39.95
+      },
+      "command_ms": 20.34,
+      "pulse_stop_ms": 104.28,
+      "fault": null
+    },
+    {
+      "elapsed_s": 24.961,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 34170,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 41
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.89,
+        "inference_ms": 25.14,
+        "postprocess_ms": 0.86,
+        "total_ms": 39.95
+      },
+      "command_ms": 20.34,
+      "pulse_stop_ms": 104.28,
+      "fault": null
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+<mujoco model="frontier_rover">
+  <compiler angle="radian" autolimits="true"/>
+  <option timestep="0.002" integrator="implicitfast" gravity="0 0 -9.81"/>
+
+  <default>
+    <joint damping="0.005" armature="0.001"/>
+    <geom condim="4" friction="1.0 0.01 0.001" solref="0.01 1"/>
+    <general ctrllimited="true" ctrlrange="-1 1" forcelimited="true" forcerange="-2 2"/>
+  </default>
+
+  <worldbody>
+    <light pos="0 0 3"/>
+    <geom name="floor" type="plane" size="4 4 0.1" rgba="0.18 0.20 0.19 1"/>
+
+    <body name="rover" pos="0 0 0.065">
+      <freejoint/>
+      <!-- Mass, wheel geometry and inertia are initial hypotheses awaiting measurement. -->
+      <geom name="chassis" type="box" size="0.128 0.075 0.012" mass="0.8" rgba="0.15 0.32 0.42 1"/>
+      <site name="imu" pos="0 0 0.02" size="0.005"/>
+
+      <body name="front_left" pos="0.09 0.087 -0.025">
+        <joint name="front_left_joint" type="hinge" axis="0 1 0"/>
+        <geom type="cylinder" size="0.0325 0.013" euler="1.570796 0 0" mass="0.05" rgba="0.08 0.08 0.08 1"/>
+      </body>
+      <body name="back_left" pos="-0.09 0.087 -0.025">
+        <joint name="back_left_joint" type="hinge" axis="0 1 0"/>
+        <geom type="cylinder" size="0.0325 0.013" euler="1.570796 0 0" mass="0.05" rgba="0.08 0.08 0.08 1"/>
+      </body>
+      <body name="front_right" pos="0.09 -0.087 -0.025">
+        <joint name="front_right_joint" type="hinge" axis="0 1 0"/>
+        <geom type="cylinder" size="0.0325 0.013" euler="1.570796 0 0" mass="0.05" rgba="0.08 0.08 0.08 1"/>
+      </body>
+      <body name="back_right" pos="-0.09 -0.087 -0.025">
+        <joint name="back_right_joint" type="hinge" axis="0 1 0"/>
+        <geom type="cylinder" size="0.0325 0.013" euler="1.570796 0 0" mass="0.05" rgba="0.08 0.08 0.08 1"/>
+      </body>
+    </body>
+  </worldbody>
+
+  <actuator>
+    <!-- Affine force includes fitted velocity feedback, a simple DC-motor model. -->
+    <general name="front_left_motor" joint="front_left_joint" gear="1"
+             gaintype="fixed" gainprm="0.87" biastype="affine" biasprm="0 0 -0.004"/>
+    <general name="back_left_motor" joint="back_left_joint" gear="1"
+             gaintype="fixed" gainprm="0.87" biastype="affine" biasprm="0 0 -0.004"/>
+    <general name="front_right_motor" joint="front_right_joint" gear="1"
+             gaintype="fixed" gainprm="0.87" biastype="affine" biasprm="0 0 -0.004"/>
+    <general name="back_right_motor" joint="back_right_joint" gear="1"
+             gaintype="fixed" gainprm="0.87" biastype="affine" biasprm="0 0 -0.004"/>
+  </actuator>
+
+  <sensor>
+    <framepos name="position" objtype="body" objname="rover"/>
+    <framequat name="orientation" objtype="body" objname="rover"/>
+    <gyro name="yaw_rate_sensor" site="imu"/>
+    <accelerometer name="acceleration_sensor" site="imu"/>
+  </sensor>
+</mujoco>

@@ -1,0 +1,36 @@
+{
+  "source": "artifacts/physical/2026-09-06-imu-motion.csv",
+  "sample_count": 530,
+  "gyro_bias_dps": {
+    "gx_dps": 0.6994656100000001,
+    "gy_dps": 1.27641222,
+    "gz_dps": 0.61755726
+  },
+  "yaw_axis": "gy_dps",
+  "observed_final_degrees": {
+    "turn_left": 127.73420280739727,
+    "turn_right": -112.28877342922617
+  },
+  "input": {
+    "turn_left": {
+      "forward": 0.0,
+      "turn": -0.35,
+      "duration_s": 0.5953400000000002
+    },
+    "turn_right": {
+      "forward": 0.0,
+      "turn": 0.35,
+      "duration_s": 0.5967029999999998
+    }
+  },
+  "fit": {
+    "left_turn_gain": 0.9,
+    "right_turn_gain": 0.84,
+    "velocity_feedback": 0.004,
+    "simulated_final_degrees": {
+      "turn_left": 126.3165249012266,
+      "turn_right": -112.38191171645848
+    },
+    "trajectory_rmse_degrees": 2.33142652088156
+  }
+}

@@ -1,0 +1,24 @@
+[Unit]
+Description=Frontier Rover browser control
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=rover
+Group=rover
+SupplementaryGroups=video render
+WorkingDirectory=/home/rover/frontier-rover/software/pi
+ExecStart=/usr/bin/python3 /home/rover/frontier-rover/software/pi/remote_control.py
+Restart=on-failure
+RestartSec=2
+KillSignal=SIGINT
+TimeoutStopSec=3
+NoNewPrivileges=true
+RuntimeDirectory=frontier-rover
+RuntimeDirectoryMode=0750
+StateDirectory=frontier-rover
+StateDirectoryMode=0750
+
+[Install]
+WantedBy=multi-user.target

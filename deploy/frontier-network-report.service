@@ -1,0 +1,12 @@
+[Unit]
+Description=Record Frontier rover network health after boot
+After=network-online.target frontier-network-bootstrap.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/frontier-network-report.sh
+TimeoutStartSec=3min
+
+[Install]
+WantedBy=multi-user.target

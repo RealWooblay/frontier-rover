@@ -1,0 +1,3756 @@
+{
+  "recorded_at": "2026-09-06T05:20:21.943172+00:00",
+  "service_url": "http://192.168.55.1:8771",
+  "target": "orange",
+  "time_limit_s": 90.0,
+  "outcome": "fault",
+  "state_counts": {
+    "armed": 5,
+    "stale_frame": 31,
+    "approaching": 7,
+    "aligning": 1,
+    "reacquiring": 32,
+    "searching": 47,
+    "fault": 1
+  },
+  "frames_observed": 29,
+  "service_mission_state_counts": {
+    "approaching": 2,
+    "stale_frame": 6,
+    "aligning": 1,
+    "reacquiring": 8,
+    "searching": 12
+  },
+  "maximum_area_ratio": 0.103925,
+  "maximum_absolute_horizontal_error": 0.838184,
+  "final": {
+    "state": "disarmed",
+    "armed": false,
+    "reason": "operator disarm",
+    "fault": "orange not found after one complete heading scan",
+    "target": "orange",
+    "confidence": 0.2,
+    "controller_config": {
+      "target": "orange",
+      "confidence": 0.2,
+      "target_area_ratio": 0.143,
+      "area_tolerance": 0.007,
+      "alignment_tolerance": 0.4,
+      "turn_gain": 0.35,
+      "max_forward": 0.7,
+      "max_turn": 0.35,
+      "search_turn": 0.35,
+      "min_turn": 0.3,
+      "max_frame_age_ms": 300,
+      "turn_pulse_ms": 70,
+      "alignment_pulse_ms": 30,
+      "reacquire_hold_ms": 1500,
+      "search_step_degrees": 30.0,
+      "camera_half_fov_degrees": 33.0,
+      "approach_pulse_ms": 300,
+      "maximum_search_steps": 12
+    },
+    "detector_ready": true,
+    "pi_url": "http://127.0.0.1:8765",
+    "frame_id": 56528,
+    "frames_processed": 33,
+    "mission_frames": 29,
+    "mission_state_counts": {
+      "approaching": 2,
+      "stale_frame": 6,
+      "aligning": 1,
+      "reacquiring": 8,
+      "searching": 12
+    },
+    "search_steps": 12,
+    "detection": null,
+    "observation": {
+      "target_visible": false,
+      "horizontal_error": 0.0,
+      "area_ratio": 0.0,
+      "frame_age_ms": 139
+    },
+    "action": {
+      "forward": 0.0,
+      "turn": 0.0,
+      "state": "disarmed"
+    },
+    "perception_timing": {
+      "preprocess_ms": 16.83,
+      "inference_ms": 36.44,
+      "postprocess_ms": 0.94,
+      "total_ms": 54.3
+    },
+    "command_ms": 640.74,
+    "pulse_stop_ms": null,
+    "updated_at": "2026-03-17T09:30:20.909861+00:00"
+  },
+  "samples": [
+    {
+      "elapsed_s": 0.008,
+      "state": "armed",
+      "armed": true,
+      "frame_id": -1,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.405449,
+        "x1_px": 388.94,
+        "y1_px": 176.11,
+        "x2_px": 473.12,
+        "y2_px": 251.75,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "disarmed"
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.97,
+        "inference_ms": 36.01,
+        "postprocess_ms": 2.01,
+        "total_ms": 55.04
+      },
+      "command_ms": null,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.118,
+      "state": "armed",
+      "armed": true,
+      "frame_id": -1,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.405449,
+        "x1_px": 388.94,
+        "y1_px": 176.11,
+        "x2_px": 473.12,
+        "y2_px": 251.75,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "disarmed"
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.97,
+        "inference_ms": 36.01,
+        "postprocess_ms": 2.01,
+        "total_ms": 55.04
+      },
+      "command_ms": null,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.231,
+      "state": "armed",
+      "armed": true,
+      "frame_id": -1,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.405449,
+        "x1_px": 388.94,
+        "y1_px": 176.11,
+        "x2_px": 473.12,
+        "y2_px": 251.75,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "disarmed"
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.97,
+        "inference_ms": 36.01,
+        "postprocess_ms": 2.01,
+        "total_ms": 55.04
+      },
+      "command_ms": null,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.344,
+      "state": "armed",
+      "armed": true,
+      "frame_id": -1,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.405449,
+        "x1_px": 388.94,
+        "y1_px": 176.11,
+        "x2_px": 473.12,
+        "y2_px": 251.75,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "disarmed"
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.97,
+        "inference_ms": 36.01,
+        "postprocess_ms": 2.01,
+        "total_ms": 55.04
+      },
+      "command_ms": null,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.455,
+      "state": "armed",
+      "armed": true,
+      "frame_id": -1,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.405449,
+        "x1_px": 388.94,
+        "y1_px": 176.11,
+        "x2_px": 473.12,
+        "y2_px": 251.75,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.346973,
+        "area_ratio": 0.027639,
+        "frame_age_ms": 156
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "disarmed"
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.97,
+        "inference_ms": 36.01,
+        "postprocess_ms": 2.01,
+        "total_ms": 55.04
+      },
+      "command_ms": null,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.565,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56339,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.472683,
+        "x1_px": 388.62,
+        "y1_px": 175.16,
+        "x2_px": 472.44,
+        "y2_px": 251.62,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817,
+        "frame_age_ms": 325
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.68,
+        "inference_ms": 35.4,
+        "postprocess_ms": 1.53,
+        "total_ms": 54.65
+      },
+      "command_ms": 19.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.684,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56339,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.472683,
+        "x1_px": 388.62,
+        "y1_px": 175.16,
+        "x2_px": 472.44,
+        "y2_px": 251.62,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817,
+        "frame_age_ms": 325
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.68,
+        "inference_ms": 35.4,
+        "postprocess_ms": 1.53,
+        "total_ms": 54.65
+      },
+      "command_ms": 19.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.798,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56339,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.472683,
+        "x1_px": 388.62,
+        "y1_px": 175.16,
+        "x2_px": 472.44,
+        "y2_px": 251.62,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817,
+        "frame_age_ms": 325
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.68,
+        "inference_ms": 35.4,
+        "postprocess_ms": 1.53,
+        "total_ms": 54.65
+      },
+      "command_ms": 19.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 0.91,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56339,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.472683,
+        "x1_px": 388.62,
+        "y1_px": 175.16,
+        "x2_px": 472.44,
+        "y2_px": 251.62,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817,
+        "frame_age_ms": 325
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.68,
+        "inference_ms": 35.4,
+        "postprocess_ms": 1.53,
+        "total_ms": 54.65
+      },
+      "command_ms": 19.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.022,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56339,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.472683,
+        "x1_px": 388.62,
+        "y1_px": 175.16,
+        "x2_px": 472.44,
+        "y2_px": 251.62,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": 0.34541,
+        "area_ratio": 0.027817,
+        "frame_age_ms": 325
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.68,
+        "inference_ms": 35.4,
+        "postprocess_ms": 1.53,
+        "total_ms": 54.65
+      },
+      "command_ms": 19.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.131,
+      "state": "approaching",
+      "armed": true,
+      "frame_id": 56344,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.550608,
+        "x1_px": 138.0,
+        "y1_px": 175.88,
+        "x2_px": 257.81,
+        "y2_px": 279.84,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066,
+        "frame_age_ms": 76
+      },
+      "action": {
+        "forward": 0.4353412587412587,
+        "turn": -0.13354005,
+        "state": "approaching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.74,
+        "inference_ms": 30.87,
+        "postprocess_ms": 1.54,
+        "total_ms": 49.17
+      },
+      "command_ms": 20.52,
+      "pulse_stop_ms": 38.62,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.245,
+      "state": "approaching",
+      "armed": true,
+      "frame_id": 56344,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.550608,
+        "x1_px": 138.0,
+        "y1_px": 175.88,
+        "x2_px": 257.81,
+        "y2_px": 279.84,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066,
+        "frame_age_ms": 76
+      },
+      "action": {
+        "forward": 0.4353412587412587,
+        "turn": -0.13354005,
+        "state": "approaching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.74,
+        "inference_ms": 30.87,
+        "postprocess_ms": 1.54,
+        "total_ms": 49.17
+      },
+      "command_ms": 20.52,
+      "pulse_stop_ms": 38.62,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.356,
+      "state": "approaching",
+      "armed": true,
+      "frame_id": 56344,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.550608,
+        "x1_px": 138.0,
+        "y1_px": 175.88,
+        "x2_px": 257.81,
+        "y2_px": 279.84,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066,
+        "frame_age_ms": 76
+      },
+      "action": {
+        "forward": 0.4353412587412587,
+        "turn": -0.13354005,
+        "state": "approaching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.74,
+        "inference_ms": 30.87,
+        "postprocess_ms": 1.54,
+        "total_ms": 49.17
+      },
+      "command_ms": 20.52,
+      "pulse_stop_ms": 38.62,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.463,
+      "state": "approaching",
+      "armed": true,
+      "frame_id": 56344,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.550608,
+        "x1_px": 138.0,
+        "y1_px": 175.88,
+        "x2_px": 257.81,
+        "y2_px": 279.84,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066,
+        "frame_age_ms": 76
+      },
+      "action": {
+        "forward": 0.4353412587412587,
+        "turn": -0.13354005,
+        "state": "approaching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.74,
+        "inference_ms": 30.87,
+        "postprocess_ms": 1.54,
+        "total_ms": 49.17
+      },
+      "command_ms": 20.52,
+      "pulse_stop_ms": 38.62,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.575,
+      "state": "approaching",
+      "armed": true,
+      "frame_id": 56344,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.550608,
+        "x1_px": 138.0,
+        "y1_px": 175.88,
+        "x2_px": 257.81,
+        "y2_px": 279.84,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066,
+        "frame_age_ms": 76
+      },
+      "action": {
+        "forward": 0.4353412587412587,
+        "turn": -0.13354005,
+        "state": "approaching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.74,
+        "inference_ms": 30.87,
+        "postprocess_ms": 1.54,
+        "total_ms": 49.17
+      },
+      "command_ms": 20.52,
+      "pulse_stop_ms": 38.62,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.686,
+      "state": "approaching",
+      "armed": true,
+      "frame_id": 56344,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.550608,
+        "x1_px": 138.0,
+        "y1_px": 175.88,
+        "x2_px": 257.81,
+        "y2_px": 279.84,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066,
+        "frame_age_ms": 76
+      },
+      "action": {
+        "forward": 0.4353412587412587,
+        "turn": -0.13354005,
+        "state": "approaching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.74,
+        "inference_ms": 30.87,
+        "postprocess_ms": 1.54,
+        "total_ms": 49.17
+      },
+      "command_ms": 20.52,
+      "pulse_stop_ms": 38.62,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.797,
+      "state": "approaching",
+      "armed": true,
+      "frame_id": 56344,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.550608,
+        "x1_px": 138.0,
+        "y1_px": 175.88,
+        "x2_px": 257.81,
+        "y2_px": 279.84,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.381543,
+        "area_ratio": 0.054066,
+        "frame_age_ms": 76
+      },
+      "action": {
+        "forward": 0.4353412587412587,
+        "turn": -0.13354005,
+        "state": "approaching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.74,
+        "inference_ms": 30.87,
+        "postprocess_ms": 1.54,
+        "total_ms": 49.17
+      },
+      "command_ms": 20.52,
+      "pulse_stop_ms": 38.62,
+      "fault": null
+    },
+    {
+      "elapsed_s": 1.915,
+      "state": "aligning",
+      "armed": true,
+      "frame_id": 56349,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.437823,
+        "x1_px": 0.0,
+        "y1_px": 202.19,
+        "x2_px": 103.56,
+        "y2_px": 308.41,
+        "horizontal_error": -0.838184,
+        "area_ratio": 0.047744
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.838184,
+        "area_ratio": 0.047744,
+        "frame_age_ms": 269
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.3,
+        "state": "aligning",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.77,
+        "inference_ms": 35.56,
+        "postprocess_ms": 1.6,
+        "total_ms": 53.97
+      },
+      "command_ms": 619.81,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.027,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56362,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 176
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.9,
+        "inference_ms": 33.72,
+        "postprocess_ms": 0.32,
+        "total_ms": 50.98
+      },
+      "command_ms": 17.24,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.142,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56362,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 176
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.9,
+        "inference_ms": 33.72,
+        "postprocess_ms": 0.32,
+        "total_ms": 50.98
+      },
+      "command_ms": 17.24,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.253,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56367,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.7,
+        "inference_ms": 36.49,
+        "postprocess_ms": 0.68,
+        "total_ms": 53.93
+      },
+      "command_ms": 91.52,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.365,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56367,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.7,
+        "inference_ms": 36.49,
+        "postprocess_ms": 0.68,
+        "total_ms": 53.93
+      },
+      "command_ms": 91.52,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.487,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56367,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 62
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.7,
+        "inference_ms": 36.49,
+        "postprocess_ms": 0.68,
+        "total_ms": 53.93
+      },
+      "command_ms": 91.52,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.6,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56372,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.03,
+        "inference_ms": 39.44,
+        "postprocess_ms": 0.72,
+        "total_ms": 57.26
+      },
+      "command_ms": 18.39,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.712,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56372,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.03,
+        "inference_ms": 39.44,
+        "postprocess_ms": 0.72,
+        "total_ms": 57.26
+      },
+      "command_ms": 18.39,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.828,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56372,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.03,
+        "inference_ms": 39.44,
+        "postprocess_ms": 0.72,
+        "total_ms": 57.26
+      },
+      "command_ms": 18.39,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 2.942,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56372,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.03,
+        "inference_ms": 39.44,
+        "postprocess_ms": 0.72,
+        "total_ms": 57.26
+      },
+      "command_ms": 18.39,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.053,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56372,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.03,
+        "inference_ms": 39.44,
+        "postprocess_ms": 0.72,
+        "total_ms": 57.26
+      },
+      "command_ms": 18.39,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.165,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56372,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.03,
+        "inference_ms": 39.44,
+        "postprocess_ms": 0.72,
+        "total_ms": 57.26
+      },
+      "command_ms": 18.39,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.279,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56372,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.03,
+        "inference_ms": 39.44,
+        "postprocess_ms": 0.72,
+        "total_ms": 57.26
+      },
+      "command_ms": 18.39,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.388,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56372,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 64
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.03,
+        "inference_ms": 39.44,
+        "postprocess_ms": 0.72,
+        "total_ms": 57.26
+      },
+      "command_ms": 18.39,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.504,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56376,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 125
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.28,
+        "inference_ms": 35.94,
+        "postprocess_ms": 0.91,
+        "total_ms": 54.23
+      },
+      "command_ms": 606.21,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.615,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56376,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 125
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.28,
+        "inference_ms": 35.94,
+        "postprocess_ms": 0.91,
+        "total_ms": 54.23
+      },
+      "command_ms": 606.21,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.727,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56376,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 125
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.28,
+        "inference_ms": 35.94,
+        "postprocess_ms": 0.91,
+        "total_ms": 54.23
+      },
+      "command_ms": 606.21,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.832,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56376,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 125
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.28,
+        "inference_ms": 35.94,
+        "postprocess_ms": 0.91,
+        "total_ms": 54.23
+      },
+      "command_ms": 606.21,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 3.942,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56376,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 125
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.28,
+        "inference_ms": 35.94,
+        "postprocess_ms": 0.91,
+        "total_ms": 54.23
+      },
+      "command_ms": 606.21,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.052,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56376,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 125
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.28,
+        "inference_ms": 35.94,
+        "postprocess_ms": 0.91,
+        "total_ms": 54.23
+      },
+      "command_ms": 606.21,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.164,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56387,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 91
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.01,
+        "inference_ms": 37.73,
+        "postprocess_ms": 0.8,
+        "total_ms": 55.62
+      },
+      "command_ms": 585.61,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.278,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56393,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 350
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.51,
+        "inference_ms": 36.29,
+        "postprocess_ms": 0.95,
+        "total_ms": 53.84
+      },
+      "command_ms": 15.95,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.396,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56393,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 350
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.51,
+        "inference_ms": 36.29,
+        "postprocess_ms": 0.95,
+        "total_ms": 53.84
+      },
+      "command_ms": 15.95,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.508,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56393,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 350
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.51,
+        "inference_ms": 36.29,
+        "postprocess_ms": 0.95,
+        "total_ms": 53.84
+      },
+      "command_ms": 15.95,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.62,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56393,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 350
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.51,
+        "inference_ms": 36.29,
+        "postprocess_ms": 0.95,
+        "total_ms": 53.84
+      },
+      "command_ms": 15.95,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.731,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56393,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 350
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.51,
+        "inference_ms": 36.29,
+        "postprocess_ms": 0.95,
+        "total_ms": 53.84
+      },
+      "command_ms": 15.95,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.843,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56393,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 350
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.51,
+        "inference_ms": 36.29,
+        "postprocess_ms": 0.95,
+        "total_ms": 53.84
+      },
+      "command_ms": 15.95,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 4.953,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56393,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 350
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.51,
+        "inference_ms": 36.29,
+        "postprocess_ms": 0.95,
+        "total_ms": 53.84
+      },
+      "command_ms": 15.95,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.067,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56400,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 112
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.55,
+        "inference_ms": 36.37,
+        "postprocess_ms": 2.53,
+        "total_ms": 55.54
+      },
+      "command_ms": 599.71,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.177,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56406,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 391
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.12,
+        "inference_ms": 36.2,
+        "postprocess_ms": 0.88,
+        "total_ms": 54.29
+      },
+      "command_ms": 19.86,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.289,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56406,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 391
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.12,
+        "inference_ms": 36.2,
+        "postprocess_ms": 0.88,
+        "total_ms": 54.29
+      },
+      "command_ms": 19.86,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.398,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56406,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 391
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.12,
+        "inference_ms": 36.2,
+        "postprocess_ms": 0.88,
+        "total_ms": 54.29
+      },
+      "command_ms": 19.86,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.511,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56406,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 391
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.12,
+        "inference_ms": 36.2,
+        "postprocess_ms": 0.88,
+        "total_ms": 54.29
+      },
+      "command_ms": 19.86,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.623,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56406,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 391
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.12,
+        "inference_ms": 36.2,
+        "postprocess_ms": 0.88,
+        "total_ms": 54.29
+      },
+      "command_ms": 19.86,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.73,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56412,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.62,
+        "inference_ms": 36.42,
+        "postprocess_ms": 0.9,
+        "total_ms": 54.03
+      },
+      "command_ms": 576.34,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.842,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56412,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.62,
+        "inference_ms": 36.42,
+        "postprocess_ms": 0.9,
+        "total_ms": 54.03
+      },
+      "command_ms": 576.34,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 5.955,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56412,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.62,
+        "inference_ms": 36.42,
+        "postprocess_ms": 0.9,
+        "total_ms": 54.03
+      },
+      "command_ms": 576.34,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.065,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56412,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.62,
+        "inference_ms": 36.42,
+        "postprocess_ms": 0.9,
+        "total_ms": 54.03
+      },
+      "command_ms": 576.34,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.177,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56412,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.62,
+        "inference_ms": 36.42,
+        "postprocess_ms": 0.9,
+        "total_ms": 54.03
+      },
+      "command_ms": 576.34,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.289,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56412,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.62,
+        "inference_ms": 36.42,
+        "postprocess_ms": 0.9,
+        "total_ms": 54.03
+      },
+      "command_ms": 576.34,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.402,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56412,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 66
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.62,
+        "inference_ms": 36.42,
+        "postprocess_ms": 0.9,
+        "total_ms": 54.03
+      },
+      "command_ms": 576.34,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.511,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.625,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.737,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.849,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 6.962,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.073,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.184,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.297,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.406,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56421,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 119
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 15.98,
+        "inference_ms": 36.19,
+        "postprocess_ms": 0.94,
+        "total_ms": 53.2
+      },
+      "command_ms": 707.3,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.523,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56431,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 222
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 14.16,
+        "inference_ms": 36.12,
+        "postprocess_ms": 0.92,
+        "total_ms": 51.3
+      },
+      "command_ms": 913.27,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.642,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56443,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 410
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.92,
+        "inference_ms": 25.71,
+        "postprocess_ms": 0.84,
+        "total_ms": 45.56
+      },
+      "command_ms": 20.55,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.752,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56443,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 410
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.92,
+        "inference_ms": 25.71,
+        "postprocess_ms": 0.84,
+        "total_ms": 45.56
+      },
+      "command_ms": 20.55,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.86,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56443,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 410
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.92,
+        "inference_ms": 25.71,
+        "postprocess_ms": 0.84,
+        "total_ms": 45.56
+      },
+      "command_ms": 20.55,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 7.969,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56443,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 410
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.92,
+        "inference_ms": 25.71,
+        "postprocess_ms": 0.84,
+        "total_ms": 45.56
+      },
+      "command_ms": 20.55,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.077,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56443,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 410
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.92,
+        "inference_ms": 25.71,
+        "postprocess_ms": 0.84,
+        "total_ms": 45.56
+      },
+      "command_ms": 20.55,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.188,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56443,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 410
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.92,
+        "inference_ms": 25.71,
+        "postprocess_ms": 0.84,
+        "total_ms": 45.56
+      },
+      "command_ms": 20.55,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.298,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56449,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 95
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.07,
+        "inference_ms": 36.27,
+        "postprocess_ms": 0.72,
+        "total_ms": 54.14
+      },
+      "command_ms": 641.41,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.408,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56449,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 95
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.07,
+        "inference_ms": 36.27,
+        "postprocess_ms": 0.72,
+        "total_ms": 54.14
+      },
+      "command_ms": 641.41,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.519,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56449,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 95
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.07,
+        "inference_ms": 36.27,
+        "postprocess_ms": 0.72,
+        "total_ms": 54.14
+      },
+      "command_ms": 641.41,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.631,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56449,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 95
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.07,
+        "inference_ms": 36.27,
+        "postprocess_ms": 0.72,
+        "total_ms": 54.14
+      },
+      "command_ms": 641.41,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.744,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56449,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 95
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.07,
+        "inference_ms": 36.27,
+        "postprocess_ms": 0.72,
+        "total_ms": 54.14
+      },
+      "command_ms": 641.41,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.851,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56449,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 95
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.07,
+        "inference_ms": 36.27,
+        "postprocess_ms": 0.72,
+        "total_ms": 54.14
+      },
+      "command_ms": 641.41,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 8.96,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56449,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 95
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.07,
+        "inference_ms": 36.27,
+        "postprocess_ms": 0.72,
+        "total_ms": 54.14
+      },
+      "command_ms": 641.41,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.07,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56460,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 83
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.47,
+        "inference_ms": 36.38,
+        "postprocess_ms": 0.99,
+        "total_ms": 50.94
+      },
+      "command_ms": 699.9,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.181,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56460,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 83
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.47,
+        "inference_ms": 36.38,
+        "postprocess_ms": 0.99,
+        "total_ms": 50.94
+      },
+      "command_ms": 699.9,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.293,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56460,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 83
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.47,
+        "inference_ms": 36.38,
+        "postprocess_ms": 0.99,
+        "total_ms": 50.94
+      },
+      "command_ms": 699.9,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.405,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56460,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 83
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.47,
+        "inference_ms": 36.38,
+        "postprocess_ms": 0.99,
+        "total_ms": 50.94
+      },
+      "command_ms": 699.9,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.518,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56460,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 83
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.47,
+        "inference_ms": 36.38,
+        "postprocess_ms": 0.99,
+        "total_ms": 50.94
+      },
+      "command_ms": 699.9,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.628,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56460,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 83
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.47,
+        "inference_ms": 36.38,
+        "postprocess_ms": 0.99,
+        "total_ms": 50.94
+      },
+      "command_ms": 699.9,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.737,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56471,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 106
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.63,
+        "inference_ms": 30.62,
+        "postprocess_ms": 0.93,
+        "total_ms": 43.27
+      },
+      "command_ms": 595.51,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.85,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56471,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 106
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.63,
+        "inference_ms": 30.62,
+        "postprocess_ms": 0.93,
+        "total_ms": 43.27
+      },
+      "command_ms": 595.51,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 9.962,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56471,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 106
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.63,
+        "inference_ms": 30.62,
+        "postprocess_ms": 0.93,
+        "total_ms": 43.27
+      },
+      "command_ms": 595.51,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.07,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56471,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 106
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.63,
+        "inference_ms": 30.62,
+        "postprocess_ms": 0.93,
+        "total_ms": 43.27
+      },
+      "command_ms": 595.51,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.177,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56471,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 106
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.63,
+        "inference_ms": 30.62,
+        "postprocess_ms": 0.93,
+        "total_ms": 43.27
+      },
+      "command_ms": 595.51,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.285,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56471,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 106
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.63,
+        "inference_ms": 30.62,
+        "postprocess_ms": 0.93,
+        "total_ms": 43.27
+      },
+      "command_ms": 595.51,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.393,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56479,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 229
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 18.31,
+        "inference_ms": 25.07,
+        "postprocess_ms": 0.96,
+        "total_ms": 44.44
+      },
+      "command_ms": 606.82,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.506,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56486,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.794385,
+        "x1_px": 0.19,
+        "y1_px": 241.31,
+        "x2_px": 211.5,
+        "y2_px": 354.62,
+        "horizontal_error": -0.669238,
+        "area_ratio": 0.103925
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.669238,
+        "area_ratio": 0.103925,
+        "frame_age_ms": 426
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.64,
+        "inference_ms": 29.96,
+        "postprocess_ms": 2.01,
+        "total_ms": 43.64
+      },
+      "command_ms": 22.1,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.617,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56486,
+      "detection": {
+        "class_id": 49,
+        "class_name": "orange",
+        "confidence": 0.794385,
+        "x1_px": 0.19,
+        "y1_px": 241.31,
+        "x2_px": 211.5,
+        "y2_px": 354.62,
+        "horizontal_error": -0.669238,
+        "area_ratio": 0.103925
+      },
+      "observation": {
+        "target_visible": true,
+        "horizontal_error": -0.669238,
+        "area_ratio": 0.103925,
+        "frame_age_ms": 426
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 11.64,
+        "inference_ms": 29.96,
+        "postprocess_ms": 2.01,
+        "total_ms": 43.64
+      },
+      "command_ms": 22.1,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.729,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56493,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.98,
+        "inference_ms": 28.61,
+        "postprocess_ms": 0.37,
+        "total_ms": 46.02
+      },
+      "command_ms": 101.22,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.849,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56493,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 48
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.98,
+        "inference_ms": 28.61,
+        "postprocess_ms": 0.37,
+        "total_ms": 46.02
+      },
+      "command_ms": 101.22,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 10.961,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56498,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.05,
+        "inference_ms": 30.92,
+        "postprocess_ms": 0.36,
+        "total_ms": 48.38
+      },
+      "command_ms": 19.18,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.068,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56498,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.05,
+        "inference_ms": 30.92,
+        "postprocess_ms": 0.36,
+        "total_ms": 48.38
+      },
+      "command_ms": 19.18,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.182,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56498,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 56
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 17.05,
+        "inference_ms": 30.92,
+        "postprocess_ms": 0.36,
+        "total_ms": 48.38
+      },
+      "command_ms": 19.18,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.293,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56503,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 19.59,
+        "inference_ms": 28.39,
+        "postprocess_ms": 0.82,
+        "total_ms": 48.87
+      },
+      "command_ms": 17.32,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.403,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56503,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 19.59,
+        "inference_ms": 28.39,
+        "postprocess_ms": 0.82,
+        "total_ms": 48.87
+      },
+      "command_ms": 17.32,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.545,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56507,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.17,
+        "inference_ms": 35.95,
+        "postprocess_ms": 0.85,
+        "total_ms": 53.06
+      },
+      "command_ms": 25.76,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.656,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56507,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.17,
+        "inference_ms": 35.95,
+        "postprocess_ms": 0.85,
+        "total_ms": 53.06
+      },
+      "command_ms": 25.76,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.767,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56507,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 60
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.17,
+        "inference_ms": 35.95,
+        "postprocess_ms": 0.85,
+        "total_ms": 53.06
+      },
+      "command_ms": 25.76,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.878,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 11.984,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.093,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.204,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.314,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.423,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.535,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.646,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.758,
+      "state": "reacquiring",
+      "armed": true,
+      "frame_id": 56512,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 49
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "reacquiring",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.99,
+        "inference_ms": 24.82,
+        "postprocess_ms": 0.84,
+        "total_ms": 42.73
+      },
+      "command_ms": 17.5,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.871,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56517,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 51
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 13.89,
+        "inference_ms": 25.78,
+        "postprocess_ms": 0.86,
+        "total_ms": 40.61
+      },
+      "command_ms": 663.99,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 12.979,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56522,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 462
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.53,
+        "inference_ms": 36.14,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.7
+      },
+      "command_ms": 17.81,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.111,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56522,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 462
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.53,
+        "inference_ms": 36.14,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.7
+      },
+      "command_ms": 17.81,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.222,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56522,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 462
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.53,
+        "inference_ms": 36.14,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.7
+      },
+      "command_ms": 17.81,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.327,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56522,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 462
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.53,
+        "inference_ms": 36.14,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.7
+      },
+      "command_ms": 17.81,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.437,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56522,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 462
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.53,
+        "inference_ms": 36.14,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.7
+      },
+      "command_ms": 17.81,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.545,
+      "state": "stale_frame",
+      "armed": true,
+      "frame_id": 56522,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 462
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "stale_frame",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.53,
+        "inference_ms": 36.14,
+        "postprocess_ms": 0.93,
+        "total_ms": 53.7
+      },
+      "command_ms": 17.81,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.66,
+      "state": "searching",
+      "armed": true,
+      "frame_id": 56528,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 139
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": -0.35,
+        "state": "searching",
+        "sent": true
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.83,
+        "inference_ms": 36.44,
+        "postprocess_ms": 0.94,
+        "total_ms": 54.3
+      },
+      "command_ms": 640.74,
+      "pulse_stop_ms": null,
+      "fault": null
+    },
+    {
+      "elapsed_s": 13.774,
+      "state": "fault",
+      "armed": false,
+      "frame_id": 56528,
+      "detection": null,
+      "observation": {
+        "target_visible": false,
+        "horizontal_error": 0.0,
+        "area_ratio": 0.0,
+        "frame_age_ms": 139
+      },
+      "action": {
+        "forward": 0.0,
+        "turn": 0.0,
+        "state": "fault_stop"
+      },
+      "perception_timing": {
+        "preprocess_ms": 16.83,
+        "inference_ms": 36.44,
+        "postprocess_ms": 0.94,
+        "total_ms": 54.3
+      },
+      "command_ms": 640.74,
+      "pulse_stop_ms": null,
+      "fault": "orange not found after one complete heading scan"
+    }
+  ]
+}

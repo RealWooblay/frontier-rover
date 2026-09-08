@@ -1,0 +1,550 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#111412">
+  <title>Frontier Rover</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      --bg: #111412;
+      --surface: #191d1a;
+      --line: #343a35;
+      --muted: #9da59f;
+      --text: #f3f5f3;
+      --green: #3cce78;
+      --amber: #f2ad3b;
+      --red: #ed5b50;
+      --cyan: #58c4d8;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 100%; height: 100%; margin: 0; overflow: hidden; background: var(--bg); color: var(--text); }
+    body { height: 100vh; height: 100dvh; }
+    button, input { font: inherit; }
+    button { -webkit-tap-highlight-color: transparent; }
+    .app-shell { width: 100%; height: 100vh; height: 100dvh; overflow: hidden; display: grid; grid-template-rows: 56px minmax(0, 1fr) 218px; }
+    .topbar { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 0 22px; border-bottom: 1px solid var(--line); background: #141714; }
+    .identity { display: flex; align-items: center; gap: 12px; min-width: 0; }
+    .mark { width: 30px; height: 30px; display: grid; place-items: center; border: 1px solid #59625a; color: var(--green); font-weight: 800; font-size: 14px; }
+    h1 { margin: 0; font-size: 17px; line-height: 1.2; letter-spacing: 0; }
+    .subhead { margin-top: 2px; color: var(--muted); font-size: 11px; text-transform: uppercase; }
+    .connection { display: flex; align-items: center; gap: 9px; font-size: 13px; font-weight: 700; }
+    .connection-dot { width: 9px; height: 9px; border-radius: 50%; background: var(--red); box-shadow: 0 0 0 3px #ed5b501f; }
+    .connection.online .connection-dot { background: var(--green); box-shadow: 0 0 0 3px #3cce7820; }
+    .connection.moving .connection-dot { background: var(--amber); box-shadow: 0 0 0 3px #f2ad3b20; }
+    .power-button { width: 38px; height: 38px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--muted); font-size: 21px; cursor: pointer; }
+    .power-button:hover { border-color: var(--red); color: var(--red); }
+    .workspace { min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 290px; }
+    .visuals { min-width: 0; min-height: 0; padding: 12px; border-right: 1px solid var(--line); display: grid; grid-template-rows: minmax(0, 1fr) 76px; gap: 10px; }
+    .camera-view { min-height: 0; position: relative; overflow: hidden; border: 1px solid var(--line); background: #090b09; }
+    #cameraCanvas { display: block; width: 100%; height: 100%; }
+    .camera-overlay { position: absolute; inset: 0; padding: 14px; pointer-events: none; display: flex; flex-direction: column; justify-content: space-between; }
+    .camera-topline, .camera-bottomline { display: flex; justify-content: space-between; gap: 12px; color: #d8ded9; font: 700 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; }
+    .camera-state { color: var(--amber); }
+    .camera-controls { display: flex; align-items: center; gap: 8px; }
+    .camera-rotate { min-width: 58px; height: 28px; padding: 0 7px; display: flex; align-items: center; justify-content: center; gap: 5px; pointer-events: auto; border: 1px solid #59625a; border-radius: 5px; background: #111412cc; color: var(--text); font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; cursor: pointer; }
+    .camera-rotate:hover { border-color: var(--cyan); color: var(--cyan); }
+    .drive-strip { min-width: 0; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr) minmax(0, 1fr); gap: 1px; border: 1px solid var(--line); background: var(--line); }
+    .drive-readout { min-width: 0; padding: 10px 13px; background: var(--surface); }
+    .label { color: var(--muted); font-size: 10px; font-weight: 750; text-transform: uppercase; }
+    .readout-value { margin-top: 5px; font: 750 18px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .output-bars { display: grid; gap: 7px; margin-top: 8px; }
+    .output-row { display: grid; grid-template-columns: 14px 1fr 42px; align-items: center; gap: 8px; font: 700 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .bar { height: 5px; background: #303630; overflow: hidden; }
+    .bar-fill { width: 0; height: 100%; background: var(--cyan); transition: width 120ms linear; }
+    .telemetry { min-width: 0; min-height: 0; overflow: hidden; background: #141714; display: grid; grid-template-rows: 42px minmax(0, 1fr); }
+    .panel-heading { margin: 0; padding: 14px 16px 10px; font-size: 12px; text-transform: uppercase; }
+    .metrics { min-height: 0; margin: 0; border-top: 1px solid var(--line); display: grid; grid-template-rows: repeat(11, minmax(0, 1fr)); }
+    .metric { min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 10px; padding: 5px 16px; border-bottom: 1px solid var(--line); }
+    .metric dt { color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; }
+    .metric dd { margin: 0; max-width: 150px; text-align: right; font: 700 12px/1.25 ui-monospace, SFMono-Regular, Menlo, monospace; overflow-wrap: anywhere; }
+    .state-ok { color: var(--green); }
+    .state-warn { color: var(--amber); }
+    .state-off { color: var(--muted); }
+    .control-deck { min-height: 0; overflow: hidden; display: grid; grid-template-columns: minmax(280px, 1fr) auto minmax(250px, 1fr); align-items: center; gap: 22px; padding: 10px 20px; border-top: 1px solid var(--line); background: var(--surface); }
+    .control-summary { display: grid; gap: 9px; max-width: 460px; }
+    .motion-name { margin-top: 3px; font-size: 21px; font-weight: 780; text-transform: uppercase; }
+    .speed-control { display: grid; gap: 5px; }
+    .speed-line { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+    #speedValue { font: 800 18px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    input[type="range"] { width: 100%; accent-color: var(--green); cursor: pointer; }
+    .calibration-control { display: grid; gap: 5px; }
+    .calibration-status { color: var(--green); font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; }
+    .calibration-status.unsaved { color: var(--amber); }
+    .calibration-status.error { color: var(--red); }
+    .calibration-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 7px; align-items: end; }
+    .calibration-field { min-width: 0; display: grid; gap: 3px; }
+    .calibration-field > span:first-child { color: var(--muted); font-size: 9px; font-weight: 750; text-transform: uppercase; }
+    .calibration-input { display: grid; grid-template-columns: minmax(42px, 1fr) 20px; align-items: center; border: 1px solid var(--line); background: #121512; }
+    .calibration-input input { width: 100%; height: 30px; min-width: 0; padding: 0 4px 0 8px; border: 0; outline: 0; background: transparent; color: var(--text); font: 750 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .calibration-input span { color: var(--muted); font-size: 11px; }
+    .apply-button { height: 32px; padding: 0 13px; border: 1px solid #50725e; border-radius: 5px; background: #243c2d; color: #c9f4d8; font-size: 11px; font-weight: 800; cursor: pointer; }
+    .apply-button:disabled { opacity: .55; cursor: wait; }
+    .dpad { display: grid; grid-template-columns: repeat(3, 60px); grid-template-rows: repeat(3, 60px); gap: 6px; }
+    .drive-button { width: 60px; height: 60px; border: 1px solid #414842; border-radius: 6px; background: #252a26; color: var(--text); font-size: 28px; font-weight: 750; cursor: pointer; touch-action: none; user-select: none; }
+    .drive-button:hover { border-color: #687169; background: #2c322d; }
+    .drive-button:active, .drive-button.active { background: #e9eee9; color: #111412; transform: translateY(1px); }
+    .drive-button[data-motion="forward"] { grid-column: 2; grid-row: 1; }
+    .drive-button[data-motion="left"] { grid-column: 1; grid-row: 2; }
+    .drive-button[data-motion="right"] { grid-column: 3; grid-row: 2; }
+    .drive-button[data-motion="reverse"] { grid-column: 2; grid-row: 3; }
+    .stop-button { grid-column: 2; grid-row: 2; width: 60px; height: 60px; border: 1px solid #b8463e; border-radius: 50%; background: var(--red); color: white; font-size: 10px; font-weight: 850; cursor: pointer; touch-action: none; }
+    .stop-button:active { background: #bd4038; transform: scale(.96); }
+    .heading-control { justify-self: end; width: min(100%, 390px); display: grid; gap: 7px; }
+    .heading-row { display: grid; grid-template-columns: repeat(4, 36px) minmax(58px, 1fr) 70px; gap: 5px; }
+    .heading-row button, .heading-input { height: 31px; border: 1px solid var(--line); border-radius: 5px; background: #252a26; color: var(--text); }
+    .heading-row button { cursor: pointer; font: 750 11px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .heading-row button:hover { border-color: var(--cyan); }
+    .heading-row .turn-go { border-color: #50725e; background: #243c2d; color: #c9f4d8; }
+    .heading-input { width: 100%; min-width: 0; padding: 0 7px; font: 750 12px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .heading-status { display: flex; align-items: center; justify-content: space-between; gap: 8px; min-height: 20px; font: 700 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .heading-status span:last-child { color: var(--muted); text-align: right; }
+    .hold-toggle { display: flex; align-items: center; gap: 7px; color: var(--muted); font: 750 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; text-transform: uppercase; cursor: pointer; }
+    .hold-toggle input { width: 15px; height: 15px; margin: 0; accent-color: var(--green); }
+    .hold-readout { color: var(--muted); font: 700 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .hold-readout.active { color: var(--cyan); }
+    .hold-readout.fault { color: var(--red); }
+    .safety { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .safety-state { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 750; }
+    .safety-state::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--green); }
+    .safety-state.stale::before { background: var(--amber); }
+    .safety-copy { color: var(--muted); font-size: 12px; line-height: 1.5; }
+    button:focus-visible, input:focus-visible { outline: 3px solid var(--cyan); outline-offset: 2px; }
+    dialog { width: min(430px, calc(100vw - 32px)); padding: 0; border: 1px solid #565d57; border-radius: 7px; background: var(--surface); color: var(--text); }
+    dialog::backdrop { background: #000a; }
+    .dialog-body { padding: 24px; }
+    .dialog-body h2 { margin: 0 0 10px; font-size: 20px; }
+    .dialog-body p { margin: 0; color: var(--muted); line-height: 1.5; }
+    .dialog-actions { display: flex; justify-content: flex-end; gap: 10px; padding: 14px 24px; border-top: 1px solid var(--line); }
+    .dialog-actions button { min-height: 40px; padding: 0 16px; border: 1px solid var(--line); border-radius: 5px; background: #292e2a; color: var(--text); cursor: pointer; }
+    .dialog-actions .danger { border-color: #b8463e; background: var(--red); color: white; font-weight: 750; }
+    @media (max-width: 900px) {
+      .workspace { grid-template-columns: minmax(0, 1fr); }
+      .telemetry { display: none; }
+      .visuals { border-right: 0; }
+      .control-deck { grid-template-columns: minmax(260px, 1fr) auto; }
+      .heading-control { display: none; }
+    }
+    @media (max-width: 680px) {
+      .app-shell { grid-template-rows: 52px minmax(0, 1fr) 200px; }
+      .workspace { grid-template-columns: 1fr; }
+      .visuals { border-right: 0; padding: 8px; grid-template-rows: minmax(0, 1fr) 66px; gap: 7px; }
+      .camera-view { width: 100%; max-height: 100%; aspect-ratio: 16 / 9; align-self: center; }
+      .control-deck { grid-template-columns: minmax(0, 1fr) auto; gap: 10px; padding: 8px 12px; }
+      .dpad { grid-template-columns: repeat(3, 56px); grid-template-rows: repeat(3, 56px); }
+      .drive-button, .stop-button { width: 56px; height: 56px; }
+    }
+    @media (max-width: 560px) {
+      .topbar { padding: 0 12px; }
+      .subhead, .connection-label { display: none; }
+      .drive-strip { grid-template-columns: minmax(0, .8fr) minmax(0, 1.35fr) minmax(0, .95fr); }
+      .drive-readout { padding: 7px 8px; }
+      .readout-value { margin-top: 2px; font-size: 14px; }
+      .output-row { grid-template-columns: 10px minmax(0, 1fr) 30px; gap: 4px; font-size: 9px; }
+      .motion-name { font-size: 18px; }
+      .control-summary { gap: 6px; }
+    }
+    @media (max-width: 390px) {
+      .dpad { grid-template-columns: repeat(3, 50px); grid-template-rows: repeat(3, 50px); gap: 5px; }
+      .drive-button, .stop-button { width: 50px; height: 50px; }
+      .control-deck { gap: 7px; padding-inline: 8px; }
+      .apply-button { height: 26px; padding-inline: 8px; grid-column: 1 / -1; }
+      .calibration-row { grid-template-columns: 1fr 1fr; gap: 4px; }
+    }
+    @media (max-height: 650px) and (min-width: 681px) {
+      .app-shell { grid-template-rows: 50px minmax(0, 1fr) 190px; }
+      .topbar { padding-inline: 16px; }
+      .visuals { grid-template-rows: minmax(0, 1fr) 68px; padding: 8px; gap: 7px; }
+      .drive-readout { padding: 7px 10px; }
+      .dpad { grid-template-columns: repeat(3, 54px); grid-template-rows: repeat(3, 54px); gap: 5px; }
+      .drive-button, .stop-button { width: 54px; height: 54px; }
+      .control-summary { gap: 6px; }
+      .control-deck { padding-block: 6px; }
+      .heading-status span:last-child { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="identity"><div class="mark" aria-hidden="true">FR</div><div><h1>Frontier Rover</h1><div class="subhead">Operator console</div></div></div>
+      <div style="display:flex;align-items:center;gap:16px">
+        <div id="connection" class="connection"><span class="connection-dot"></span><span class="connection-label">Connecting</span></div>
+        <button id="powerButton" class="power-button" type="button" aria-label="Power off rover" title="Power off rover">&#x23FB;</button>
+      </div>
+    </header>
+    <section class="workspace">
+      <section class="visuals" aria-label="Rover visuals">
+        <div class="camera-view">
+          <canvas id="cameraCanvas" aria-label="Camera viewport placeholder"></canvas>
+          <div class="camera-overlay">
+            <div class="camera-topline"><span>CAM-01</span><span class="camera-controls"><span id="cameraState" class="camera-state">CHECKING</span><button id="rotateCamera" class="camera-rotate" type="button" aria-label="Rotate camera view" title="Rotate camera view"><span aria-hidden="true">&#x21BB;</span><span id="cameraRotation">270&deg;</span></button></span></div>
+            <div class="camera-bottomline"><span id="frameClock">--:--:--</span><span>FRONT</span></div>
+          </div>
+        </div>
+        <div class="drive-strip">
+          <div class="drive-readout"><div class="label">Motion</div><div id="motionName" class="readout-value">STOPPED</div></div>
+          <div class="drive-readout">
+            <div class="label">Motor output</div>
+            <div class="output-bars">
+              <div class="output-row"><span>L</span><div class="bar"><div id="leftBar" class="bar-fill"></div></div><span id="leftOutput">0%</span></div>
+              <div class="output-row"><span>R</span><div class="bar"><div id="rightBar" class="bar-fill"></div></div><span id="rightOutput">0%</span></div>
+            </div>
+          </div>
+          <div class="drive-readout"><div class="label">Command age</div><div id="commandAge" class="readout-value">0 ms</div></div>
+        </div>
+      </section>
+      <aside class="telemetry" aria-label="Rover telemetry">
+        <h2 class="panel-heading">System telemetry</h2>
+        <dl class="metrics">
+          <div class="metric"><dt>Pi</dt><dd id="hostname">--</dd></div>
+          <div class="metric"><dt>Temperature</dt><dd id="temperature">--</dd></div>
+          <div class="metric"><dt>Wi-Fi</dt><dd id="wifiSignal">--</dd></div>
+          <div class="metric"><dt>Address</dt><dd id="wifiIp">--</dd></div>
+          <div class="metric"><dt>Uptime</dt><dd id="uptime">--</dd></div>
+          <div class="metric"><dt>Memory</dt><dd id="memory">--</dd></div>
+          <div class="metric"><dt>Camera</dt><dd id="cameraMetric" class="state-off">--</dd></div>
+          <div class="metric"><dt>IMU</dt><dd id="imuMetric" class="state-off">--</dd></div>
+          <div class="metric"><dt>Yaw rate</dt><dd id="yawRate">--</dd></div>
+          <div class="metric"><dt>Relative yaw</dt><dd id="relativeYaw">--</dd></div>
+          <div class="metric"><dt>Jetson link</dt><dd id="jetson" class="state-off">--</dd></div>
+        </dl>
+      </aside>
+    </section>
+    <section class="control-deck" aria-label="Drive controls">
+      <div class="control-summary">
+        <div><div class="label">Current command</div><div id="deckMotion" class="motion-name">Stopped</div></div>
+        <label class="speed-control" for="speed"><span class="speed-line"><span class="label">Speed</span><span id="speedValue">100%</span></span><input id="speed" type="range" min="20" max="100" step="5" value="100"></label>
+        <form id="calibrationForm" class="calibration-control">
+          <div class="speed-line"><span class="label">Straight calibration</span><span id="calibrationStatus" class="calibration-status">Loading</span></div>
+          <div class="calibration-row">
+            <label class="calibration-field" for="leftCalibration"><span>Left PWM</span><span class="calibration-input"><input id="leftCalibration" type="number" min="0" max="100" step="1" value="40" inputmode="decimal"><span>%</span></span></label>
+            <label class="calibration-field" for="rightCalibration"><span>Right PWM</span><span class="calibration-input"><input id="rightCalibration" type="number" min="0" max="100" step="1" value="60" inputmode="decimal"><span>%</span></span></label>
+            <button id="applyCalibration" class="apply-button" type="submit">Apply</button>
+          </div>
+        </form>
+      </div>
+      <div class="dpad" aria-label="Direction pad">
+        <button class="drive-button" data-motion="forward" type="button" aria-label="Move forward" title="Move forward">&#x2191;</button>
+        <button class="drive-button" data-motion="left" type="button" aria-label="Turn left" title="Turn left">&#x2190;</button>
+        <button id="emergencyStop" class="stop-button" type="button" aria-label="Emergency stop" title="Emergency stop">STOP</button>
+        <button class="drive-button" data-motion="right" type="button" aria-label="Turn right" title="Turn right">&#x2192;</button>
+        <button class="drive-button" data-motion="reverse" type="button" aria-label="Move backward" title="Move backward">&#x2193;</button>
+      </div>
+      <section class="heading-control" aria-label="Relative heading control">
+        <div class="safety"><div id="safetyState" class="safety-state">Watchdog armed</div><label class="hold-toggle"><input id="headingHold" type="checkbox"><span>Heading hold</span><output id="holdReadout" class="hold-readout">OFF</output></label></div>
+        <div class="heading-row">
+          <button type="button" data-angle="-90" title="Turn right 90 degrees">-90</button>
+          <button type="button" data-angle="-45" title="Turn right 45 degrees">-45</button>
+          <button type="button" data-angle="45" title="Turn left 45 degrees">+45</button>
+          <button type="button" data-angle="90" title="Turn left 90 degrees">+90</button>
+          <input id="turnAngle" class="heading-input" type="number" min="-180" max="180" step="1" value="90" aria-label="Relative turn angle in degrees">
+          <button id="startTurn" class="turn-go" type="button">TURN</button>
+        </div>
+        <div class="heading-status"><span id="headingState">IDLE</span><span id="headingError">Target -- / error --</span></div>
+      </section>
+    </section>
+  </main>
+  <dialog id="shutdownDialog">
+    <div class="dialog-body"><h2>Power off rover?</h2><p>The motors will stop and the Raspberry Pi will shut down safely.</p></div>
+    <div class="dialog-actions"><button id="cancelShutdown" type="button">Cancel</button><button id="confirmShutdown" class="danger" type="button">Power off</button></div>
+  </dialog>
+  <script>
+    const ui = {
+      connection: document.querySelector("#connection"), connectionLabel: document.querySelector(".connection-label"),
+      motionName: document.querySelector("#motionName"), deckMotion: document.querySelector("#deckMotion"), commandAge: document.querySelector("#commandAge"),
+      leftBar: document.querySelector("#leftBar"), rightBar: document.querySelector("#rightBar"), leftOutput: document.querySelector("#leftOutput"), rightOutput: document.querySelector("#rightOutput"),
+      speed: document.querySelector("#speed"), speedValue: document.querySelector("#speedValue"), safetyState: document.querySelector("#safetyState"),
+      calibrationForm: document.querySelector("#calibrationForm"), leftCalibration: document.querySelector("#leftCalibration"), rightCalibration: document.querySelector("#rightCalibration"),
+      calibrationStatus: document.querySelector("#calibrationStatus"), applyCalibration: document.querySelector("#applyCalibration"),
+      cameraState: document.querySelector("#cameraState"), cameraMetric: document.querySelector("#cameraMetric"), imuMetric: document.querySelector("#imuMetric"), yawRate: document.querySelector("#yawRate"), relativeYaw: document.querySelector("#relativeYaw"), jetson: document.querySelector("#jetson"),
+      hostname: document.querySelector("#hostname"), temperature: document.querySelector("#temperature"), wifiSignal: document.querySelector("#wifiSignal"), wifiIp: document.querySelector("#wifiIp"),
+      uptime: document.querySelector("#uptime"), memory: document.querySelector("#memory"), frameClock: document.querySelector("#frameClock"), rotateCamera: document.querySelector("#rotateCamera"), cameraRotation: document.querySelector("#cameraRotation"),
+      turnAngle: document.querySelector("#turnAngle"), startTurn: document.querySelector("#startTurn"), headingState: document.querySelector("#headingState"), headingError: document.querySelector("#headingError"),
+      headingHold: document.querySelector("#headingHold"), holdReadout: document.querySelector("#holdReadout")
+    };
+    const driveButtons = [...document.querySelectorAll("[data-motion]")];
+    const keyMotion = { ArrowUp: "forward", w: "forward", W: "forward", ArrowDown: "reverse", s: "reverse", S: "reverse", ArrowLeft: "left", a: "left", A: "left", ArrowRight: "right", d: "right", D: "right" };
+    let activeMotion = "stop";
+    let heartbeat = null;
+    let shuttingDown = false;
+    function throttle() { return Number(ui.speed.value) / 100; }
+    async function sendCommand(motion, keepalive = false) {
+      if (shuttingDown) return;
+      try {
+        const response = await fetch("/api/command", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ motion, throttle: throttle() }), keepalive });
+        if (!response.ok) throw new Error("command rejected");
+        setConnected(motion !== "stop");
+      } catch (_) { setDisconnected(); }
+    }
+    function begin(motion) {
+      if (motion === "stop" || shuttingDown || activeMotion === motion) return;
+      end(false);
+      activeMotion = motion;
+      driveButtons.find(button => button.dataset.motion === motion)?.classList.add("active");
+      renderMotion(motion);
+      sendCommand(motion);
+      heartbeat = setInterval(() => sendCommand(motion), 100);
+    }
+    function end(sendStop = true) {
+      clearInterval(heartbeat);
+      heartbeat = null;
+      activeMotion = "stop";
+      driveButtons.forEach(button => button.classList.remove("active"));
+      renderMotion("stop");
+      if (sendStop) sendCommand("stop", true);
+    }
+    function renderMotion(motion) { const label = motion === "stop" ? "Stopped" : motion; ui.motionName.textContent = label.toUpperCase(); ui.deckMotion.textContent = label; }
+    function setConnected(moving = false) { ui.connection.className = moving ? "connection moving" : "connection online"; ui.connectionLabel.textContent = moving ? "Moving" : "Connected"; }
+    function setDisconnected() { ui.connection.className = "connection"; ui.connectionLabel.textContent = "Disconnected"; clearInterval(heartbeat); heartbeat = null; activeMotion = "stop"; renderMotion("stop"); }
+    function renderOutput(side, value) { const magnitude = Math.round(Math.abs(value) * 100); ui[`${side}Bar`].style.width = `${magnitude}%`; ui[`${side}Output`].textContent = `${value < 0 ? "-" : ""}${magnitude}%`; }
+    function formatUptime(seconds) { if (seconds == null) return "--"; const days = Math.floor(seconds / 86400); const hours = Math.floor((seconds % 86400) / 3600); const minutes = Math.floor((seconds % 3600) / 60); return days ? `${days}d ${hours}h` : `${hours}h ${minutes}m`; }
+    async function pollStatus() {
+      if (shuttingDown) return;
+      try {
+        const response = await fetch("/api/status", { cache: "no-store" });
+        if (!response.ok) throw new Error("status unavailable");
+        const state = await response.json();
+        setConnected(state.motor_active);
+        renderOutput("left", state.left_output); renderOutput("right", state.right_output);
+        ui.commandAge.textContent = `${state.command_age_ms} ms`;
+        ui.safetyState.textContent = state.stale ? "Watchdog stopped motors" : "Watchdog armed";
+        ui.safetyState.className = state.stale ? "safety-state stale" : "safety-state";
+        const hold = state.heading_hold || {};
+        ui.headingHold.checked = Boolean(hold.enabled);
+        ui.headingHold.disabled = hold.state === "imu_unavailable" && state.motor_active;
+        const holdError = hold.error_degrees == null ? "--" : `${Number(hold.error_degrees).toFixed(1)}°`;
+        const correction = `${Math.round(Number(hold.correction || 0) * 100)}%`;
+        ui.holdReadout.textContent = hold.state === "holding" ? `e ${holdError} / c ${correction}` : String(hold.state || "off").replace("_", " ");
+        ui.holdReadout.className = `hold-readout${hold.state === "holding" ? " active" : hold.state === "imu_unavailable" ? " fault" : ""}`;
+        if (activeMotion === "stop") renderMotion(state.motor_active ? state.motion : "stop");
+      } catch (_) { setDisconnected(); }
+    }
+    async function pollTelemetry() {
+      if (shuttingDown) return;
+      try {
+        const response = await fetch("/api/telemetry", { cache: "no-store" });
+        if (!response.ok) throw new Error("telemetry unavailable");
+        const data = await response.json();
+        ui.hostname.textContent = data.hostname || "--";
+        ui.temperature.textContent = data.temperature_c == null ? "--" : `${data.temperature_c.toFixed(1)} C`;
+        ui.wifiSignal.textContent = data.wifi_signal_dbm == null ? "--" : `${data.wifi_signal_dbm} dBm`;
+        ui.wifiIp.textContent = data.wifi_ip || "--";
+        ui.uptime.textContent = formatUptime(data.uptime_seconds);
+        ui.memory.textContent = data.memory_percent == null ? "--" : `${data.memory_percent.toFixed(1)}%`;
+        const stream = data.camera_stream || {};
+        const cameraLive = stream.state === "streaming";
+        ui.cameraState.textContent = cameraLive ? "LIVE" : stream.state === "starting" ? "STARTING" : "NO VIDEO";
+        ui.cameraState.className = cameraLive ? "camera-state state-ok" : "camera-state";
+        ui.cameraMetric.textContent = cameraLive ? `${Number(stream.capture_fps || 0).toFixed(1)} fps` : stream.state || "Unavailable";
+        ui.cameraMetric.className = cameraLive ? "state-ok" : "state-warn";
+        const imu = data.imu || {};
+        const imuLive = imu.state === "streaming";
+        ui.imuMetric.textContent = imuLive ? "Live" : imu.state || "Unavailable";
+        ui.imuMetric.className = imuLive ? "state-ok" : "state-warn";
+        ui.yawRate.textContent = imu.yaw_rate_dps == null ? "--" : `${Number(imu.yaw_rate_dps).toFixed(1)} deg/s`;
+        ui.relativeYaw.textContent = imu.relative_yaw_degrees == null ? "--" : `${Number(imu.relative_yaw_degrees).toFixed(1)} deg`;
+        const jetsonLinked = data.jetson_state === "linked";
+        ui.jetson.textContent = jetsonLinked ? "Ethernet linked" : "Offline";
+        ui.jetson.className = jetsonLinked ? "state-ok" : "state-off";
+      } catch (_) { setDisconnected(); }
+    }
+    async function pollHeading() {
+      try {
+        const response = await fetch("/api/heading", { cache: "no-store" });
+        if (!response.ok) throw new Error("heading unavailable");
+        const state = await response.json();
+        ui.headingState.textContent = String(state.state || "idle").toUpperCase();
+        ui.headingState.className = state.state === "complete" ? "state-ok" : state.state === "failed" ? "state-warn" : "";
+        const target = state.target_degrees == null ? "--" : `${Number(state.target_degrees).toFixed(0)} deg`;
+        const error = state.error_degrees == null ? "--" : `${Number(state.error_degrees).toFixed(1)} deg`;
+        ui.headingError.textContent = `Target ${target} / error ${error}`;
+        ui.startTurn.textContent = state.active ? "CANCEL" : "TURN";
+        ui.startTurn.classList.toggle("danger", Boolean(state.active));
+      } catch (_) {
+        ui.headingState.textContent = "UNAVAILABLE";
+        ui.headingError.textContent = "IMU control offline";
+      }
+    }
+    async function toggleHeadingTurn() {
+      const active = ui.startTurn.textContent === "CANCEL";
+      if (!active && !ui.turnAngle.reportValidity()) return;
+      end(false);
+      await sendCommand("stop");
+      const path = active ? "/api/heading/cancel" : "/api/heading/turn";
+      const body = active ? {} : { target_degrees: Number(ui.turnAngle.value) };
+      try {
+        const response = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) });
+        if (!response.ok) throw new Error((await response.json()).error || "turn rejected");
+        await pollHeading();
+      } catch (error) {
+        ui.headingState.textContent = "REJECTED";
+        ui.headingError.textContent = error.message;
+      }
+    }
+    async function updateHeadingHold() {
+      end();
+      ui.headingHold.disabled = true;
+      try {
+        const response = await fetch("/api/heading-hold", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ enabled: ui.headingHold.checked })
+        });
+        if (!response.ok) throw new Error("heading hold rejected");
+        await pollStatus();
+      } catch (_) {
+        ui.headingHold.checked = !ui.headingHold.checked;
+        ui.holdReadout.textContent = "UPDATE FAILED";
+        ui.holdReadout.className = "hold-readout fault";
+      } finally {
+        ui.headingHold.disabled = false;
+      }
+    }
+    function showCalibration(calibration) {
+      ui.leftCalibration.value = Number((calibration.left_pwm * 100).toFixed(1));
+      ui.rightCalibration.value = Number((calibration.right_pwm * 100).toFixed(1));
+      ui.calibrationStatus.textContent = "Saved";
+      ui.calibrationStatus.className = "calibration-status";
+    }
+    async function loadCalibration() {
+      try {
+        const response = await fetch("/api/calibration", { cache: "no-store" });
+        if (!response.ok) throw new Error("calibration unavailable");
+        showCalibration(await response.json());
+      } catch (_) {
+        ui.calibrationStatus.textContent = "Unavailable";
+        ui.calibrationStatus.className = "calibration-status error";
+      }
+    }
+    async function updateCalibration(event) {
+      event.preventDefault();
+      if (!ui.calibrationForm.reportValidity()) return;
+      end();
+      ui.applyCalibration.disabled = true;
+      ui.calibrationStatus.textContent = "Saving";
+      ui.calibrationStatus.className = "calibration-status unsaved";
+      try {
+        const response = await fetch("/api/calibration", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            left_pwm: Number(ui.leftCalibration.value) / 100,
+            right_pwm: Number(ui.rightCalibration.value) / 100
+          })
+        });
+        if (!response.ok) throw new Error("calibration rejected");
+        showCalibration(await response.json());
+      } catch (_) {
+        ui.calibrationStatus.textContent = "Update failed";
+        ui.calibrationStatus.className = "calibration-status error";
+      } finally {
+        ui.applyCalibration.disabled = false;
+      }
+    }
+    driveButtons.forEach(button => {
+      const motion = button.dataset.motion;
+      button.addEventListener("pointerdown", event => { event.preventDefault(); button.setPointerCapture(event.pointerId); begin(motion); });
+      button.addEventListener("pointerup", () => end());
+      button.addEventListener("pointercancel", () => end());
+      button.addEventListener("lostpointercapture", () => end());
+      button.addEventListener("contextmenu", event => event.preventDefault());
+    });
+    document.querySelector("#emergencyStop").addEventListener("pointerdown", event => { event.preventDefault(); end(); });
+    ui.speed.addEventListener("input", () => { ui.speedValue.textContent = `${ui.speed.value}%`; if (activeMotion !== "stop") sendCommand(activeMotion); });
+    ui.calibrationForm.addEventListener("submit", updateCalibration);
+    document.querySelectorAll("[data-angle]").forEach(button => button.addEventListener("click", () => { ui.turnAngle.value = button.dataset.angle; }));
+    ui.startTurn.addEventListener("click", toggleHeadingTurn);
+    ui.headingHold.addEventListener("change", updateHeadingHold);
+    [ui.leftCalibration, ui.rightCalibration].forEach(input => input.addEventListener("input", () => {
+      ui.calibrationStatus.textContent = "Unsaved";
+      ui.calibrationStatus.className = "calibration-status unsaved";
+    }));
+    document.addEventListener("keydown", event => { if (event.code === "Space") { event.preventDefault(); end(); return; } if (event.repeat) return; const motion = keyMotion[event.key]; if (motion) { event.preventDefault(); begin(motion); } });
+    document.addEventListener("keyup", event => { if (keyMotion[event.key] && activeMotion === keyMotion[event.key]) end(); });
+    window.addEventListener("blur", () => end());
+    window.addEventListener("pagehide", () => end());
+    document.addEventListener("visibilitychange", () => { if (document.hidden) end(); });
+    const shutdownDialog = document.querySelector("#shutdownDialog");
+    document.querySelector("#powerButton").addEventListener("click", () => { end(); shutdownDialog.showModal(); });
+    document.querySelector("#cancelShutdown").addEventListener("click", () => shutdownDialog.close());
+    document.querySelector("#confirmShutdown").addEventListener("click", async () => {
+      shuttingDown = true; shutdownDialog.close(); end(false);
+      ui.connection.className = "connection"; ui.connectionLabel.textContent = "Shutting down"; ui.motionName.textContent = "POWERING OFF"; ui.deckMotion.textContent = "Powering off";
+      try {
+        const response = await fetch("/api/system/shutdown", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ confirm: "poweroff" }) });
+        if (!response.ok) throw new Error("shutdown rejected");
+      } catch (_) { shuttingDown = false; ui.connectionLabel.textContent = "Shutdown failed"; }
+    });
+    const canvas = document.querySelector("#cameraCanvas");
+    const context = canvas.getContext("2d");
+    let cameraBitmap = null;
+    let cameraFrameId = -1;
+    let cameraRotation = Number(localStorage.getItem("frontier-camera-rotation") || 270);
+    let cameraPollTimer = null;
+    function prepareCanvas() {
+      const ratio = window.devicePixelRatio || 1; const width = canvas.clientWidth; const height = canvas.clientHeight;
+      if (canvas.width !== Math.round(width * ratio) || canvas.height !== Math.round(height * ratio)) { canvas.width = Math.round(width * ratio); canvas.height = Math.round(height * ratio); }
+      context.setTransform(ratio, 0, 0, ratio, 0, 0); context.clearRect(0, 0, width, height);
+      return { width, height };
+    }
+    function drawReticle(width, height) {
+      const cx = width / 2; const cy = height / 2; context.strokeStyle = "#58c4d899"; context.lineWidth = 1.5;
+      context.beginPath(); context.moveTo(cx - 46, cy); context.lineTo(cx - 12, cy); context.moveTo(cx + 12, cy); context.lineTo(cx + 46, cy); context.stroke();
+      context.beginPath(); context.moveTo(cx, cy - 46); context.lineTo(cx, cy - 12); context.moveTo(cx, cy + 12); context.lineTo(cx, cy + 46); context.stroke();
+      context.beginPath(); context.arc(cx, cy, 5, 0, Math.PI * 2); context.stroke();
+    }
+    function drawViewport() {
+      const { width, height } = prepareCanvas();
+      if (cameraBitmap) {
+        const quarterTurn = cameraRotation % 180 !== 0;
+        const rotatedWidth = quarterTurn ? cameraBitmap.height : cameraBitmap.width;
+        const rotatedHeight = quarterTurn ? cameraBitmap.width : cameraBitmap.height;
+        const scale = Math.min(width / rotatedWidth, height / rotatedHeight);
+        context.save();
+        context.translate(width / 2, height / 2);
+        context.rotate(cameraRotation * Math.PI / 180);
+        context.drawImage(cameraBitmap, -cameraBitmap.width * scale / 2, -cameraBitmap.height * scale / 2, cameraBitmap.width * scale, cameraBitmap.height * scale);
+        context.restore();
+        drawReticle(width, height);
+        return;
+      }
+      context.strokeStyle = "#26302a"; context.lineWidth = 1;
+      const grid = 48;
+      for (let x = grid; x < width; x += grid) { context.beginPath(); context.moveTo(x, 0); context.lineTo(x, height); context.stroke(); }
+      for (let y = grid; y < height; y += grid) { context.beginPath(); context.moveTo(0, y); context.lineTo(width, y); context.stroke(); }
+      drawReticle(width, height);
+      context.fillStyle = "#9da59f"; context.font = "700 12px ui-monospace, monospace"; context.textAlign = "center"; context.fillText("CAMERA INPUT UNAVAILABLE", width / 2, height / 2 + 82);
+    }
+    async function pollCamera() {
+      if (shuttingDown || document.hidden) { cameraPollTimer = setTimeout(pollCamera, 250); return; }
+      try {
+        const response = await fetch(`/api/camera/frame.jpg?after=${cameraFrameId}`, { cache: "no-store" });
+        if (response.status === 204) return;
+        if (!response.ok) throw new Error("camera unavailable");
+        const bitmap = await createImageBitmap(await response.blob());
+        cameraBitmap?.close();
+        cameraBitmap = bitmap;
+        cameraFrameId = Number(response.headers.get("X-Frame-Id") || cameraFrameId + 1);
+        const age = Number(response.headers.get("X-Frame-Age-Ms") || 0);
+        ui.frameClock.textContent = `FRAME ${cameraFrameId} / ${age} MS`;
+        ui.cameraState.textContent = "LIVE";
+        ui.cameraState.className = "camera-state state-ok";
+        drawViewport();
+      } catch (_) {
+        ui.cameraState.textContent = "WAITING";
+        ui.cameraState.className = "camera-state";
+      } finally {
+        cameraPollTimer = setTimeout(pollCamera, 50);
+      }
+    }
+    new ResizeObserver(drawViewport).observe(canvas);
+    function showCameraRotation() { ui.cameraRotation.textContent = `${cameraRotation}\u00b0`; }
+    ui.rotateCamera.addEventListener("click", () => { cameraRotation = (cameraRotation + 90) % 360; localStorage.setItem("frontier-camera-rotation", cameraRotation); showCameraRotation(); drawViewport(); });
+    showCameraRotation();
+    drawViewport(); pollCamera(); pollStatus(); pollTelemetry(); pollHeading(); loadCalibration(); setInterval(pollStatus, 500); setInterval(pollHeading, 250); setInterval(pollTelemetry, 3000);
+  </script>
+</body>
+</html>

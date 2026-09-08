@@ -1,0 +1,14 @@
+[Unit]
+Description=Converge Frontier rover networking once
+After=local-fs.target systemd-networkd.service
+Wants=systemd-networkd.service
+Before=frontier-rover-control.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/frontier-network-bootstrap.sh
+TimeoutStartSec=8min
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

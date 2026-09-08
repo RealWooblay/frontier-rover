@@ -1,0 +1,7 @@
+[Unit]
+Description=Safely power off the Frontier Rover
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/rm -f /run/frontier-rover/poweroff
+ExecStart=/usr/bin/systemctl poweroff

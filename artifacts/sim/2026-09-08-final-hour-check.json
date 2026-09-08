@@ -1,0 +1,30 @@
+{
+  "date": "2026-09-08",
+  "scope": "simulation_only",
+  "endpoint": "/api/run-policy-arena",
+  "request": {
+    "scenario_seed": 9201,
+    "scenario_id": 0,
+    "policy": "learned",
+    "inject_stuck": false,
+    "capture_frames": true
+  },
+  "result": {
+    "scenario_id": 0,
+    "policy": "learned_mlp_with_safety",
+    "success": false,
+    "terminal_state": "timeout",
+    "elapsed_s": 24.04,
+    "steps": 470,
+    "reward_total": -1.8876,
+    "contact_episodes": 0,
+    "recoveries": 7,
+    "path_length_m": 4.1865,
+    "final_goal_distance_m": 2.2579,
+    "final_pose_error_m": 0.1054,
+    "range_dropouts": 357
+  },
+  "rendered_frame_count": 97,
+  "trace_count": 470,
+  "interpretation": "The endpoint completed a real MuJoCo simulation and returned rendered frames, but the navigation policy did not reach its goal. Zero contacts is not mission success. No physical motor commands were sent."
+}

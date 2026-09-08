@@ -1,0 +1,532 @@
+{
+  "recorded_at": "2026-09-06T05:21:58.949487+00:00",
+  "found": false,
+  "sectors_observed": 13,
+  "step_degrees": -30.0,
+  "probes_per_sector": 3,
+  "records": [
+    {
+      "sector": 0,
+      "nominal_heading_degrees": -0.0,
+      "image": "sector-00.jpg",
+      "frame_id": "57765",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 105
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 105
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 105
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -33.0,
+        "error_degrees": 3.0,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 1,
+      "nominal_heading_degrees": -30.0,
+      "image": "sector-01.jpg",
+      "frame_id": "57786",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 251
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 251
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 251
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -31.5,
+        "error_degrees": 1.5,
+        "corrections": 0,
+        "elapsed_seconds": 0.55,
+        "message": null
+      }
+    },
+    {
+      "sector": 2,
+      "nominal_heading_degrees": -60.0,
+      "image": "sector-02.jpg",
+      "frame_id": "57803",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 315
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 315
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 315
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -32.1,
+        "error_degrees": 2.1,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 3,
+      "nominal_heading_degrees": -90.0,
+      "image": "sector-03.jpg",
+      "frame_id": "57821",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 320
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 320
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 55
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -32.1,
+        "error_degrees": 2.1,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 4,
+      "nominal_heading_degrees": -120.0,
+      "image": "sector-04.jpg",
+      "frame_id": "57839",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 378
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 123
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 123
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -31.0,
+        "error_degrees": 1.0,
+        "corrections": 0,
+        "elapsed_seconds": 0.53,
+        "message": null
+      }
+    },
+    {
+      "sector": 5,
+      "nominal_heading_degrees": -150.0,
+      "image": "sector-05.jpg",
+      "frame_id": "57857",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 55
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 55
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 55
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -31.7,
+        "error_degrees": 1.7,
+        "corrections": 0,
+        "elapsed_seconds": 0.55,
+        "message": null
+      }
+    },
+    {
+      "sector": 6,
+      "nominal_heading_degrees": -180.0,
+      "image": "sector-06.jpg",
+      "frame_id": "57876",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 340
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 340
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 79
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -30.7,
+        "error_degrees": 0.7,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 7,
+      "nominal_heading_degrees": -210.0,
+      "image": "sector-07.jpg",
+      "frame_id": "57895",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 310
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 68
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 68
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -31.1,
+        "error_degrees": 1.1,
+        "corrections": 0,
+        "elapsed_seconds": 0.55,
+        "message": null
+      }
+    },
+    {
+      "sector": 8,
+      "nominal_heading_degrees": -240.0,
+      "image": "sector-08.jpg",
+      "frame_id": "57915",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 193
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 58
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 58
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -33.0,
+        "error_degrees": 3.0,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 9,
+      "nominal_heading_degrees": -270.0,
+      "image": "sector-09.jpg",
+      "frame_id": "57936",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 95
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 95
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 95
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -33.9,
+        "error_degrees": 3.9,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 10,
+      "nominal_heading_degrees": -300.0,
+      "image": "sector-10.jpg",
+      "frame_id": "57951",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 249
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 67
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 67
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -29.1,
+        "error_degrees": -0.9,
+        "corrections": 0,
+        "elapsed_seconds": 0.55,
+        "message": null
+      }
+    },
+    {
+      "sector": 11,
+      "nominal_heading_degrees": -330.0,
+      "image": "sector-11.jpg",
+      "frame_id": "57971",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 269
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 80
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 80
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -30.0,
+        "error_degrees": 0.0,
+        "corrections": 0,
+        "elapsed_seconds": 0.55,
+        "message": null
+      }
+    },
+    {
+      "sector": 12,
+      "nominal_heading_degrees": -360.0,
+      "image": "sector-12.jpg",
+      "frame_id": "57989",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 334
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 105
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 105
+        }
+      ]
+    }
+  ]
+}

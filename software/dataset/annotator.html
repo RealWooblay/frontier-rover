@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lemon Dataset Labeler</title>
+  <style>
+    :root { color-scheme: dark; --bg:#111413; --panel:#1a1f1d; --line:#39413d; --text:#edf1ee; --muted:#a5aea8; --accent:#f2cf3a; --ok:#68d391; }
+    * { box-sizing: border-box; }
+    body { margin:0; min-height:100vh; background:var(--bg); color:var(--text); font:14px/1.45 system-ui,sans-serif; }
+    header { height:58px; display:flex; align-items:center; justify-content:space-between; padding:0 20px; border-bottom:1px solid var(--line); }
+    h1 { margin:0; font-size:17px; letter-spacing:0; }
+    .counter,.meta { color:var(--muted); font:12px ui-monospace,monospace; }
+    main { display:grid; grid-template-columns:minmax(0,1fr) 280px; height:calc(100vh - 58px); }
+    .stage { min-width:0; padding:20px; overflow:auto; }
+    .visual-stack { width:100%; display:grid; gap:14px; }
+    .viewport { min-width:0; }
+    .viewport-head { display:flex; justify-content:space-between; margin-bottom:6px; color:var(--muted); font:11px ui-monospace,monospace; text-transform:uppercase; }
+    canvas { display:block; width:100%; height:auto; border:1px solid var(--line); background:#080a09; }
+    #canvas { cursor:crosshair; }
+    #liveState { color:var(--ok); }
+    aside { border-left:1px solid var(--line); background:var(--panel); padding:18px; display:flex; flex-direction:column; gap:18px; }
+    .label { display:flex; align-items:center; gap:9px; }
+    .swatch { width:14px; height:14px; background:var(--accent); }
+    dl { margin:0; display:grid; grid-template-columns:1fr auto; gap:8px; }
+    dt { color:var(--muted); } dd { margin:0; font-family:ui-monospace,monospace; }
+    .actions { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:auto; }
+    button { min-height:40px; border:1px solid var(--line); border-radius:5px; background:#222825; color:var(--text); font-weight:650; cursor:pointer; }
+    button:hover { border-color:var(--accent); }
+    button:disabled { cursor:wait; opacity:.65; }
+    button.capture { grid-column:1/-1; }
+    button.primary { grid-column:1/-1; background:var(--accent); border-color:var(--accent); color:#171914; }
+    #status { min-height:20px; color:var(--muted); } #status.ok { color:var(--ok); }
+    @media (max-width:760px) {
+      main { height:auto; min-height:calc(100vh - 58px); grid-template-columns:1fr; grid-template-rows:auto auto; }
+      .stage { padding:12px; overflow:visible; }
+      canvas { width:100%; height:auto; max-height:none; }
+      aside { border-left:0; border-top:1px solid var(--line); }
+    }
+  </style>
+</head>
+<body>
+  <header><h1>Lemon Dataset Labeler</h1><span id="counter" class="counter">0 / 0</span></header>
+  <main>
+    <section class="stage">
+      <div class="visual-stack">
+        <div class="viewport">
+          <div class="viewport-head"><span>Live rover view</span><span id="liveState">Connecting</span></div>
+          <canvas id="liveCanvas" width="640" height="360"></canvas>
+        </div>
+        <div class="viewport">
+          <div class="viewport-head"><span>Frozen labelling frame</span><span>640 x 360</span></div>
+          <canvas id="canvas"></canvas>
+        </div>
+      </div>
+    </section>
+    <aside>
+      <div><div class="label"><span class="swatch"></span><strong>0: lemon</strong></div><div id="filename" class="meta"></div></div>
+      <dl>
+        <dt>x center</dt><dd id="xCenter">--</dd>
+        <dt>y center</dt><dd id="yCenter">--</dd>
+        <dt>width</dt><dd id="boxWidth">--</dd>
+        <dt>height</dt><dd id="boxHeight">--</dd>
+      </dl>
+      <div id="status"></div>
+      <div class="actions">
+        <button id="capture" class="capture">Capture in 5s</button>
+        <button id="previous" aria-label="Previous image">&larr;</button>
+        <button id="next" aria-label="Next image">&rarr;</button>
+        <button id="clear">Clear box</button>
+        <button id="save" class="primary">Save label</button>
+      </div>
+    </aside>
+  </main>
+  <script>
+    const canvas = document.querySelector("#canvas"); const ctx = canvas.getContext("2d");
+    const liveCanvas=document.querySelector("#liveCanvas");const liveContext=liveCanvas.getContext("2d");const liveState=document.querySelector("#liveState");
+    const image = new Image(); let images=[]; let index=0; let boxes=[]; let start=null; let draft=null; let lastLiveAt=0;
+    const session=new URLSearchParams(location.search).get("session");
+    const fields={x:document.querySelector("#xCenter"),y:document.querySelector("#yCenter"),w:document.querySelector("#boxWidth"),h:document.querySelector("#boxHeight")};
+    function current(){ return images[index]; }
+    function render(){ ctx.clearRect(0,0,canvas.width,canvas.height); if(image.complete)ctx.drawImage(image,0,0); const all=draft?[...boxes,draft]:boxes; ctx.strokeStyle="#f2cf3a";ctx.lineWidth=3; for(const b of all)ctx.strokeRect(b.x,b.y,b.w,b.h); showValues(all.at(-1)); }
+    function showValues(box){ if(!box){Object.values(fields).forEach(el=>el.textContent="--");return;} fields.x.textContent=((box.x+box.w/2)/canvas.width).toFixed(6); fields.y.textContent=((box.y+box.h/2)/canvas.height).toFixed(6); fields.w.textContent=(box.w/canvas.width).toFixed(6); fields.h.textContent=(box.h/canvas.height).toFixed(6); }
+    function point(event){ const rect=canvas.getBoundingClientRect(); return {x:(event.clientX-rect.left)*canvas.width/rect.width,y:(event.clientY-rect.top)*canvas.height/rect.height}; }
+    canvas.addEventListener("pointerdown",event=>{start=point(event);draft=null;canvas.setPointerCapture(event.pointerId);});
+    canvas.addEventListener("pointermove",event=>{if(!start)return;const p=point(event);draft={x:Math.min(start.x,p.x),y:Math.min(start.y,p.y),w:Math.abs(p.x-start.x),h:Math.abs(p.y-start.y)};render();});
+    canvas.addEventListener("pointerup",()=>{if(draft&&draft.w>2&&draft.h>2)boxes=[draft];start=null;draft=null;render();});
+    async function load(){ if(!images.length)return; document.querySelector("#counter").textContent=`${index+1} / ${images.length}`; document.querySelector("#filename").textContent=current(); document.querySelector("#status").textContent=""; const label=await fetch(`/api/label?path=${encodeURIComponent(current())}`).then(r=>r.json()); image.onload=()=>{canvas.width=image.naturalWidth;canvas.height=image.naturalHeight;boxes=(label.boxes||[]).map(b=>({x:(b.x_center-b.width/2)*canvas.width,y:(b.y_center-b.height/2)*canvas.height,w:b.width*canvas.width,h:b.height*canvas.height}));render();}; image.src=`/api/image?path=${encodeURIComponent(current())}&v=${Date.now()}`; }
+    document.querySelector("#clear").addEventListener("click",()=>{boxes=[];render();});
+    document.querySelector("#previous").addEventListener("click",()=>{if(index>0){index--;load();}});
+    document.querySelector("#next").addEventListener("click",()=>{if(index<images.length-1){index++;load();}});
+    document.querySelector("#capture").addEventListener("click",async event=>{const button=event.currentTarget;const status=document.querySelector("#status");button.disabled=true;try{if(!session)throw new Error("Open the labeler with a session name in the URL");for(let seconds=5;seconds>0;seconds--){button.textContent=`Capturing in ${seconds}`;await new Promise(resolve=>setTimeout(resolve,1000));}if(Date.now()-lastLiveAt>1000)throw new Error("Live camera is offline or stale");const jpeg=await new Promise(resolve=>liveCanvas.toBlob(resolve,"image/jpeg",.92));if(!jpeg)throw new Error("Could not encode camera frame");const response=await fetch(`/api/capture?session=${encodeURIComponent(session)}`,{method:"POST",headers:{"Content-Type":"image/jpeg"},body:jpeg});const result=await response.json();if(!response.ok)throw new Error(result.error);const data=await fetch("/api/images").then(r=>r.json());images=data.images.filter(path=>path.includes(`/${session}/`));index=images.indexOf(result.saved);await load();status.textContent=`Captured ${result.saved}`;status.className="ok";}catch(error){status.textContent=error.message;status.className="";}finally{button.disabled=false;button.textContent="Capture in 5s";}});
+    document.querySelector("#save").addEventListener("click",async()=>{const normalized=boxes.map(b=>({class_id:0,x_center:(b.x+b.w/2)/canvas.width,y_center:(b.y+b.h/2)/canvas.height,width:b.w/canvas.width,height:b.h/canvas.height}));const response=await fetch("/api/label",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({path:current(),boxes:normalized})});const result=await response.json();const status=document.querySelector("#status");status.textContent=response.ok?`Saved ${result.saved}`:result.error;status.className=response.ok?"ok":"";});
+    fetch("/api/images").then(r=>r.json()).then(data=>{images=session?data.images.filter(path=>path.includes(`/${session}/`)):data.images;load();});
+    async function pollLive(){try{const response=await fetch(`/api/live-frame?v=${Date.now()}`,{cache:"no-store"});if(!response.ok)throw new Error("camera unavailable");const bitmap=await createImageBitmap(await response.blob());liveContext.setTransform(1,0,0,1,0,0);liveContext.clearRect(0,0,liveCanvas.width,liveCanvas.height);liveContext.translate(0,liveCanvas.height);liveContext.rotate(-Math.PI/2);liveContext.drawImage(bitmap,0,0);bitmap.close();lastLiveAt=Date.now();liveState.textContent=`FRAME ${response.headers.get("X-Frame-Id")||"--"} / ${response.headers.get("X-Frame-Age-Ms")||"--"} MS`;}catch(_){liveState.textContent="CAMERA OFFLINE";}finally{setTimeout(pollLive,100);}}
+    pollLive();
+  </script>
+</body>
+</html>

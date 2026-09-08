@@ -1,0 +1,111 @@
+{
+  "recorded_at": "2026-09-06T05:19:46.946647+00:00",
+  "found": true,
+  "sectors_observed": 2,
+  "step_degrees": -30.0,
+  "probes_per_sector": 3,
+  "records": [
+    {
+      "sector": 0,
+      "nominal_heading_degrees": -0.0,
+      "image": "sector-00.jpg",
+      "frame_id": "55989",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 384
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 195
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 195
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -29.7,
+        "error_degrees": -0.3,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 1,
+      "nominal_heading_degrees": -30.0,
+      "image": "sector-01.jpg",
+      "frame_id": "56010",
+      "detections": [
+        {
+          "class_id": 49,
+          "class_name": "orange",
+          "confidence": 0.370224,
+          "x1_px": 387.89,
+          "y1_px": 175.69,
+          "x2_px": 472.94,
+          "y2_px": 252.19,
+          "horizontal_error": 0.345044,
+          "area_ratio": 0.028238
+        },
+        {
+          "class_id": 49,
+          "class_name": "orange",
+          "confidence": 0.405449,
+          "x1_px": 388.94,
+          "y1_px": 176.11,
+          "x2_px": 473.12,
+          "y2_px": 251.75,
+          "horizontal_error": 0.346973,
+          "area_ratio": 0.027639
+        },
+        {
+          "class_id": 49,
+          "class_name": "orange",
+          "confidence": 0.405449,
+          "x1_px": 388.94,
+          "y1_px": 176.11,
+          "x2_px": 473.12,
+          "y2_px": 251.75,
+          "horizontal_error": 0.346973,
+          "area_ratio": 0.027639
+        }
+      ],
+      "observations": [
+        {
+          "target_visible": true,
+          "horizontal_error": 0.345044,
+          "area_ratio": 0.028238,
+          "frame_age_ms": 290
+        },
+        {
+          "target_visible": true,
+          "horizontal_error": 0.346973,
+          "area_ratio": 0.027639,
+          "frame_age_ms": 156
+        },
+        {
+          "target_visible": true,
+          "horizontal_error": 0.346973,
+          "area_ratio": 0.027639,
+          "frame_age_ms": 156
+        }
+      ]
+    }
+  ]
+}

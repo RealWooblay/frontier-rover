@@ -1,0 +1,1257 @@
+{
+  "collected_at": "2026-09-08T08:43:44.830093+00:00",
+  "base_url": "http://192.168.0.87:8765",
+  "duration_s": 11.713,
+  "motion_commands_sent": 0,
+  "summary": {
+    "unique_frames": 0,
+    "delivered_fps": 0.0,
+    "gap_p50_ms": null,
+    "gap_p95_ms": null,
+    "max_gap_ms": null,
+    "published_age_p50_ms": null,
+    "published_age_p95_ms": null,
+    "skipped_frame_ids": 0,
+    "errors": 309
+  },
+  "limits": "Measures delivery to this collector. Header age starts at Pi publication, not sensor exposure. This is not end-to-end optical latency.",
+  "frames": [],
+  "errors": [
+    {
+      "elapsed_s": 0.0268,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.0509,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.0762,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.1015,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.127,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.1524,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.1779,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.2033,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.229,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.2554,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.2788,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.3064,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.3291,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.3554,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.3816,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.4058,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.4322,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.4557,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.4818,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.5079,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.531,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.5565,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.5806,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.6065,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.6307,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.6547,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.6761,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.7021,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.7263,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.7517,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.7771,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.8025,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.8276,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.8531,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.8742,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.8997,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.9238,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.9444,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.9699,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 0.9955,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.0207,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.0449,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.0704,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.0958,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.1203,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.1436,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.169,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.1928,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.2182,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.2437,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.2665,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.292,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.3177,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.3433,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.3697,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.3967,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.4229,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.4445,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.4688,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.4917,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.5137,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.5382,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.5639,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.5873,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.6129,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.6363,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.6604,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.6858,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.7113,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.7368,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.7622,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.7871,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.8126,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.838,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.8606,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.8864,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.912,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.9375,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.9622,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 1.9862,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.0119,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.0371,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.0614,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.0869,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.1123,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.1377,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.1613,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.1872,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.2127,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.2381,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.2616,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.2871,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.3126,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.337,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.3624,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.3878,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.413,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.4369,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.4622,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.4866,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.5118,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.537,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.5622,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.5874,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.6126,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.6378,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.663,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.6883,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.7136,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.7389,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.7604,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.7841,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.8096,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.8343,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.8597,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.885,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.9105,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.9347,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.9601,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 2.9811,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.0066,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.0282,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.0529,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.0785,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.1043,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.1299,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.155,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.178,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.2038,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.2293,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.2547,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.28,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.3013,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.327,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.3523,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.3777,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.4033,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.4288,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.4551,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.4777,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.5043,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.5307,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.5556,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.582,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.6038,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.6275,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.653,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.6785,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.7041,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.7297,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.7558,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.781,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.8073,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.8337,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.8601,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.8825,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.9039,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.9295,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.9558,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 3.979,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.0031,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.0296,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.0519,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.0784,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.1051,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.1304,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.157,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.1832,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.2063,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.2321,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.2562,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.2795,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.3048,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.3304,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.3538,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.3793,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.4046,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.43,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.4553,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.4807,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.5061,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.5315,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.5569,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.5824,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.6036,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.629,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.6543,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.6797,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.7037,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.7291,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.7545,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.7798,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.8027,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.8282,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.8539,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.8795,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.905,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.9305,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.9559,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 4.9816,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.0053,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.0306,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.0538,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.0792,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.1045,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.1297,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.1535,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.1757,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.2009,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.2262,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.2514,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.2766,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.3018,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.3271,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.3523,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.377,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.4022,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.4273,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.4526,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.4778,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.4981,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.5202,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.5454,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.5701,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.5953,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.6202,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.6454,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.6701,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.6953,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.7205,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.7458,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.7711,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.7963,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.8192,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.8444,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.8696,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.8949,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.9201,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.9453,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.9705,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 5.9957,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.0204,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.0457,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.0701,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.0954,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.1201,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.143,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.1682,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.1906,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.2112,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.2358,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.2611,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.2851,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.3103,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.3355,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.3607,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.3858,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.411,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.4363,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.4612,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.4858,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.511,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.5364,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.5612,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.5859,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.6111,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.6363,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.6615,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.6866,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.7118,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.737,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.7623,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.7868,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.812,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.8368,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.8619,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.8872,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.9124,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.9367,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.9619,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 6.9859,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.0111,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.0364,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.0616,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.0868,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.1121,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.1368,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.1584,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.1836,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.2088,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.234,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.2593,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.2845,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.3097,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.335,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.3591,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.3843,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.4095,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.4348,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.4602,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.4856,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.5109,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.5363,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.5616,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.5869,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.6121,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 7.6368,
+      "error": "<urlopen error [Errno 64] Host is down>"
+    },
+    {
+      "elapsed_s": 9.6631,
+      "error": "<urlopen error timed out>"
+    },
+    {
+      "elapsed_s": 11.6894,
+      "error": "<urlopen error timed out>"
+    }
+  ]
+}

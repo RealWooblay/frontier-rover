@@ -1,0 +1,398 @@
+{
+  "recorded_at": "2026-09-06T05:17:09.000699+00:00",
+  "found": true,
+  "sectors_observed": 9,
+  "step_degrees": -30.0,
+  "probes_per_sector": 3,
+  "records": [
+    {
+      "sector": 0,
+      "nominal_heading_degrees": -0.0,
+      "image": "sector-00.jpg",
+      "frame_id": "53496",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 255
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 255
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 255
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -30.5,
+        "error_degrees": 0.5,
+        "corrections": 0,
+        "elapsed_seconds": 0.59,
+        "message": null
+      }
+    },
+    {
+      "sector": 1,
+      "nominal_heading_degrees": -30.0,
+      "image": "sector-01.jpg",
+      "frame_id": "53510",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 446
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 144
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 144
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -29.5,
+        "error_degrees": -0.5,
+        "corrections": 0,
+        "elapsed_seconds": 0.53,
+        "message": null
+      }
+    },
+    {
+      "sector": 2,
+      "nominal_heading_degrees": -60.0,
+      "image": "sector-02.jpg",
+      "frame_id": "53530",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 274
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 274
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 54
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -29.9,
+        "error_degrees": -0.1,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 3,
+      "nominal_heading_degrees": -90.0,
+      "image": "sector-03.jpg",
+      "frame_id": "53549",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 248
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 171
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 72
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -31.5,
+        "error_degrees": 1.5,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 4,
+      "nominal_heading_degrees": -120.0,
+      "image": "sector-04.jpg",
+      "frame_id": "53566",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 402
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 87
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 87
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -30.1,
+        "error_degrees": 0.1,
+        "corrections": 0,
+        "elapsed_seconds": 0.53,
+        "message": null
+      }
+    },
+    {
+      "sector": 5,
+      "nominal_heading_degrees": -150.0,
+      "image": "sector-05.jpg",
+      "frame_id": "53586",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 228
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 228
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 228
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -32.8,
+        "error_degrees": 2.8,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 6,
+      "nominal_heading_degrees": -180.0,
+      "image": "sector-06.jpg",
+      "frame_id": "53605",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 184
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 104
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 104
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -29.6,
+        "error_degrees": -0.4,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 7,
+      "nominal_heading_degrees": -210.0,
+      "image": "sector-07.jpg",
+      "frame_id": "53622",
+      "detections": [
+        null,
+        null,
+        null
+      ],
+      "observations": [
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 73
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 73
+        },
+        {
+          "target_visible": false,
+          "horizontal_error": 0.0,
+          "area_ratio": 0.0,
+          "frame_age_ms": 73
+        }
+      ],
+      "turn": {
+        "state": "complete",
+        "active": false,
+        "target_degrees": -30.0,
+        "measured_degrees": -27.0,
+        "error_degrees": -3.0,
+        "corrections": 0,
+        "elapsed_seconds": 0.57,
+        "message": null
+      }
+    },
+    {
+      "sector": 8,
+      "nominal_heading_degrees": -240.0,
+      "image": "sector-08.jpg",
+      "frame_id": "53638",
+      "detections": [
+        {
+          "class_id": 49,
+          "class_name": "orange",
+          "confidence": 0.27513,
+          "x1_px": 327.75,
+          "y1_px": 172.88,
+          "x2_px": 411.94,
+          "y2_px": 245.16,
+          "horizontal_error": 0.155762,
+          "area_ratio": 0.026411
+        },
+        {
+          "class_id": 49,
+          "class_name": "orange",
+          "confidence": 0.230922,
+          "x1_px": 330.67,
+          "y1_px": 171.44,
+          "x2_px": 412.81,
+          "y2_px": 244.34,
+          "horizontal_error": 0.161694,
+          "area_ratio": 0.025992
+        },
+        {
+          "class_id": 49,
+          "class_name": "orange",
+          "confidence": 0.230922,
+          "x1_px": 330.67,
+          "y1_px": 171.44,
+          "x2_px": 412.81,
+          "y2_px": 244.34,
+          "horizontal_error": 0.161694,
+          "area_ratio": 0.025992
+        }
+      ],
+      "observations": [
+        {
+          "target_visible": true,
+          "horizontal_error": 0.155762,
+          "area_ratio": 0.026411,
+          "frame_age_ms": 422
+        },
+        {
+          "target_visible": true,
+          "horizontal_error": 0.161694,
+          "area_ratio": 0.025992,
+          "frame_age_ms": 127
+        },
+        {
+          "target_visible": true,
+          "horizontal_error": 0.161694,
+          "area_ratio": 0.025992,
+          "frame_age_ms": 127
+        }
+      ]
+    }
+  ]
+}

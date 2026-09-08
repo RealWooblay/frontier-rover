@@ -1,0 +1,270 @@
+{
+  "schema_version": 1,
+  "generated_on": "2026-09-08",
+  "scope": "laptop-completable simulation, training, replay, and evidence",
+  "stages": [
+    {
+      "name": "Real2Sim directional yaw identification",
+      "state": "complete with physical data",
+      "evidence": "MPU-9250 log, fitted MuJoCo parameters, three held-out final-yaw endpoints"
+    },
+    {
+      "name": "Contact-physical Gymnasium environment",
+      "state": "complete on laptop",
+      "evidence": "MuJoCo wheel forces, friction, contacts, rays, latency, noise, and dead reckoning"
+    },
+    {
+      "name": "Behavior cloning plus DAgger",
+      "state": "complete on laptop",
+      "evidence": "9-32-2 MLP, deterministic seeds, training report, immutable model hash"
+    },
+    {
+      "name": "Held-out policy and actuator-fault evaluation",
+      "state": "complete on laptop",
+      "evidence": "same randomized worlds; ideal contact/stuck flags in policy observations; physical equivalents pending"
+    },
+    {
+      "name": "Rendered-camera mapping and exploration",
+      "state": "complete in simulation",
+      "evidence": "RGB render, HSV target detector, occupancy map, frontiers, A*, target memory"
+    },
+    {
+      "name": "Physical Sim2Real policy transfer",
+      "state": "blocked by observation parity",
+      "evidence": "physical rover lacks metric range and wheel displacement observations"
+    }
+  ],
+  "metrics": {
+    "real2sim": {
+      "yaw_axis": "gy_dps",
+      "fitted_parameters": {
+        "left_turn_gain": 0.9,
+        "right_turn_gain": 0.84,
+        "velocity_feedback": 0.004,
+        "simulated_final_degrees": {
+          "turn_left": 126.3165249012266,
+          "turn_right": -112.38191171645848
+        },
+        "trajectory_rmse_degrees": 2.33142652088156
+      },
+      "controller_max_error_degrees": 2.0241549999999933,
+      "legacy_model_rmse_degrees": 36.50731986573412,
+      "fitted_model_rmse_degrees": 14.34258923990711,
+      "held_out_rmse_reduction_percent": 60.713113718958304
+    },
+    "policy_training": {
+      "samples": 29380,
+      "validation_samples": 4786,
+      "initial_validation_mse": 0.28442357208853764,
+      "final_validation_mse": 0.01748986697694931,
+      "model_sha256": "782a3b40d5bc45bf3bdf71629c75ae8a3a20d7aa06187e3e1a53a0800fbf3c6e"
+    },
+    "policy_evaluation": {
+      "learned": {
+        "episodes": 40,
+        "successes": 33,
+        "success_rate": 0.825,
+        "contact_episodes": 0,
+        "recoveries": 139,
+        "mean_reward": 20.932547500000002,
+        "mean_elapsed_s_successes": 8.087030303030303,
+        "mean_final_pose_error_m": 0.16427750000000002
+      },
+      "expert": {
+        "episodes": 40,
+        "successes": 32,
+        "success_rate": 0.8,
+        "contact_episodes": 36,
+        "recoveries": 36,
+        "mean_reward": 18.2758325,
+        "mean_elapsed_s_successes": 8.969312500000001,
+        "mean_final_pose_error_m": 0.17093
+      },
+      "actuator_stall_learned": {
+        "episodes": 12,
+        "successes": 10,
+        "success_rate": 0.8333333333333334,
+        "contact_episodes": 0,
+        "recoveries": 53,
+        "mean_reward": 20.238941666666665,
+        "mean_elapsed_s_successes": 9.672799999999999,
+        "mean_final_pose_error_m": 0.13403333333333334
+      }
+    },
+    "mapping": {
+      "trials": 12,
+      "successes": 10,
+      "success_rate": 0.8333333333333334,
+      "collision_free_trials": 10,
+      "mean_pose_error_m": 0.1882,
+      "mean_elapsed_s_successes": 7.3751999999999995
+    },
+    "controller_ablation": {
+      "baseline": {
+        "missions": 12,
+        "successes": 12,
+        "contact_events": 10,
+        "missions_with_contact": 5
+      },
+      "baseline_with_shield": {
+        "missions": 12,
+        "successes": 10,
+        "contact_events": 0,
+        "missions_with_contact": 0
+      },
+      "bounded_mlp": {
+        "missions": 12,
+        "successes": 10,
+        "contact_events": 48,
+        "missions_with_contact": 5
+      },
+      "bounded_mlp_with_shield": {
+        "missions": 12,
+        "successes": 11,
+        "contact_events": 0,
+        "missions_with_contact": 0
+      }
+    }
+  },
+  "acceptance_checks": {
+    "model_hash_matches_training_and_evaluation": true,
+    "training_reduced_validation_error": true,
+    "learned_policy_beats_expert_success_rate": true,
+    "learned_nominal_contact_episodes_zero": true,
+    "learned_fault_contact_episodes_zero": true,
+    "real2sim_improves_held_out_yaw_error": true,
+    "rendered_mapping_majority_success": true
+  },
+  "all_laptop_checks_pass": true,
+  "files": {
+    "physical_imu_log": {
+      "path": "artifacts/physical/2026-09-06-imu-motion.csv",
+      "bytes": 61812,
+      "sha256": "506f004f8ab958337a24669ce64e75b9e91123422328120d8cb68216cdb87fb3"
+    },
+    "real2sim_fit": {
+      "path": "artifacts/sim/2026-09-06-imu-turn-fit.json",
+      "bytes": 834,
+      "sha256": "13c077c52fabf5cc5ad50480cdc94b1274cb4b59790009d6d4ca6f58b893928a"
+    },
+    "turn_validation": {
+      "path": "artifacts/sim/2026-09-06-closed-loop-turn-validation.json",
+      "bytes": 1388,
+      "sha256": "c055b42c049b29bc25703a20c588c893f876241026f8ecf1b2b0e1d488a5ef47"
+    },
+    "mapping_benchmark": {
+      "path": "artifacts/sim/2026-09-06-high-fidelity-exploration.json",
+      "bytes": 22413,
+      "sha256": "baa8f30b4b268f3f48bd9e3f93bef1f1f63a43df777f876e4ac6f4feace2533c"
+    },
+    "policy_model": {
+      "path": "artifacts/models/high-fidelity-navigation-policy.npz",
+      "bytes": 3824,
+      "sha256": "782a3b40d5bc45bf3bdf71629c75ae8a3a20d7aa06187e3e1a53a0800fbf3c6e"
+    },
+    "policy_training": {
+      "path": "artifacts/models/high-fidelity-navigation-policy-training.json",
+      "bytes": 59662,
+      "sha256": "e6b9890db94e49a9b3de551a051385b6409467f8e3154ec1df03c63dd6622a9e"
+    },
+    "policy_evaluation": {
+      "path": "artifacts/sim/high-fidelity-policy-evaluation.json",
+      "bytes": 48301,
+      "sha256": "bd0b82d30f6374bf8acffc0dda15fca4515f017403524ff87dc92c35b213daed"
+    },
+    "rejected_policy_baseline": {
+      "path": "artifacts/sim/high-fidelity-policy-evaluation-baseline.json",
+      "bytes": 48265,
+      "sha256": "aea47730517a3b30a56df9557f9b89882e63ab0e214a428c18409d15891aad69"
+    },
+    "contact_environment": {
+      "path": "software/sim/high_fidelity_env.py",
+      "bytes": 23038,
+      "sha256": "d5f9dc6b20a9e3111636fa2634b670e7ebe3fabeb849e480e2ed980f8034ce9b"
+    },
+    "learned_policy_and_safety": {
+      "path": "software/sim/mlp_policy.py",
+      "bytes": 9023,
+      "sha256": "608fa609a4669f3661a20012e2c77eef83a58cbafd1254a9508ceddf552d0fe4"
+    },
+    "policy_training_code": {
+      "path": "software/sim/train_high_fidelity_policy.py",
+      "bytes": 8743,
+      "sha256": "d6293959a2e41c57e0ca0f4bb285d3d7f795b6edfdf6c17e6e9544216f84b4e6"
+    },
+    "policy_evaluation_code": {
+      "path": "software/sim/evaluate_high_fidelity_policy.py",
+      "bytes": 5914,
+      "sha256": "86919b1f247b95330e86f300438eb4c2754cc2790d0640bf7c9c3be08cf322a5"
+    },
+    "mapping_code": {
+      "path": "software/sim/exploration_scenario.py",
+      "bytes": 26722,
+      "sha256": "76738645dfa7322a8a2c9b0f474311ee1f99c60a52fc4dea203dbd45946d11a9"
+    },
+    "autonomy_lab_server": {
+      "path": "software/sim/lab_server.py",
+      "bytes": 24229,
+      "sha256": "5cde2480e9e98d3af0479ca6e51827cf68d180d812f1a993f465fe8abd237776"
+    },
+    "autonomy_lab_ui": {
+      "path": "software/sim/lab.html",
+      "bytes": 54729,
+      "sha256": "1e5d50f20732f0b21e0a97ba9e517dd376f2d769b69eabc4da084618aaa756fb"
+    },
+    "camera_freshness_ui": {
+      "path": "software/sim/camera_freshness.js",
+      "bytes": 1385,
+      "sha256": "12349642c064c8ad20754691425da67fc624e43b4ba50ea964636469086bd3a9"
+    },
+    "manual_drive_ui": {
+      "path": "software/sim/manual_drive.js",
+      "bytes": 2133,
+      "sha256": "da798c748d82a5e8dbb6790074d462efa496fad603018bc89990415933b49454"
+    },
+    "simulation_course": {
+      "path": "docs/simulation-and-sim2real-course.md",
+      "bytes": 24582,
+      "sha256": "24d83fe23dc5f3fd1d37caf52ea5da34ef84270168b7aaccf53dacb195561f76"
+    },
+    "practical_course": {
+      "path": "docs/rover-practical-course.md",
+      "bytes": 29274,
+      "sha256": "99944ab6fee2f74e3d05ac25e764aad7f43dc73bb238d726743f7d9969b2014b"
+    },
+    "learning_workshop": {
+      "path": "software/learning/rover_workshop.py",
+      "bytes": 10010,
+      "sha256": "2d5203dc67389329489cf07bbbaad229fd67c32ee46b2d9238928a6be9142057"
+    },
+    "controller_ablation": {
+      "path": "artifacts/sim/2026-09-08-controller-ablation.json",
+      "bytes": 22296,
+      "sha256": "bf2f77fa8bc12636a56defc98a08932aa71f9832b838f52a3b41e1ae1b750217"
+    },
+    "policy_arena_desktop_capture": {
+      "path": "artifacts/images/policy-arena-desktop.png",
+      "bytes": 170718,
+      "sha256": "6744a6e912235076a588539cb21fbe3bfd99b529e128e242cd0958c44d63c86a"
+    },
+    "policy_arena_mobile_capture": {
+      "path": "artifacts/images/policy-arena-mobile.png",
+      "bytes": 98567,
+      "sha256": "dd3123923f4e1f442b0f06af4a3926bbbe9adeb1c6b9d3ff327cd852502e0c65"
+    }
+  },
+  "reproduce": [
+    "python software/sim/train_high_fidelity_policy.py",
+    "python software/sim/evaluate_high_fidelity_policy.py",
+    "python software/sim/build_offline_evidence.py",
+    "MUJOCO_GL=cgl python software/sim/lab_server.py --port 8780"
+  ],
+  "claim_boundary": "Simulation evidence supports implementation and controlled virtual evaluation. It does not claim physical metric navigation or physical deployment of the learned policy.",
+  "interpretation_limits": [
+    "Yaw validation RMSE covers three turn endpoints, not the complete trajectories.",
+    "The historical evaluation compared learned plus safety against baseline alone.",
+    "The fresh four-way ablation isolates safety within each controller family; output bounds differ across families.",
+    "Contact/stuck inputs include ideal simulator information; physical observation parity remains incomplete.",
+    "Historical benchmark results informed development and are not a never-seen blind final test."
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "recorded_at": "2026-09-06T04:47:47.110166+00:00",
+  "pi_url": "http://192.168.0.87:8765",
+  "preflight": {
+    "hostname": "frontier-pi",
+    "imu": {
+      "state": "streaming",
+      "yaw_rate_dps": -0.11,
+      "relative_yaw_degrees": -147.4,
+      "bias_dps": 1.282,
+      "noise_dps": 0.117,
+      "sample_age_ms": 3,
+      "sample_count": 90492,
+      "error": null
+    },
+    "camera_stream": {
+      "state": "streaming",
+      "width": 360,
+      "height": 640,
+      "capture_fps": 16.1,
+      "frame_age_ms": 207,
+      "frame_id": 27137,
+      "error": null
+    }
+  },
+  "turns": [
+    {
+      "state": "complete",
+      "active": false,
+      "target_degrees": 45.0,
+      "measured_degrees": 46.1,
+      "error_degrees": -1.1,
+      "corrections": 1,
+      "elapsed_seconds": 1.03,
+      "message": null
+    },
+    {
+      "state": "complete",
+      "active": false,
+      "target_degrees": -90.0,
+      "measured_degrees": -92.2,
+      "error_degrees": 2.2,
+      "corrections": 1,
+      "elapsed_seconds": 1.27,
+      "message": null
+    },
+    {
+      "state": "complete",
+      "active": false,
+      "target_degrees": 45.0,
+      "measured_degrees": 44.2,
+      "error_degrees": 0.8,
+      "corrections": 1,
+      "elapsed_seconds": 1.01,
+      "message": null
+    }
+  ],
+  "summary": {
+    "complete": 3,
+    "requested": 3,
+    "maximum_absolute_error_degrees": 2.2,
+    "net_measured_degrees": -1.8999999999999986
+  }
+}

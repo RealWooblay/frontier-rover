@@ -1,0 +1,14 @@
+[Unit]
+Description=Frontier Rover Jetson autonomy service
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/wooblay/frontier-rover/software/jetson
+ExecStart=/usr/bin/python3 /home/wooblay/frontier-rover/software/jetson/autonomy_service.py --target "sports ball"
+Restart=on-failure
+RestartSec=3
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=default.target

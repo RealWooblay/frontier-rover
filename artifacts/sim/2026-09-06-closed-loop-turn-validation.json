@@ -1,0 +1,41 @@
+{
+  "source": "artifacts/physical/2026-09-06-closed-loop-turn.csv",
+  "turns": [
+    {
+      "turn_number": 1,
+      "target_degrees": 60.0,
+      "physical_degrees": 60.334022,
+      "controller_error_degrees": -0.3340219999999974,
+      "legacy_sim_degrees": 67.63908737312047,
+      "legacy_error_degrees": 7.3050653731204775,
+      "fitted_sim_degrees": 59.27413207508916,
+      "fitted_error_degrees": -1.0598899249108342
+    },
+    {
+      "turn_number": 2,
+      "target_degrees": -120.0,
+      "physical_degrees": -117.975845,
+      "controller_error_degrees": -2.0241549999999933,
+      "legacy_sim_degrees": -180.72022112447695,
+      "legacy_error_degrees": -62.74437612447694,
+      "fitted_sim_degrees": -141.33313981926867,
+      "fitted_error_degrees": -23.35729481926866
+    },
+    {
+      "turn_number": 3,
+      "target_degrees": 60.0,
+      "physical_degrees": 59.243047,
+      "controller_error_degrees": 0.7569530000000029,
+      "legacy_sim_degrees": 56.391293858215434,
+      "legacy_error_degrees": -2.851753141784563,
+      "fitted_sim_degrees": 50.85001355630781,
+      "fitted_error_degrees": -8.39303344369219
+    }
+  ],
+  "summary": {
+    "controller_max_error_degrees": 2.0241549999999933,
+    "legacy_model_rmse_degrees": 36.50731986573412,
+    "fitted_model_rmse_degrees": 14.34258923990711,
+    "held_out_rmse_reduction_percent": 60.713113718958304
+  }
+}

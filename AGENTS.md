@@ -51,6 +51,78 @@ Do not waste time teaching elementary software-engineering concepts unless they 
 
 ---
 
+## Non-Negotiable Teaching Contract
+
+Teaching is part of task completion for every activity related to this rover. It
+is not optional commentary added after implementation. The agent must help the
+owner build an accurate mental model of the physical system, software, data
+flow, assumptions, measurements, and failure modes while progress is made.
+
+For every meaningful engineering step, provide the following before acting:
+
+1. **Objective:** State the narrow result being pursued.
+2. **System position:** Show where this component or change sits in the complete
+   architecture.
+3. **Concept:** Explain the technical principle being learned, in plain language
+   first and then with the correct technical terminology.
+4. **Mechanism:** Explain what physically or computationally happens.
+5. **Interfaces:** Identify the data, signals, voltage, protocol, API, timing, or
+   units crossing each relevant boundary.
+6. **Prediction:** State what should happen if the current understanding is
+   correct.
+7. **Measurement:** Define how the result will be observed and quantified.
+8. **Failure meaning:** Explain what the likely failure outcomes would imply.
+
+After acting, provide:
+
+1. What changed.
+2. The important code, configuration, or wiring involved.
+3. The evidence showing whether it worked.
+4. What the result teaches about the system.
+5. One short teach-back question for the owner to answer at the end of a
+   meaningful experiment or milestone.
+6. An update to the living learning guide when a durable concept, architecture
+   decision, measurement, or diagnostic result was established.
+
+Enforcement rules:
+
+- Never provide unexplained commands, constants, wiring, code, acronyms, or
+  framework names.
+- Never say only "run this". Explain what it changes, why it is needed, and how
+  the result can be inspected.
+- When changing code, trace the relevant path from user input through software
+  boundaries to hardware output.
+- When debugging, state the hypothesis and the evidence that would confirm or
+  reject it before performing the test.
+- Label facts, measurements, assumptions, and hypotheses distinctly.
+- Keep explanations concise, but never omit the technical mechanism.
+- Do not silently combine several conceptual steps into one opaque operation.
+- Do not treat successful output as proof of owner understanding; use a brief
+  teach-back at meaningful checkpoints.
+- Even when the owner says "just do it", provide the short objective, mechanism,
+  and measurement before proceeding.
+- Do not turn every shell command into a lecture. Apply this contract around
+  meaningful engineering decisions, experiments, debugging steps, and changes.
+
+Use this response structure whenever practical:
+
+```text
+Objective
+Architecture / system path
+Concept and mechanism
+Prediction and measurement
+Action or experiment
+Result and evidence
+What was learned
+Teach-back
+```
+
+If the owner says **"Teaching reset"**, stop the current sequence and restate
+the objective, system path, mechanism, expected measurement, and failure
+interpretation before continuing.
+
+---
+
 ## Hardware Currently Available
 
 `docs/hardware-inventory.md` is the authoritative list of exact products,
@@ -65,7 +137,11 @@ Known hardware:
 - HiLetgo GY-9250 / MPU-9250 IMU breakout
 - XiaoR Geek XR-003 4WD chassis, mechanically assembled
 - Four supplied two-wire TT brushed DC gearmotors
+- Three DIANN TB6612FNG dual-channel motor-driver modules
 - Lylanmo LM2596 adjustable buck modules
+- LRP 7.2 V 3000 mAh six-cell NiMH battery with Tamiya connector
+- Infinity Power IP-Ni2 2 A NiMH/NiCd charger
+- Tamiya connector pairs and 5 mm heat-shrink tubing
 - ELEGOO Dupont jumper wires, logic signals only
 - CENTROPOWER 5.5 x 2.1 mm 18 AWG DC pigtails
 - Raspberry Pi power supply
@@ -75,22 +151,22 @@ Known hardware:
 - CSI camera extension cable, 15-pin to 22-pin
 - Laptop used as the development machine
 
-Not present, despite what earlier notes implied:
-
-- No battery, battery holder, or battery protection circuitry of any kind
-- No motor-controller board; the XR-003 listing excludes controllers and sensors
-
 Important unknowns:
 
-- Motor winding resistance, running current, and stall current
 - Whether the motors include encoders
-- Battery chemistry, nominal voltage, maximum voltage, and safe current
-- Exact MPU-9250 breakout-board design and voltage tolerance
+- Long-term MPU-9250 bias stability and magnetic interference on the assembled rover
 - Actual load behaviour of the assembled LM2596 modules
-- Physical wiring and connector polarity
+- Sustained four-motor running current and TB6612 thermal margin under floor load
 - Measured chassis mass and payload margin against the 500 g listed limit
+- Camera operation and end-to-end image-stream latency
+- Pi-to-Jetson command and video transport under realistic load
 
 Never invent these details.
+
+The current MPU-9250 breakout is rigidly mounted vertically. Stationary
+acceleration and physical turn tests identify sensor Y as the chassis vertical
+yaw axis. Do not tell the owner to remount it flat without repeating axis
+identification and updating the controller.
 
 Before giving wiring instructions, resolve unknowns in this order: the official
 product listing or datasheet first, then a multimeter measurement. Ask for a
@@ -109,15 +185,119 @@ The Raspberry Pi currently has:
 - Home Wi-Fi with DHCP
 - Multicast DNS name: `frontier-pi.local`
 - All Ubuntu package updates applied as of 2026-07-22
-- No Ethernet adapter currently available
+- A direct USB Ethernet recovery path at `10.55.0.2`
+- A browser controller served on port `8765`
+- A four-motor GPIO controller using two TB6612FNG boards
+- A 350 ms stale-command watchdog
+- Safe shutdown from the operator console
+- A verified IMX708 Camera Module 3 using an explicit device-tree overlay
+- A 360 x 640 latest-frame HTTP camera feed, rotated to 640 x 360 in the
+  operator UI, at a configured 15 fps
+- A Jetson Orin Nano running Ubuntu 22.04 at `192.168.55.1` over NVIDIA USB
+  device-mode networking
+- A temporary SSH reverse tunnel exposing the Pi controller as
+  `127.0.0.1:8765` on the Jetson
+- OpenCV 4.5.4 with AprilTag 36h11 and ORB feature tracking on the Jetson
+- The owner confirms Camera Module 3 previously worked directly on the Jetson.
+  Preserve that software installation and matching ribbon; do not unnecessarily
+  repeat driver setup. A fresh direct capture has not been performed this session.
 
 Current platform constraints:
 
 - The local `sudo` password is intentionally temporary and weak.
 - `vcgencmd` cannot currently access `/dev/vcio` on this Ubuntu image.
-- No GPIO, motor, sensor, ROS 2, or Jetson software has been installed.
-- Do not install the full robotics stack before the earlier raw interfaces and
-  safety boundaries have been understood and tested.
+- MPU-9250 acquisition and synchronized motor/IMU logging are integrated. A
+  standalone Pi controller completed `+60/-120/+60` degree relative turns with
+  maximum measured error `2.02 degrees`. The revised MuJoCo actuator reduced
+  held-out final-yaw endpoint RMSE across three turns by `60.7%`, although it
+  still has `14.34 degrees` RMSE. This is not a full-trajectory validation metric.
+  Persistent browser/API heading control completed a second
+  physical `+45/-90/+45` acceptance sequence with `2.2 degrees` maximum error.
+  The accepted contact-world 386-parameter navigation policy was trained from
+  29,380 imperfect-observation samples with behavior cloning and two DAgger
+  rounds. It completed 33/40 held-out randomized MuJoCo missions with zero
+  contact episodes, versus 32/40 and 36 contacts for the deterministic expert.
+  That comparison includes a safety filter only on the learned side. A fresh
+  12-world four-way ablation on 2026-09-08 found 48 contact events for the neural
+  policy without the filter and zero with it; do not attribute collision
+  avoidance to learned weights alone. Contact/stuck policy inputs are idealized
+  simulator signals, not validated physical measurements.
+  It completed 10/12 injected-stall missions with zero contacts. The older
+  39/40 result used simplified analytic collision handling and is historical,
+  not the current fidelity benchmark. Encoders, ROS 2, physical learned-policy
+  transfer, and Mac-independent Pi-to-Jetson transport are not yet integrated.
+- The Jetson autonomy service now uses a shared mission-command runtime also
+  used by the MuJoCo target scenario. ORB plus RANSAC image-motion estimation
+  is deployed and was verified on saved physical rover frames. It reports
+  pixel motion only; it must not be described as metric visual odometry or
+  SLAM without scale calibration and independent motion/range observations.
+- A MuJoCo hidden-target experiment now uses physical wall/obstacle contacts,
+  geometry rays, rendered RGB target perception, explicit sensor/command
+  latency, seeded noise/dropout, dead reckoning, occupancy mapping, frontiers,
+  A*, and target memory. The canonical run arrived in 33.932 simulated seconds
+  with zero contacts and 0.4303 m final pose error. A rendered-camera randomized
+  benchmark completed 10/12 missions. Physical occupancy mapping remains
+  blocked because the rover has no range sensor or wheel encoders; translation,
+  friction, mass, and timing parameters are still assumptions.
+- The Jetson has no active Wi-Fi interface. The current USB/SSH tunnel depends
+  on the Mac and is a learning setup, not the final independent deployment.
+- The Jetson autonomy service is deployed, enabled, and starts disarmed. A
+  perception-only probe and bounded mission runner are available; three fresh
+  orange missions timed out safely when detections were intermittent or absent.
+- On 2026-09-08 the owner selected a soccer ball. The deployed Jetson systemd
+  unit now starts with `--target "sports ball"`. A 45-second monotonic mission
+  budget is deployed and tested; Pi stale-command watchdog remains independent.
+  The latest Pi restart did not restore access from the Mac. No fresh ball
+  detection or physical wheel acceptance was completed. The camera reader
+  `read1` fix is local only until Pi access returns. See
+  `docs/experiments/2026-09-08-sports-ball-deployment.md` before continuing.
+- Later on September 8, the Pi card was inspected read-only and safely ejected.
+  The owner reports no green ACT activity on Pi wall power both with and without
+  the SD card. The saved current logs end at 18:40 AEST; no cause is proven.
+  The owner declined bare-board electrical isolation; retain GPIO/camera wiring.
+  A later 7.5 V reading is ambiguous between TB6612 VM and VCC, with momentary
+  green ACT activity. Both power sources must be off while identifying the pad;
+  do not call this a confirmed 3.3 V overvoltage or a successful boot. Do not
+  repeat network rewrites or declare the board dead. See
+  `docs/experiments/2026-09-08-pi-card-readonly-inspection.md` for current evidence.
+  The owner subsequently confirmed repeated attempts with the SD card both in
+  and out; stop repeating the card-presence question. Probe contact remains
+  uncertain, so the later 0.05 V reading does not prove supply failure.
+  Latest: the owner now permits unplugging the Pi-end GPIO harness and camera
+  for an isolated boot with the existing SD and proper wall supply. Both power
+  sources must be disconnected before handling connectors; preserve soldered
+  wiring and photograph the header first. This test is not yet completed and
+  must not be presented as a guaranteed fix.
+  Follow-up: the owner reports wiring unplugged with no improvement. SSH/HTTP
+  still fail and hostname resolution times out. No reliable internal-voltage
+  result exists. A Pi 4 EEPROM recovery would need a separately identified
+  spare card; do not erase either device's existing card or promise recovery.
+  Latest recovery status: the owner authorized erasing their spare camera card.
+  It was identified as ExFAT `sd-reader`, UUID
+  `6AC700FC-9955-3759-B227-EDB1AD3DCE5C`, and prepared with official Pi 4 SD-first
+  recovery firmware. All files and FAT32 were verified and the card ejected.
+  It is now `PIRECOVERY`, UUID `55FEAB7C-DA7E-3969-B25D-2798B7967A07`, with a
+  temporary 512 MB partition. The owner reports no green ACT light during the
+  recovery test; recovery success is unconfirmed. Suspect hardware/power, but
+  no reliable rail measurement or specific failed component is established.
+  No Wi-Fi is expected from this card. Do not loop through more network fixes.
+  Camera card restoration is complete: re-identified by its recovery UUID,
+  repartitioned to full-capacity ExFAT `sd-reader`, filesystem checked and safely
+  ejected. New UUID: `1C731B23-992A-373B-AA60-DB90EB924656`. Original rover and
+  Jetson storage were untouched. Camera-side formatting remains the owner's
+  final step before recording; no more recovery firmware remains installed on
+  the camera card's filesystem.
+  See `docs/experiments/2026-09-08-pi-eeprom-recovery.md`.
+- Straight travel remains open-loop by default. The calibration currently
+  saved on the Pi is 80% left and 100% right at full throttle; wheel rotation
+  and distance are not measured. An optional IMU PD heading-hold loop is
+  deployed but disabled pending rigid sensor mounting and physical validation.
+  It corrects short-term yaw during manual forward/reverse commands and does
+  not estimate translation or individual wheel speed.
+- The Pi is powered by the Belkin BPB012; the motors use the separate 7.2 V NiMH
+  pack. The Belkin must not be used to power the Jetson Orin Nano Developer Kit.
+- Do not introduce the full robotics stack merely to hide raw interfaces or
+  safety boundaries that have not yet been understood and tested.
 
 Never store passwords, Wi-Fi credentials, API keys, or other secrets in this repository.
 
@@ -160,6 +340,7 @@ Laptop / Operator UI
         |
         v
 NVIDIA Jetson
+- Stationary on supplied wall power during the learning build
 - Camera
 - Perception
 - Mapping
@@ -524,26 +705,40 @@ Guidelines:
 
 ## Current Priority
 
-Do not build autonomous navigation yet.
+Travel handoff on 2026-09-08: the owner is taking the Jetson and already-proven
+camera/ribbon, not rebuilding a rover immediately. Use
+`docs/offline-field-guide.md`, `docs/backup-and-offline.md` and
+`software/learning/offline_workbook.html` for the next lessons. A separate
+`/Users/jackcoleman/Developer/rover-learning` pack is the intended independent
+offline copy; verify its `backup-manifest.json` before claiming backup complete.
+Keep raw indoor photos and historical credentials private. Never delete the
+development checkout as an implied part of backup. The offline server blocks
+physical requests and the workbook explicitly distinguishes recorded physics
+replay, classroom calculations and an actual saved network. The first learning
+deliverable is a trace from camera pixels to bounded motor requests; the next
+is a fixed-seed physics experiment with a measured result. Preserve the existing
+teaching contract, with predictions, actual snippets, units and evidence.
 
-The immediate priority is M0:
+M0 development setup, M2 four-motor bring-up, M3 IMU acquisition, and one
+closed-loop relative-heading experiment from M5 are complete. M1 power and
+hardware characterisation is sufficient for the current short, supervised
+tests, although sustained-current and thermal validation remain open. M4
+linear odometry and M5 wheel-speed control remain incomplete because the rover
+has no wheel encoders.
 
-Completed:
+Camera streaming and initial Pi-to-Jetson transport from M6 are proven. The
+current priorities are:
 
-1. Selected and installed Ubuntu Server 26.04 LTS ARM64.
-2. Configured Wi-Fi and key-based SSH.
-3. Booted and updated the Raspberry Pi.
-4. Verified remote access, internet, DNS, storage, temperature, and system state.
-5. Recorded the baseline system state.
-6. Created the initial Git repository and documentation.
-7. Established and tested the safe shutdown procedure.
+1. Expose bounded relative-turn commands through the persistent control API.
+2. Use camera observations to correct accumulated gyro-heading drift.
+3. Quantify localization error before attempting a mapped autonomous mission.
+4. Remove the Mac dependency from the Pi-to-Jetson perception-control path.
 
-Remaining before M1:
-
-1. Review the M0 experiment and operating-system decision with the user.
-2. Establish and test the backup and recovery procedure.
-
-Do not write GPIO, motor, sensor, ROS, or Jetson code until M0 is complete.
+A MuJoCo contact rover, Gymnasium interface, imperfect observation pipeline,
+behavior-cloned/DAgger policy, safety shield, rendered policy arena, mapping
+benchmark, and measured Real2Sim turn evaluation now exist. Continue fitting
+linear motion, delay, friction, and slip before physical learned-policy
+transfer. Preserve the Pi watchdog as the final motor-stop authority.
 
 ---
 

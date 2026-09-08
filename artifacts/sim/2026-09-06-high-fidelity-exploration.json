@@ -1,0 +1,714 @@
+{
+  "experiment": "domain-randomized contact-physical hidden-target exploration",
+  "date": "2026-09-06",
+  "seed": 907,
+  "rendered_camera": true,
+  "summary": {
+    "trials": 12,
+    "successes": 10,
+    "success_rate": 0.8333333333333334,
+    "collision_free_trials": 10,
+    "mean_pose_error_m": 0.1882,
+    "mean_elapsed_s_successes": 7.3751999999999995
+  },
+  "truth_boundary": "ground truth is used by MuJoCo physics and scoring, never planner input",
+  "parameter_status": "turn response measured; translation, friction, mass, range, and latency distributions assumed",
+  "trials": [
+    {
+      "trial_id": 0,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": 0.5128298485657659,
+            "y_m": -0.6693446125373783,
+            "radius_m": 0.2000061011137403
+          },
+          {
+            "x_m": -0.2386738258674117,
+            "y_m": -0.041571421617452975,
+            "radius_m": 0.2703986718004241
+          }
+        ],
+        "target": {
+          "x_m": 0.08779758522564679,
+          "y_m": 0.4525417627753605,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 0.8600936429286561,
+        "left_turn_gain": 0.8333672514916172,
+        "right_turn_gain": 0.8286320037629713,
+        "velocity_feedback": 0.005880738565758882,
+        "left_drive_scale": 1.0025791403662168,
+        "right_drive_scale": 0.9153534950786067
+      },
+      "fidelity": {
+        "seed": 907000,
+        "range_noise_sigma_m": 0.020316726010667356,
+        "range_dropout_probability": 0.02117780280927105,
+        "range_latency_ms": 49,
+        "camera_period_ms": 150,
+        "camera_latency_ms": 180,
+        "camera_dropout_probability": 0.011245516420457825,
+        "command_latency_ms": 81,
+        "odometry_noise_sigma_mps": 0.01778973629098201,
+        "gyro_noise_sigma_dps": 0.2701947762321251,
+        "rendered_camera": true
+      },
+      "odometry_scale": 1.0140103064166162,
+      "gyro_scale": 1.0216224180844242,
+      "gyro_bias_dps": -0.31790782058941125,
+      "result": {
+        "success": false,
+        "terminal_state": "timeout",
+        "elapsed_s": 50.036,
+        "target_seen": true,
+        "collisions": 2,
+        "replans": 733,
+        "final_distance_m": 0.849,
+        "pose_error_m": 0.3337
+      }
+    },
+    {
+      "trial_id": 1,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": -0.3800185237595194,
+            "y_m": 0.7161345544163966,
+            "radius_m": 0.3038430729661953
+          },
+          {
+            "x_m": 0.5736926202860471,
+            "y_m": -0.4062470981378953,
+            "radius_m": 0.21641693372783724
+          }
+        ],
+        "target": {
+          "x_m": 1.0740619833617158,
+          "y_m": 0.635395752083507,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 0.8619589927239636,
+        "left_turn_gain": 0.9584949089396163,
+        "right_turn_gain": 0.8165087959962328,
+        "velocity_feedback": 0.004038766280157826,
+        "left_drive_scale": 1.0207557634385227,
+        "right_drive_scale": 1.0871023449736632
+      },
+      "fidelity": {
+        "seed": 907001,
+        "range_noise_sigma_m": 0.010028435917460608,
+        "range_dropout_probability": 0.014797709050974866,
+        "range_latency_ms": 52,
+        "camera_period_ms": 83,
+        "camera_latency_ms": 70,
+        "camera_dropout_probability": 0.019255466473199465,
+        "command_latency_ms": 92,
+        "odometry_noise_sigma_mps": 0.01584662097426056,
+        "gyro_noise_sigma_dps": 0.12853198275462338,
+        "rendered_camera": true
+      },
+      "odometry_scale": 0.9551649870381411,
+      "gyro_scale": 1.0143022189091906,
+      "gyro_bias_dps": 0.041860823897163946,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 8.444,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 17,
+        "final_distance_m": 0.483,
+        "pose_error_m": 0.2918
+      }
+    },
+    {
+      "trial_id": 2,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": 0.15081438641630673,
+            "y_m": 0.06382859754179127,
+            "radius_m": 0.18423342836690926
+          },
+          {
+            "x_m": 0.9562035726450842,
+            "y_m": -0.659509402211184,
+            "radius_m": 0.19655801271915996
+          }
+        ],
+        "target": {
+          "x_m": 0.817062333754323,
+          "y_m": 0.2611122540262558,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 0.9243372332779621,
+        "left_turn_gain": 0.8436469668626947,
+        "right_turn_gain": 0.819533124438208,
+        "velocity_feedback": 0.005942430481379825,
+        "left_drive_scale": 1.0379420102246162,
+        "right_drive_scale": 0.9627832535957777
+      },
+      "fidelity": {
+        "seed": 907002,
+        "range_noise_sigma_m": 0.013127181276432469,
+        "range_dropout_probability": 0.0362540658782187,
+        "range_latency_ms": 69,
+        "camera_period_ms": 123,
+        "camera_latency_ms": 81,
+        "camera_dropout_probability": 0.002124885115498948,
+        "command_latency_ms": 73,
+        "odometry_noise_sigma_mps": 0.0057831010932608996,
+        "gyro_noise_sigma_dps": 0.1824000355808587,
+        "rendered_camera": true
+      },
+      "odometry_scale": 0.985704634286191,
+      "gyro_scale": 1.0270547554273108,
+      "gyro_bias_dps": -0.3191614619798179,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 8.738,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 34,
+        "final_distance_m": 0.673,
+        "pose_error_m": 0.0474
+      }
+    },
+    {
+      "trial_id": 3,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": -0.6938109241843227,
+            "y_m": 0.7026351146255558,
+            "radius_m": 0.2236964972644903
+          },
+          {
+            "x_m": 0.5220656682983509,
+            "y_m": 0.7066751359597878,
+            "radius_m": 0.24511238002075497
+          }
+        ],
+        "target": {
+          "x_m": 1.2515681678231263,
+          "y_m": 0.08519915275367329,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 1.1882746530071089,
+        "left_turn_gain": 0.9088937839954149,
+        "right_turn_gain": 0.784949799118182,
+        "velocity_feedback": 0.005460868597641955,
+        "left_drive_scale": 0.977832743612456,
+        "right_drive_scale": 0.9934957436514169
+      },
+      "fidelity": {
+        "seed": 907003,
+        "range_noise_sigma_m": 0.00650759305796668,
+        "range_dropout_probability": 0.002726023702342615,
+        "range_latency_ms": 99,
+        "camera_period_ms": 136,
+        "camera_latency_ms": 176,
+        "camera_dropout_probability": 0.005836712247615667,
+        "command_latency_ms": 67,
+        "odometry_noise_sigma_mps": 0.004872365928167851,
+        "gyro_noise_sigma_dps": 0.1291476301304934,
+        "rendered_camera": true
+      },
+      "odometry_scale": 1.0150270563543027,
+      "gyro_scale": 0.9908854572648367,
+      "gyro_bias_dps": 0.3843556640133724,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 5.684,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 5,
+        "final_distance_m": 0.52,
+        "pose_error_m": 0.1209
+      }
+    },
+    {
+      "trial_id": 4,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": -0.1745078785712364,
+            "y_m": -0.6353296019772423,
+            "radius_m": 0.2092734444319753
+          },
+          {
+            "x_m": 0.28550071424361656,
+            "y_m": -0.3524821341561122,
+            "radius_m": 0.2319015391301241
+          }
+        ],
+        "target": {
+          "x_m": 1.3385930395667927,
+          "y_m": 0.9010847597691851,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 1.1787724387637804,
+        "left_turn_gain": 0.8469713585593315,
+        "right_turn_gain": 0.893349733642213,
+        "velocity_feedback": 0.003700671594432372,
+        "left_drive_scale": 0.9766137451683925,
+        "right_drive_scale": 1.0158146021094778
+      },
+      "fidelity": {
+        "seed": 907004,
+        "range_noise_sigma_m": 0.025494150971665696,
+        "range_dropout_probability": 0.013475100044742824,
+        "range_latency_ms": 81,
+        "camera_period_ms": 111,
+        "camera_latency_ms": 110,
+        "camera_dropout_probability": 0.041920432945066984,
+        "command_latency_ms": 42,
+        "odometry_noise_sigma_mps": 0.008824988560034963,
+        "gyro_noise_sigma_dps": 0.05961484025462585,
+        "rendered_camera": true
+      },
+      "odometry_scale": 1.0154855799968983,
+      "gyro_scale": 1.0070869213430913,
+      "gyro_bias_dps": -0.30230864060022,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 5.422,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 4,
+        "final_distance_m": 0.549,
+        "pose_error_m": 0.222
+      }
+    },
+    {
+      "trial_id": 5,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": 0.8379634841630328,
+            "y_m": 0.1280096396560566,
+            "radius_m": 0.30677441499094155
+          },
+          {
+            "x_m": -0.020917582997144746,
+            "y_m": 0.5180545545800501,
+            "radius_m": 0.23547160788964633
+          }
+        ],
+        "target": {
+          "x_m": 0.9691995366040136,
+          "y_m": -0.53074352477177,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 1.0324200232349188,
+        "left_turn_gain": 0.9005675938835717,
+        "right_turn_gain": 0.8895253505865907,
+        "velocity_feedback": 0.005405252187089062,
+        "left_drive_scale": 0.9395924559143644,
+        "right_drive_scale": 0.9753765003288329
+      },
+      "fidelity": {
+        "seed": 907005,
+        "range_noise_sigma_m": 0.016719088503127748,
+        "range_dropout_probability": 0.02892119650972114,
+        "range_latency_ms": 43,
+        "camera_period_ms": 87,
+        "camera_latency_ms": 89,
+        "camera_dropout_probability": 0.03848610200926886,
+        "command_latency_ms": 88,
+        "odometry_noise_sigma_mps": 0.013765072316954058,
+        "gyro_noise_sigma_dps": 0.23439410449629583,
+        "rendered_camera": true
+      },
+      "odometry_scale": 0.9977681249642405,
+      "gyro_scale": 0.9954036808427349,
+      "gyro_bias_dps": 0.09534426346768149,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 2.044,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 1,
+        "final_distance_m": 0.622,
+        "pose_error_m": 0.0333
+      }
+    },
+    {
+      "trial_id": 6,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": -0.06884913584377605,
+            "y_m": 0.228148087453812,
+            "radius_m": 0.24743728505689488
+          },
+          {
+            "x_m": 0.4777276597783817,
+            "y_m": 0.19376138801261766,
+            "radius_m": 0.23276465475177036
+          }
+        ],
+        "target": {
+          "x_m": 0.28037501973285656,
+          "y_m": 0.7414631830310425,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 1.003023955577202,
+        "left_turn_gain": 0.864317801425367,
+        "right_turn_gain": 0.8547670427238562,
+        "velocity_feedback": 0.00478145786002809,
+        "left_drive_scale": 1.0706147304765683,
+        "right_drive_scale": 1.04029200860462
+      },
+      "fidelity": {
+        "seed": 907006,
+        "range_noise_sigma_m": 0.011510971201931858,
+        "range_dropout_probability": 0.01066234185385412,
+        "range_latency_ms": 115,
+        "camera_period_ms": 102,
+        "camera_latency_ms": 140,
+        "camera_dropout_probability": 0.03201460619241905,
+        "command_latency_ms": 31,
+        "odometry_noise_sigma_mps": 0.01518998789494974,
+        "gyro_noise_sigma_dps": 0.1053395991908948,
+        "rendered_camera": true
+      },
+      "odometry_scale": 0.9827482793434383,
+      "gyro_scale": 1.0239723360110917,
+      "gyro_bias_dps": 0.34306119838220217,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 6.822,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 8,
+        "final_distance_m": 0.658,
+        "pose_error_m": 0.3807
+      }
+    },
+    {
+      "trial_id": 7,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": 0.407381293856095,
+            "y_m": 0.5964671807581325,
+            "radius_m": 0.18887920134581426
+          },
+          {
+            "x_m": -0.4168829120170422,
+            "y_m": -0.41073758550185957,
+            "radius_m": 0.28217062903601675
+          }
+        ],
+        "target": {
+          "x_m": 0.9474710405722517,
+          "y_m": -0.31478355371357014,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 0.8964840637764078,
+        "left_turn_gain": 0.8973834544321115,
+        "right_turn_gain": 0.8933321204059748,
+        "velocity_feedback": 0.00311426711551651,
+        "left_drive_scale": 1.0630373951490466,
+        "right_drive_scale": 1.0915698380647383
+      },
+      "fidelity": {
+        "seed": 907007,
+        "range_noise_sigma_m": 0.019194207598277807,
+        "range_dropout_probability": 0.03134784425041361,
+        "range_latency_ms": 102,
+        "camera_period_ms": 89,
+        "camera_latency_ms": 110,
+        "camera_dropout_probability": 0.04209907824471328,
+        "command_latency_ms": 91,
+        "odometry_noise_sigma_mps": 0.016166151145957874,
+        "gyro_noise_sigma_dps": 0.18363331625376406,
+        "rendered_camera": true
+      },
+      "odometry_scale": 0.9925458838267813,
+      "gyro_scale": 1.0127307017792362,
+      "gyro_bias_dps": 0.07584711839759456,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 6.49,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 7,
+        "final_distance_m": 0.359,
+        "pose_error_m": 0.1342
+      }
+    },
+    {
+      "trial_id": 8,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": -0.3154636336175348,
+            "y_m": -0.07784794997866173,
+            "radius_m": 0.18843089714433728
+          },
+          {
+            "x_m": -0.47343348922319006,
+            "y_m": -0.6792036428945754,
+            "radius_m": 0.1889434008154867
+          }
+        ],
+        "target": {
+          "x_m": 0.6136295777044039,
+          "y_m": 0.09352516106749742,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 1.10476369583909,
+        "left_turn_gain": 0.9548320586582254,
+        "right_turn_gain": 0.8773015977650408,
+        "velocity_feedback": 0.0035900898227357765,
+        "left_drive_scale": 1.0157122790381614,
+        "right_drive_scale": 0.9833109456395193
+      },
+      "fidelity": {
+        "seed": 907008,
+        "range_noise_sigma_m": 0.010589726368332705,
+        "range_dropout_probability": 0.021496897304577267,
+        "range_latency_ms": 63,
+        "camera_period_ms": 117,
+        "camera_latency_ms": 176,
+        "camera_dropout_probability": 0.04332777724592776,
+        "command_latency_ms": 94,
+        "odometry_noise_sigma_mps": 0.019412800451816627,
+        "gyro_noise_sigma_dps": 0.05379915172658882,
+        "rendered_camera": true
+      },
+      "odometry_scale": 0.9563615606356481,
+      "gyro_scale": 1.007837107614322,
+      "gyro_bias_dps": 0.3289636619984573,
+      "result": {
+        "success": false,
+        "terminal_state": "timeout",
+        "elapsed_s": 50.002,
+        "target_seen": true,
+        "collisions": 4,
+        "replans": 720,
+        "final_distance_m": 1.274,
+        "pose_error_m": 0.0213
+      }
+    },
+    {
+      "trial_id": 9,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": -0.1187252571995685,
+            "y_m": -0.6753485852091541,
+            "radius_m": 0.296466204702039
+          },
+          {
+            "x_m": 0.9421030220131488,
+            "y_m": -0.13743644095918617,
+            "radius_m": 0.2809936611513435
+          }
+        ],
+        "target": {
+          "x_m": 0.9683368317512455,
+          "y_m": 0.7622930850939733,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 0.8508260043411313,
+        "left_turn_gain": 0.8675507758018857,
+        "right_turn_gain": 0.8888162355252082,
+        "velocity_feedback": 0.005421711921318076,
+        "left_drive_scale": 1.0433947638705254,
+        "right_drive_scale": 1.0328450412191552
+      },
+      "fidelity": {
+        "seed": 907009,
+        "range_noise_sigma_m": 0.02916410404939274,
+        "range_dropout_probability": 0.02144257429799407,
+        "range_latency_ms": 49,
+        "camera_period_ms": 115,
+        "camera_latency_ms": 120,
+        "camera_dropout_probability": 0.0015432099670358692,
+        "command_latency_ms": 66,
+        "odometry_noise_sigma_mps": 0.012350788908527666,
+        "gyro_noise_sigma_dps": 0.16341991888723803,
+        "rendered_camera": true
+      },
+      "odometry_scale": 0.9821230734113364,
+      "gyro_scale": 1.0036742920855857,
+      "gyro_bias_dps": -0.022161192153448195,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 2.956,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 2,
+        "final_distance_m": 0.421,
+        "pose_error_m": 0.1137
+      }
+    },
+    {
+      "trial_id": 10,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": -0.5277203014160375,
+            "y_m": -0.031632726301321856,
+            "radius_m": 0.2793693367914726
+          },
+          {
+            "x_m": 1.0067372190852144,
+            "y_m": -0.7049965063361198,
+            "radius_m": 0.2946537977300493
+          }
+        ],
+        "target": {
+          "x_m": 1.1539289766353689,
+          "y_m": 0.486504770333551,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 0.8740401969669154,
+        "left_turn_gain": 0.8310446308221091,
+        "right_turn_gain": 0.8337016771469763,
+        "velocity_feedback": 0.004768525342034148,
+        "left_drive_scale": 0.9314391996174329,
+        "right_drive_scale": 0.9109363995563659
+      },
+      "fidelity": {
+        "seed": 907010,
+        "range_noise_sigma_m": 0.01861356352004267,
+        "range_dropout_probability": 0.0041528477354198625,
+        "range_latency_ms": 42,
+        "camera_period_ms": 101,
+        "camera_latency_ms": 66,
+        "camera_dropout_probability": 0.016591933909508028,
+        "command_latency_ms": 74,
+        "odometry_noise_sigma_mps": 0.015565173898298104,
+        "gyro_noise_sigma_dps": 0.3260077563852865,
+        "rendered_camera": true
+      },
+      "odometry_scale": 0.9429339534577578,
+      "gyro_scale": 1.0073526312374257,
+      "gyro_bias_dps": -0.1506647120332769,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 5.098,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 4,
+        "final_distance_m": 0.566,
+        "pose_error_m": 0.2307
+      }
+    },
+    {
+      "trial_id": 11,
+      "world": {
+        "obstacles": [
+          {
+            "x_m": -0.40435210750081624,
+            "y_m": -0.1343064885409424,
+            "radius_m": 0.1824331746030364
+          },
+          {
+            "x_m": 0.8227648136923928,
+            "y_m": -0.257986602885639,
+            "radius_m": 0.26196755750288253
+          }
+        ],
+        "target": {
+          "x_m": -0.1546451985773523,
+          "y_m": 0.7985046499349013,
+          "horizontal_fov_rad": 1.2217304763960306,
+          "area_numerator": 0.0962,
+          "distance_offset_m": 0.641
+        }
+      },
+      "dynamics": {
+        "floor_friction": 1.1096643390734533,
+        "left_turn_gain": 0.9358960767010674,
+        "right_turn_gain": 0.7951147905169533,
+        "velocity_feedback": 0.005127988730199573,
+        "left_drive_scale": 0.9996055899406138,
+        "right_drive_scale": 1.053549063921287
+      },
+      "fidelity": {
+        "seed": 907011,
+        "range_noise_sigma_m": 0.009359245667507322,
+        "range_dropout_probability": 0.012528161954756452,
+        "range_latency_ms": 91,
+        "camera_period_ms": 84,
+        "camera_latency_ms": 166,
+        "camera_dropout_probability": 0.04151899242535651,
+        "command_latency_ms": 99,
+        "odometry_noise_sigma_mps": 0.016891376284190213,
+        "gyro_noise_sigma_dps": 0.3574463223360852,
+        "rendered_camera": true
+      },
+      "odometry_scale": 1.0232391762551998,
+      "gyro_scale": 0.9993420785951815,
+      "gyro_bias_dps": -0.09020743644714413,
+      "result": {
+        "success": true,
+        "terminal_state": "arrived",
+        "elapsed_s": 22.054,
+        "target_seen": true,
+        "collisions": 0,
+        "replans": 67,
+        "final_distance_m": 0.669,
+        "pose_error_m": 0.3287
+      }
+    }
+  ]
+}

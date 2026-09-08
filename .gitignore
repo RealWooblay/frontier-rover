@@ -1,1 +1,23 @@
 .DS_Store
+*.engine
+.venv/
+__pycache__/
+*.pyc
+
+# Rebuildable OS images and credential-bearing historical provisioning files.
+pi-images/
+pi-dlp-sd-work/
+*.img
+*.img.xz
+.env
+.env.*
+
+# Indoor camera photographs stay in the owner's private offline backup.
+datasets/**/raw/
+artifacts/physical/**/*.jpg
+artifacts/physical/**/*.png
+
+# Local exports, render checks and runtime caches are not source files.
+.artifact_work/
+learning-output/
+.pytest_cache/
