@@ -91,7 +91,9 @@ def main() -> None:
         shutil.copy2(ROOT / "software/learning" / name, destination / name)
         (destination / name).chmod(0o755)
     shutil.copy2(ROOT / "docs/Frontier_Rover_Field_Guide.docx", destination / "Frontier_Rover_Field_Guide.docx")
-    shutil.copy2(ROOT / "docs/backup-and-offline.md", destination / "START HERE.md")
+    # A travel pack may have newer, reader-specific links outside the repo.
+    if not (destination / "START HERE.md").exists():
+        shutil.copy2(ROOT / "docs/backup-and-offline.md", destination / "START HERE.md")
     bundle = destination / "frontier-rover.bundle"
     subprocess.run(["git", "-C", str(ROOT), "bundle", "create", str(bundle), "--all"], check=True)
     subprocess.run(["git", "-C", str(ROOT), "bundle", "verify", str(bundle)], check=True)

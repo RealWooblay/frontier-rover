@@ -2,6 +2,19 @@
 
 A hands-on apprenticeship in building a reliable autonomous 4WD rover.
 
+## Archive checkpoint: 10 October 2026
+
+This is a documented robotics prototype, not a completed autonomous household
+robot. Historical driving, vision, IMU experiments and laptop simulation are
+preserved. Reliable physical hidden-object navigation and validated deployment
+of the simulation-trained policy remain unfinished; the Pi fault below remains
+unresolved. No new hardware acceptance test was performed for this archive.
+
+The updated [two-hour class](docs/two-hour-robotics/study.md) includes worked
+control, vision, learning and simulation lessons. Open its adjacent `study.html`
+locally for the interactive exercises. These lessons and their verification
+outputs are now versioned alongside the original source and experiment data.
+
 ## Status on 8 September 2026
 
 The Pi is currently out of service with a suspected hardware or power fault.

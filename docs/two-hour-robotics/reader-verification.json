@@ -1,0 +1,131 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "errors": [],
+    "missing": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "file:///Users/jackcoleman/Developer/frontier-rover/artifacts/learning/arena-1-start-chase.jpg",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/jackcoleman/Developer/frontier-rover/artifacts/learning/turn-validation.png",
+        "loaded": true
+      }
+    ],
+    "headings": 10,
+    "answers": 14,
+    "badAnchors": [],
+    "localLinks": [
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#what-you-will-get-from-today",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#1-the-complete-robot-0-15-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#2-geometry-and-state-15-35-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#3-control-and-actuators-35-55-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#4-vision-and-learning-55-80-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#5-simulation-and-evidence-80-105-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#6-engineering-practice-105-120-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#beyond-two-hours-a-role-readiness-map",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#resources-in-a-useful-order",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#source-trail-and-verification",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/verified-comparison.json",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/learning/offline_workbook.html",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/offline-field-guide.md",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/learning/rover_workshop.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/jetson/yolo_perception.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/jetson/mission_runtime.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/pi/heading_control.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/sim/mujoco_rover.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/sim/mlp_policy.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/Frontier_Rover_Field_Guide.docx"
+    ]
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "height": 844,
+    "errors": [],
+    "missing": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "file:///Users/jackcoleman/Developer/frontier-rover/artifacts/learning/arena-1-start-chase.jpg",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/jackcoleman/Developer/frontier-rover/artifacts/learning/turn-validation.png",
+        "loaded": true
+      }
+    ],
+    "headings": 10,
+    "answers": 14,
+    "badAnchors": [],
+    "localLinks": [
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#what-you-will-get-from-today",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#1-the-complete-robot-0-15-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#2-geometry-and-state-15-35-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#3-control-and-actuators-35-55-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#4-vision-and-learning-55-80-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#5-simulation-and-evidence-80-105-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#6-engineering-practice-105-120-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#beyond-two-hours-a-role-readiness-map",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#resources-in-a-useful-order",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#source-trail-and-verification",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/verified-comparison.json",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/learning/offline_workbook.html",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/offline-field-guide.md",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/learning/rover_workshop.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/jetson/yolo_perception.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/jetson/mission_runtime.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/pi/heading_control.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/sim/mujoco_rover.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/sim/mlp_policy.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/Frontier_Rover_Field_Guide.docx"
+    ]
+  },
+  {
+    "name": "narrow",
+    "width": 320,
+    "height": 720,
+    "errors": [],
+    "missing": [],
+    "overflow": false,
+    "images": [
+      {
+        "src": "file:///Users/jackcoleman/Developer/frontier-rover/artifacts/learning/arena-1-start-chase.jpg",
+        "loaded": true
+      },
+      {
+        "src": "file:///Users/jackcoleman/Developer/frontier-rover/artifacts/learning/turn-validation.png",
+        "loaded": true
+      }
+    ],
+    "headings": 10,
+    "answers": 14,
+    "badAnchors": [],
+    "localLinks": [
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#what-you-will-get-from-today",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#1-the-complete-robot-0-15-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#2-geometry-and-state-15-35-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#3-control-and-actuators-35-55-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#4-vision-and-learning-55-80-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#5-simulation-and-evidence-80-105-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#6-engineering-practice-105-120-minutes",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#beyond-two-hours-a-role-readiness-map",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#resources-in-a-useful-order",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/study.html#source-trail-and-verification",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/two-hour-robotics/verified-comparison.json",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/learning/offline_workbook.html",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/offline-field-guide.md",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/learning/rover_workshop.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/jetson/yolo_perception.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/jetson/mission_runtime.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/pi/heading_control.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/sim/mujoco_rover.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/software/sim/mlp_policy.py",
+      "file:///Users/jackcoleman/Developer/frontier-rover/docs/Frontier_Rover_Field_Guide.docx"
+    ]
+  }
+]

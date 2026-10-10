@@ -1,0 +1,110 @@
+{
+  "generated_at": "2026-09-30T20:41:14.093421+00:00",
+  "purpose": "four-way controller ablation on fresh seeded contact worlds",
+  "seed": 260930,
+  "model_sha256": "782a3b40d5bc45bf3bdf71629c75ae8a3a20d7aa06187e3e1a53a0800fbf3c6e",
+  "summary": {
+    "baseline": {
+      "missions": 1,
+      "successes": 1,
+      "contact_events": 1,
+      "missions_with_contact": 1
+    },
+    "baseline_with_shield": {
+      "missions": 1,
+      "successes": 1,
+      "contact_events": 0,
+      "missions_with_contact": 0
+    },
+    "bounded_mlp": {
+      "missions": 1,
+      "successes": 1,
+      "contact_events": 0,
+      "missions_with_contact": 0
+    },
+    "bounded_mlp_with_shield": {
+      "missions": 1,
+      "successes": 1,
+      "contact_events": 0,
+      "missions_with_contact": 0
+    }
+  },
+  "episodes": {
+    "baseline": [
+      {
+        "scenario_id": 0,
+        "policy": "deterministic_expert",
+        "success": true,
+        "terminal_state": "success",
+        "elapsed_s": 10.93,
+        "steps": 214,
+        "reward_total": 23.2221,
+        "contact_episodes": 1,
+        "recoveries": 1,
+        "path_length_m": 3.6143,
+        "final_goal_distance_m": 0.1959,
+        "final_pose_error_m": 0.1296,
+        "range_dropouts": 171
+      }
+    ],
+    "baseline_with_shield": [
+      {
+        "scenario_id": 0,
+        "policy": "shielded_deterministic_expert",
+        "success": true,
+        "terminal_state": "success",
+        "elapsed_s": 12.63,
+        "steps": 248,
+        "reward_total": 23.9878,
+        "contact_episodes": 0,
+        "recoveries": 3,
+        "path_length_m": 3.2813,
+        "final_goal_distance_m": 0.1959,
+        "final_pose_error_m": 0.1094,
+        "range_dropouts": 211
+      }
+    ],
+    "bounded_mlp": [
+      {
+        "scenario_id": 0,
+        "policy": "bounded_mlp_without_shield",
+        "success": true,
+        "terminal_state": "success",
+        "elapsed_s": 10.08,
+        "steps": 197,
+        "reward_total": 24.7531,
+        "contact_episodes": 0,
+        "recoveries": 0,
+        "path_length_m": 3.0214,
+        "final_goal_distance_m": 0.1967,
+        "final_pose_error_m": 0.1184,
+        "range_dropouts": 155
+      }
+    ],
+    "bounded_mlp_with_shield": [
+      {
+        "scenario_id": 0,
+        "policy": "learned_mlp_with_safety",
+        "success": true,
+        "terminal_state": "success",
+        "elapsed_s": 12.93,
+        "steps": 254,
+        "reward_total": 24.0428,
+        "contact_episodes": 0,
+        "recoveries": 3,
+        "path_length_m": 3.5245,
+        "final_goal_distance_m": 0.1923,
+        "final_pose_error_m": 0.2271,
+        "range_dropouts": 194
+      }
+    ]
+  },
+  "interpretation": [
+    "Same world, parameter distributions, and random seed per controller; trajectories differ.",
+    "Within each family, shield on/off isolates its contribution on these runs.",
+    "Baseline and learned families have different output bounds; this is not architecture-only attribution.",
+    "Collision is an ideal simulator contact signal; stuck includes true movement and injected-fault state.",
+    "Known initial pose and goal coordinates are assumptions. Physical transfer is untested.",
+    "A small selected scenario suite is engineering evidence, not a general safety guarantee."
+  ]
+}

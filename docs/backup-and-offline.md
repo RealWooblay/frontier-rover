@@ -1,5 +1,15 @@
 # Backup and offline learning
 
+The September 30 structured lessons are also versioned under
+`docs/two-hour-robotics/`. Open `study.html` locally; GitHub's Markdown edition
+is `study.md`. The existing travel pack keeps its original top-level
+`two-hour-robotics/` copy, so saved offline links continue to work.
+
+The lessons' command examples and optional build/check scripts refer to the
+author's Mac runtime. Reading the generated HTML needs only a browser. Running
+the Python experiments on another machine requires the project's simulation
+dependencies and corresponding local paths.
+
 The travel pack is a separate folder, not a shortcut into the development repo:
 
 `/Users/jackcoleman/Developer/rover-learning`
