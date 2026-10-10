@@ -43,9 +43,12 @@ requests. No button in this launch mode can drive a rover. It runs only on
 - Local-only material: indoor camera photographs, raw collection manifests and
   historical DLP provisioning files. The latter may contain old credentials.
   Do not publish the private folder or share the entire pack indiscriminately.
-- Excluded: the old multi-gigabyte operating-system image, generated caches and
-  `.DS_Store`. The OS image is rebuildable installation media, not a full backup
-  of the current Jetson SD card or a record of all changes made on a device.
+- Private recovery archive: the customized August 27 Pi installation image is
+  retained compressed in `private/recovery-image/`. Its bytes differ from the
+  downloaded Ubuntu distribution, so preserve this archive rather than assuming
+  it is disposable. It is not a backup of the final Pi or Jetson SD card.
+- Excluded: redundant uncompressed installation media, the unmodified Ubuntu
+  download, generated caches and `.DS_Store`.
 
 `backup-manifest.json` records the exact commit, independently observed remote
 commit, copied files and SHA-256 hashes. A successful push alone does not prove
